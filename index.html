@@ -376,7 +376,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-01-23 00:00:00 / 修改时间：22:52:24" itemprop="dateCreated datePublished" datetime="2020-01-23T00:00:00+08:00">2020-01-23</time>
+              <time title="创建时间：2020-01-23 00:00:00 / 修改时间：23:02:33" itemprop="dateCreated datePublished" datetime="2020-01-23T00:00:00+08:00">2020-01-23</time>
             </span>
 
           <br>
@@ -404,7 +404,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p><img src="/.io//GL.png" alt="梯度下降法脉络图"><br>本篇博文，主要给大家梳理一下梯度下降算法的发展脉络。梯度下降的根是随机梯度下降（SGD）算法，后人在SGD的基础上进行了一系列的发展和改进。改进的思路主要有两个：引入动量和自适应学习率。</p>
+          <meta name="referrer" content="no-referrer">
+
+<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p><img src="/.io//GL.png" alt="梯度下降法脉络图"><br>本篇博文，主要给大家梳理一下梯度下降算法的发展脉络。梯度下降的根是随机梯度下降（SGD）算法，后人在SGD的基础上进行了一系列的发展和改进。改进的思路主要有两个：引入动量和自适应学习率。</p>
 <h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><h3 id="什么是梯度"><a href="#什么是梯度" class="headerlink" title="什么是梯度"></a>什么是梯度</h3><p><img src="/.io//GDUnderstand.png" alt="梯度下降法脉络图"></p>
 <p>理解梯度之前，我们要理解什么是方向导数；理解方向导数之前，我们需要理解什么是偏导数；理解偏导数之前，我们要对导数有所了解。导数刻画的是函数f(x)的变化快慢。偏导数f_x(x，y)刻画的是函数f(x,y)沿着x轴变化的快慢、同理f_y(x，y)刻画的是函数f(x,y)沿着y轴变化的快慢。除了x轴、y轴之外，如果我们想知道函数沿着方向u的变化快慢怎么办？自然地就引入了方向导数，方向导数刻画的是函数沿着某一个方向变化的快慢。说完方向导数，哪什么是梯度呢？梯度就是方向导数最大的那个向量。沿着这个方向，函数变化率最大。<br>一句话概括，梯度下降法是：沿着梯度反方向更新目标函数𝑓(𝜃)的参数𝜃，使目标函数取得极小值的过程。换句话说：在参数的梯度方向上更新参数，使得误差逐渐变小！</p>
 <h3 id="梯度下降法的三种变体"><a href="#梯度下降法的三种变体" class="headerlink" title="梯度下降法的三种变体"></a>梯度下降法的三种变体</h3><h4 id="Batch-gradient-descent"><a href="#Batch-gradient-descent" class="headerlink" title="Batch gradient descent"></a>Batch gradient descent</h4><p>这种梯度下降法的特点是，遍历整个训练集的数据后更新一次模型参数𝜃。因此，这种方法收敛的速度非常慢；如果数据集非常大时，这种训练方法是不可接受的，因为对内存来说是一个非常大的挑战；而且，这种方法不能在线训练网络；</p>
