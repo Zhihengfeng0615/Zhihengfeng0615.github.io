@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('https://fengzhiheng.github.io').hostname,
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.7.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    comments: {"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
+  };
+</script>
+
+  <meta name="description" content="一些基本概念和定义：SCI、SSCI、IF、WOS、ESI、JCR、H Index">
+<meta property="og:type" content="article">
+<meta property="og:title" content="文献检索相关的基本概念">
+<meta property="og:url" content="https://fengzhiheng.github.io/2020/02/13/%E6%96%87%E7%8C%AE%E7%9B%B8%E5%85%B3%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/index.html">
+<meta property="og:site_name" content="Feng Zhiheng&#39;s Blog">
+<meta property="og:description" content="一些基本概念和定义：SCI、SSCI、IF、WOS、ESI、JCR、H Index">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-02-13T09:54:50.000Z">
+<meta property="article:modified_time" content="2020-02-13T14:49:08.135Z">
+<meta property="article:author" content="Feng Zhiheng">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://fengzhiheng.github.io/2020/02/13/%E6%96%87%E7%8C%AE%E7%9B%B8%E5%85%B3%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true
+  };
+</script>
+
+  <title>文献检索相关的基本概念 | Feng Zhiheng's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Feng Zhiheng's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://fengzhiheng.github.io/2020/02/13/%E6%96%87%E7%8C%AE%E7%9B%B8%E5%85%B3%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Feng Zhiheng">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Feng Zhiheng's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          文献检索相关的基本概念
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-02-13 17:54:50 / 修改时间：22:49:08" itemprop="dateCreated datePublished" datetime="2020-02-13T17:54:50+08:00">2020-02-13</time>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>3.6k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>6 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>一些基本概念和定义：SCI、SSCI、IF、WOS、ESI、JCR、H Index</p>
+<a id="more"></a> 
+<h3 id="什么是SCI"><a href="#什么是SCI" class="headerlink" title="什么是SCI?"></a>什么是SCI?</h3><p>SCI即《科学引文索引》(Science Citation Index），是由美国科学信息研究所（Institute for Scientific Information 简称ISI）创建的，收录文献的作者、题目、源期刊、摘要、关键词，不仅可以从文献引证的角度评估文章的学术价值，还可以迅速方便地组建研究课题的参考文献网络。SCI创刊于1961年。经过40年的发展完善，已从开始时单一的印刷型发展成为功能强大的电子化、集成化、网络化的大型多学科、综合性检索系统。</p>
+<h3 id="什么是SSCI数据库"><a href="#什么是SSCI数据库" class="headerlink" title="什么是SSCI数据库"></a>什么是SSCI数据库</h3><p>SSCI即社会科学引文索引（Social Sciences Citation Index），为SCI的姊妹篇，亦由美国科学信息研究所创建，是目前世界上可以用来对不同国家和地区的社会科学论文的数量进行统计分析的大型检索工具。</p>
+<h3 id="什么是CSSCI？"><a href="#什么是CSSCI？" class="headerlink" title="什么是CSSCI？"></a>什么是CSSCI？</h3><p>由南京大学研制成功的“中文社会科学引文索引”（CSSCI）是国家、教育部重点研究项目</p>
+<h3 id="什么是WOS"><a href="#什么是WOS" class="headerlink" title="什么是WOS?"></a>什么是WOS?</h3><p>Web of Science<br>历史：1997年，Thomson公司将SCI (Science Citation Index, 创立于1963年), SSCI (Social Science Citation Index，创立于1973年) 以及AHCI （Arts &amp; Humanities Citaion Index，创立于1978年）整合，利用互联网开放环境，创建了网络版的多学科文献数据库——Web of Science，成立至今已经20年。2016年7月，Onex Corporate与Baring Private Equity Asia完成对Thomson Scientific的收购，将其更名为科睿唯安(Clarivate Analytics）。</p>
+<h3 id="IF是什么？"><a href="#IF是什么？" class="headerlink" title="IF是什么？"></a>IF是什么？</h3><p>Impact Factor，影响因子.<br>在 JCR 中可以得到每种期刊的影响因子（Impact Factor， IF，某期刊前两年发表的论文在第三年中平均被引次数）。影响因子的高低，在一定程度上可以反应一个期刊的影响力。<br>中科院根据影响因子的高低把SCI期刊划分为“一二三四”四个区。</p>
+<p>来自 <a href="http://blog.sciencenet.cn/blog-505548-994063.html" target="_blank" rel="noopener">http://blog.sciencenet.cn/blog-505548-994063.html</a> </p>
+<h3 id="什么是ESI"><a href="#什么是ESI" class="headerlink" title="什么是ESI?"></a>什么是ESI?</h3><p>ESI（Essential Science Indicators）－基本科学指标数据库，是由世界上著名的学术信息出版机构ISI（美国科技信息所）于2001年推出的衡量科学研究绩效、跟踪科学发展趋势的基本分析评价工具，是基于ISI引文索引数据库Science Citation Index （简称SCI）和 Social Science Citation Index（简称SSCI）所收录的全球8500多种学术期刊的1000多万条文献纪录而建立的计量分析数据库。</p>
+<p>ESI中的数据包括高被引率作者的排名、论文排名（前1%）、国家排名（前50%）和期刊排名（50%），并有简要的说明指导用户如何进行数据分析，所有图表带有解释性的链接页面。ESI的另一个独特之处是提供被称为研究前沿的专业领域列表，该列表反映了当前正深入研究的和有突破性进展的科学领域。</p>
+<h3 id="什么是Clarivate？"><a href="#什么是Clarivate？" class="headerlink" title="什么是Clarivate？"></a>什么是Clarivate？</h3><p>科睿唯安作为全球领先的专业信息服务提供商，致力于通过为全球客户提供值得信赖的数据与分析，洞悉科技前沿，加快创新步伐。公司拥全球领先的分析解决方案和覆盖范围广泛的数据库，深受全球知名学府、机构和品牌信赖。</p>
+<p>来自 <a href="https://clarivate.com.cn/about-us/what-we-do/" target="_blank" rel="noopener">https://clarivate.com.cn/about-us/what-we-do/</a> </p>
+<h3 id="如何查看不同期刊的影响力（JCR）？"><a href="#如何查看不同期刊的影响力（JCR）？" class="headerlink" title="如何查看不同期刊的影响力（JCR）？"></a>如何查看不同期刊的影响力（JCR）？</h3><p>Journal Citation Reports(JCR)是美国ISI（科学情报研究所）出版的一种关于期刊评估的基本的、全面的和唯一的资源工具，可以根据期刊引用数据反映期刊的重要程度，可查询期刊的影响因子。</p>
+<p><a href="http://dbnav.lib.pku.edu.cn/content/journal-citation-reportsjcr-%E6%9C%9F%E5%88%8A%E5%BC%95%E7%94%A8%E6%8A%A5%E5%91%8A%E7%BD%91%E7%BB%9C%E7%89%88web-science" target="_blank" rel="noopener">http://dbnav.lib.pku.edu.cn/content/journal-citation-reportsjcr-%E6%9C%9F%E5%88%8A%E5%BC%95%E7%94%A8%E6%8A%A5%E5%91%8A%E7%BD%91%E7%BB%9C%E7%89%88web-science</a> </p>
+<h3 id="如何评价不同机构在国际上的影响力？"><a href="#如何评价不同机构在国际上的影响力？" class="headerlink" title="如何评价不同机构在国际上的影响力？"></a>如何评价不同机构在国际上的影响力？</h3><p>利用ESI数据库。ESI的使用教程：<a href="http://dbnav.lib.pku.edu.cn/sites/default/files/ESI.pdf" target="_blank" rel="noopener">http://dbnav.lib.pku.edu.cn/sites/default/files/ESI.pdf</a></p>
+<h3 id="汤森路透集团为何物？"><a href="#汤森路透集团为何物？" class="headerlink" title="汤森路透集团为何物？"></a>汤森路透集团为何物？</h3><p>汤森路透是全球领先的专业信息服务提供商。我们将专业知识与创新科技相结合，为金融市场及风险管理、法律、税务与会计和媒体领域的专业人员和决策者提供重要的信息，产业还包括世界上最受信赖的新闻机构。</p>
+<p>来自 <a href="https://www.thomsonreuters.cn/zh/about-us.html" target="_blank" rel="noopener">https://www.thomsonreuters.cn/zh/about-us.html</a> </p>
+<p>汤森路透集团每年都会出版期刊引用报告（Journal Citation Report，JCR），提供了一套统计数据，展示科学期刊被引用情况、发表论文数量以及论文的平均被引用情况。</p>
+<p>来自 <a href="http://blog.sciencenet.cn/blog-505548-994063.html" target="_blank" rel="noopener">http://blog.sciencenet.cn/blog-505548-994063.html</a> </p>
+<h3 id="H-Index是什么"><a href="#H-Index是什么" class="headerlink" title="H Index是什么"></a>H Index是什么</h3><p>H指数（H index）是一个混合量化指标，可用于评估研究人员的学术产出数量与学术产出水平。H指数是2005年由美国加利福尼亚大学圣地亚哥分校的物理学家乔治·希尔施提出的。<br>H指数的计算基于其研究者的论文数量及其论文被引用的次数。赫希认为：一个人在其所有学术文章中有N篇论文分别被引用了至少N次，他的H指数就是N。如美国耶鲁大学免疫学家理查德·弗来沃发表的900篇文章中，有107篇被引用了107次以上，他的H指数是107。<br>可以按照如下方法确定某人的H指数：</p>
+<ol>
+<li>将其发表的所有SCI论文按被引次数从高到低排序；</li>
+<li>从前往后查找排序后的列表，直到某篇论文的序号大于该论文被引次数。所得序号减一即为H指数。</li>
+</ol>
+<h3 id="如何查H-index"><a href="#如何查H-index" class="headerlink" title="如何查H index"></a>如何查H index</h3><ol>
+<li>查阅国际期刊、国家、学科等的H指数可以查<a href="http://www.scimagojr.com/countryrank.php" target="_blank" rel="noopener">http://www.scimagojr.com/countryrank.php</a></li>
+<li>查阅作者的论文、被引用量、H指数等可以查<a href="http://www.researcherid.com/Home.action" target="_blank" rel="noopener">http://www.researcherid.com/Home.action</a></li>
+</ol>
+<h3 id="论文的引用次数如何计算"><a href="#论文的引用次数如何计算" class="headerlink" title="论文的引用次数如何计算"></a>论文的引用次数如何计算</h3><p>目前，收集论文的被引次数有两大数据库，即Web of Science (WoS)和Google Scholar。WoS上查到的论文被引用数据来自于该系统中收录的期刊（即SCI期刊）论文和书籍的引用，主要是英文期刊论文和书籍的引用。而Google Scholar系统中所查到的论文被引用数据来自于该系统中收录的SCI期刊论文和书籍和任何非SCI期刊论文、毕业论文、书籍和专利等的引用，并不限于英文的引用。</p>
+<h3 id="常用的期刊评价指标"><a href="#常用的期刊评价指标" class="headerlink" title="常用的期刊评价指标"></a>常用的期刊评价指标</h3><table>
+<thead>
+<tr>
+<th align="center">指标</th>
+<th align="center">描述</th>
+<th align="center">查询网站/系统</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">IF</td>
+<td align="center">期刊影响因子（Journal Impact Factor），某期刊前两年发表的论文在第三年中平均被引次数</td>
+<td align="center">JCR、SCIE（JIF数据引自JCR）、SSCI（JIF数据引自JCR）</td>
+</tr>
+<tr>
+<td align="center">SNIP</td>
+<td align="center">Source Normalized Impact per Paper，是在三年引文窗中某一来源出版物中的每篇论文的平均被引次数与该学科领域的“引文潜力”之间的比值，其中“引文潜力”是指一篇文章估计在指定的学科领域中所达到的平均被引次数。它不用考虑期刊分类，依据作者引用其他论文的频次、引用影响的成熟速度和数据库在领域内的文献覆盖率，就可以对不同学科领域的期刊进行直接比较。SNIP一年更新两次，具有动态发展性</td>
+<td align="center"><a href="http://www.scopus.com/" target="_blank" rel="noopener">http://www.scopus.com/</a> <a href="http://www.journalindicators.com/" target="_blank" rel="noopener">http://www.journalindicators.com/</a></td>
+</tr>
+<tr>
+<td align="center">SJR</td>
+<td align="center">SCImago Joumal Rankings，衡量经过加权后的期刊被引用次数。引用次数的加权值由施引期刊的学科领域和声望 (SJR) 决定</td>
+<td align="center"><a href="http://www.scimagojr.com/" target="_blank" rel="noopener">http://www.scimagojr.com/</a> Scopus</td>
+</tr>
+<tr>
+<td align="center">Cite Score</td>
+<td align="center">衡量期刊所发表文献的平均被引用次数,计算时间为三年（之前三年出版的文献在一年中受到期刊引用的次数，除以这三年出版的编入 Scopus 检索的文献数量），每年更新</td>
+<td align="center"><a href="http://dbnav.lib.pku.edu.cn/node/11875" target="_blank" rel="noopener">http://dbnav.lib.pku.edu.cn/node/11875</a></td>
+</tr>
+</tbody></table>
+<h3 id="国外权威数据库中收录的中国期刊"><a href="#国外权威数据库中收录的中国期刊" class="headerlink" title="国外权威数据库中收录的中国期刊"></a>国外权威数据库中收录的中国期刊</h3><p>SCI中收录的中国期刊：<a href="http://mjl.clarivate.com/publist_sciex.pdf" target="_blank" rel="noopener">http://mjl.clarivate.com/publist_sciex.pdf</a></p>
+<p>SSCI中收录的中国期刊：<a href="http://mjl.clarivate.com/publist_ssci.pdf" target="_blank" rel="noopener">http://mjl.clarivate.com/publist_ssci.pdf</a></p>
+<p>A&amp;HCI中收录的中国期刊：<a href="http://mjl.clarivate.com/publist_ah.pdf" target="_blank" rel="noopener">http://mjl.clarivate.com/publist_ah.pdf</a></p>
+<p>EI中收录的中国期刊：<a href="https://www.elsevier.com/solutions/engineering-village/content" target="_blank" rel="noopener">https://www.elsevier.com/solutions/engineering-village/content</a></p>
+
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Feng Zhiheng
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://fengzhiheng.github.io/2020/02/13/%E6%96%87%E7%8C%AE%E7%9B%B8%E5%85%B3%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" title="文献检索相关的基本概念">https://fengzhiheng.github.io/2020/02/13/文献相关的基本概念/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/02/11/Nyquist%E9%87%87%E6%A0%B7%E5%AE%9A%E5%BE%8B/" rel="prev" title="奈奎斯特采样定律-Nyquist Sampling Theorem">
+      <i class="fa fa-chevron-left"></i> 奈奎斯特采样定律-Nyquist Sampling Theorem
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+    
+  
+  <div class="comments">
+  <script src="https://utteranc.es/client.js" repo="FengZhiheng/FengZhiheng.github.io" issue-term="pathname" theme="github-light" crossorigin="anonymous" async></script>
+  </div>
+  
+  
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是SCI"><span class="nav-number">1.</span> <span class="nav-text">什么是SCI?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是SSCI数据库"><span class="nav-number">2.</span> <span class="nav-text">什么是SSCI数据库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是CSSCI？"><span class="nav-number">3.</span> <span class="nav-text">什么是CSSCI？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是WOS"><span class="nav-number">4.</span> <span class="nav-text">什么是WOS?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IF是什么？"><span class="nav-number">5.</span> <span class="nav-text">IF是什么？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是ESI"><span class="nav-number">6.</span> <span class="nav-text">什么是ESI?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是Clarivate？"><span class="nav-number">7.</span> <span class="nav-text">什么是Clarivate？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何查看不同期刊的影响力（JCR）？"><span class="nav-number">8.</span> <span class="nav-text">如何查看不同期刊的影响力（JCR）？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何评价不同机构在国际上的影响力？"><span class="nav-number">9.</span> <span class="nav-text">如何评价不同机构在国际上的影响力？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#汤森路透集团为何物？"><span class="nav-number">10.</span> <span class="nav-text">汤森路透集团为何物？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#H-Index是什么"><span class="nav-number">11.</span> <span class="nav-text">H Index是什么</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何查H-index"><span class="nav-number">12.</span> <span class="nav-text">如何查H index</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#论文的引用次数如何计算"><span class="nav-number">13.</span> <span class="nav-text">论文的引用次数如何计算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常用的期刊评价指标"><span class="nav-number">14.</span> <span class="nav-text">常用的期刊评价指标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#国外权威数据库中收录的中国期刊"><span class="nav-number">15.</span> <span class="nav-text">国外权威数据库中收录的中国期刊</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Feng Zhiheng"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Feng Zhiheng</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">55</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Feng Zhiheng</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    <span title="站点总字数">94k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">2:37</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.2.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.7.0
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  
+  <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="//cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-nest@latest/canvas-nest.min.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
