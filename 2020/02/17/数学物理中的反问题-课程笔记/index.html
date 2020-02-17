@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('https://fengzhiheng.github.io').hostname,
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.7.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    comments: {"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
+  };
+</script>
+
+  <meta name="description" content="数学物理中的反问题，教材是：An introduction to the mathematical theory of inverse problems by Andreas Kirsch (auth.) (z-lib.org)——德国人">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数学物理中的反问题-课程笔记">
+<meta property="og:url" content="https://fengzhiheng.github.io/2020/02/17/%E6%95%B0%E5%AD%A6%E7%89%A9%E7%90%86%E4%B8%AD%E7%9A%84%E5%8F%8D%E9%97%AE%E9%A2%98-%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:site_name" content="Feng Zhiheng&#39;s Blog">
+<meta property="og:description" content="数学物理中的反问题，教材是：An introduction to the mathematical theory of inverse problems by Andreas Kirsch (auth.) (z-lib.org)——德国人">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-02-17T04:54:25.000Z">
+<meta property="article:modified_time" content="2020-02-17T07:22:33.832Z">
+<meta property="article:author" content="Feng Zhiheng">
+<meta property="article:tag" content="未整理">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://fengzhiheng.github.io/2020/02/17/%E6%95%B0%E5%AD%A6%E7%89%A9%E7%90%86%E4%B8%AD%E7%9A%84%E5%8F%8D%E9%97%AE%E9%A2%98-%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true
+  };
+</script>
+
+  <title>数学物理中的反问题-课程笔记 | Feng Zhiheng's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Feng Zhiheng's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://fengzhiheng.github.io/2020/02/17/%E6%95%B0%E5%AD%A6%E7%89%A9%E7%90%86%E4%B8%AD%E7%9A%84%E5%8F%8D%E9%97%AE%E9%A2%98-%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Feng Zhiheng">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Feng Zhiheng's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          数学物理中的反问题-课程笔记
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-02-17 12:54:25 / 修改时间：15:22:33" itemprop="dateCreated datePublished" datetime="2020-02-17T12:54:25+08:00">2020-02-17</time>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.7k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>3 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>数学物理中的反问题，教材是：<br>An introduction to the mathematical theory of inverse problems by Andreas Kirsch (auth.) (z-lib.org)——德国人</p>
+<a id="more"></a> 
+
+<hr>
+<h3 id="Lecture-1"><a href="#Lecture-1" class="headerlink" title="Lecture-1"></a>Lecture-1</h3><p>2020年2月17日12:56:32<br>数学物理方程，指的就是偏微分方程<br>课程的名字，有问题。是外行人写的。</p>
+<p>想说的是，偏微分方程的反问题。——属于比较难的一类。</p>
+<h4 id="这门课的名称应该叫：反问题的数学理论与算法："><a href="#这门课的名称应该叫：反问题的数学理论与算法：" class="headerlink" title="这门课的名称应该叫：反问题的数学理论与算法："></a>这门课的名称应该叫：反问题的数学理论与算法：</h4><p>归根到底：计算数学，如何用计算机数值求解。</p>
+<p>积分方程、微分方程</p>
+<p>基本思路，把反问题，转换成一个稳定的问题，把问题离散。<br>老师只懂数学，所以从数学的角度理解这个问题。</p>
+<h4 id="课程介绍"><a href="#课程介绍" class="headerlink" title="课程介绍"></a>课程介绍</h4><p>教材的介绍<br>课程大纲，在函数空间里玩儿。<br>希尔伯特空间，有内积会很方便。<br>最好学过泛函分析。没学过泛函分析，可能有点难<br>数值计算，可以弥补。<br>一般第三章介绍不完。</p>
+<p>关键词：积分方程、紧算子、奇异值分解、第一类线性方程、微分方程、特征值（实际能够测到的）、有限元、希尔伯特空间、几何分析、数值计算（这是这门课的非常基础的内容）</p>
+<p>离散天生就有正则化的性质。</p>
+<p>第四章开始，反问题的三个special case。<br>第五章，一种特殊的成像<br>第六章，反散射，雷达技术</p>
+<p>核心是第二章</p>
+<p>开这门课的目的是：<br>张XXX希望在这方面做一些工作。希望北大也开展这方面的问题的研究。</p>
+<p><strong>考核的方式</strong>：</p>
+<ol>
+<li>之前—-&gt;闭卷考试的方式、变成了考泛函分析。</li>
+<li>变成了：前边，老师讲线性反问题的理论。后边同学们每个人讲一些内容。结合自己的研究工作，从这门课得到哪些有帮助的东西。把问题讲清楚。根据你讲的情况，给你一个成绩。只要你愿意，你只要能停下来，讲讲你自己做的东西。就能deserve一个比较好的成绩。自己的学生，正则化理论，你怎么用的？</li>
+</ol>
+<p>如果不符合以上的内容，怎么办？问题不大，第一种，你可以根据老师讲的东西，觉得老师讲的不清楚，你再仔细讲一讲。<br>第二种，之前你思考的问题和反问题不相关，但是现在你开始从反问题的角度思考这种问题，和大家分享讲一讲。第三种，之前你在哪了看到了一篇关于反问题的paper，把paper里的内容讲一讲。</p>
+<p>口试是非常厉害的考察方式。</p>
+<p>老师非常主观地给成绩。</p>
+<p>老师觉得思想很重要。</p>
+<p>老师好，我的麦克风出现了点问题，所以只能通过文字交流。选这门课，主要想通过这门课拓展一下自己的思维方式。因为在我的研究领域中，很多问题都是反问题，没有正解。我的研究方向是神经生物方向，探讨的是引起疼痛背后的神经学机制。</p>
+<p>其实关心这门课，是因为我的导师说，我们实验关心的问题都是反问题，但是我都不知道反问题是什么，所以我想来向专家请教请教，到底什么才是反问题。遇到反问题，用正则化就能完全解决吗？没准我的导致就只是听过反问题的名词感觉比较高级，用这个词来咋呼我。我要通过上这门课来好好求证一下，到底我导师说的那些问题是不是反问题。除此之外，我还想学学反问题如何求解呢？</p>
+<p>积分方程的求解问题。</p>
+<p>紧算子有奇异值分解，所有都能看得非常清楚。</p>
+<h4 id="为什么要研究反问题呢？"><a href="#为什么要研究反问题呢？" class="headerlink" title="为什么要研究反问题呢？"></a>为什么要研究反问题呢？</h4><p>三元组。</p>
+<p>什么样的输入，会造成这样的输出？</p>
+<ul>
+<li>正整数乘法与因子分解问题【正反问题】，为什么呢，为什么正整数乘法叫正问题，因子分解叫反问题？因为乘法容易算，反问题不容易算，甚至反问题的解不是唯一的。</li>
+<li>一元多项式求值与插值问题；</li>
+<li>函数的积分与微分问题；</li>
+<li>函数的积分与微分问题；<br>  老师：一定要把积分问题当成正问题，把微分问题当成反问题。因为积分问题越积分，越稳定。如果你的问题有误差，越微分，这个误差就越被放大。<br>  老师：一般有这样的规律：一个方向的变换越稳定，它的反问题就越不问题。反卷积非常不稳定。<br>  图像的去噪、去模糊、超分辨也算是个反问题</li>
+<li>Fourier变化与反变换；</li>
+</ul>
+<p>定义：</p>
+<ol>
+<li>正问题：已知输入和系统，求输出</li>
+<li>重构问题：已知系统和输出，求输入</li>
+<li>系统辨识问题：已知输入和输出，求系统参数<br>2和3都是反问题</li>
+</ol>
+<p>X是一个集合，这个集合有一定的数学结构，怎么理解呢？<br>:=  叫做，y定义成。<br>K是一个算子</p>
+<p>我的理解：机器学习的训练过程就是一个反问题求解的过程。</p>
+<p>弯弯，叫做tiuta</p>
+<p>第一类方程：<br>1.xxx2.xxxx3.卷积</p>
+<p>如果算子可逆，那么谁正，谁逆就无所谓了。</p>
+<p>K^{-1}的性质不好了，因为他是无界的，为什么？</p>
+<hr>
+
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Feng Zhiheng
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://fengzhiheng.github.io/2020/02/17/%E6%95%B0%E5%AD%A6%E7%89%A9%E7%90%86%E4%B8%AD%E7%9A%84%E5%8F%8D%E9%97%AE%E9%A2%98-%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/" title="数学物理中的反问题-课程笔记">https://fengzhiheng.github.io/2020/02/17/数学物理中的反问题-课程笔记/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%9C%AA%E6%95%B4%E7%90%86/" rel="tag"># 未整理</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/02/17/%E7%A5%9E%E7%BB%8F%E5%B7%A5%E7%A8%8B%E6%A6%82%E8%AE%BA-%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0%E6%94%B6%E8%8E%B7/" rel="prev" title="神经工程概论-课程笔记收获">
+      <i class="fa fa-chevron-left"></i> 神经工程概论-课程笔记收获
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+    
+  
+  <div class="comments">
+  <script src="https://utteranc.es/client.js" repo="FengZhiheng/FengZhiheng.github.io" issue-term="pathname" theme="github-light" crossorigin="anonymous" async></script>
+  </div>
+  
+  
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Lecture-1"><span class="nav-number">1.</span> <span class="nav-text">Lecture-1</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#这门课的名称应该叫：反问题的数学理论与算法："><span class="nav-number">1.1.</span> <span class="nav-text">这门课的名称应该叫：反问题的数学理论与算法：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#课程介绍"><span class="nav-number">1.2.</span> <span class="nav-text">课程介绍</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#为什么要研究反问题呢？"><span class="nav-number">1.3.</span> <span class="nav-text">为什么要研究反问题呢？</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Feng Zhiheng"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Feng Zhiheng</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">58</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Feng Zhiheng</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    <span title="站点总字数">100k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">2:47</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.2.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.7.0
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  
+  <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="//cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-nest@latest/canvas-nest.min.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>

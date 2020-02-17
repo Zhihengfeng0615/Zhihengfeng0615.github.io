@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('https://fengzhiheng.github.io').hostname,
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.7.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    comments: {"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
+  };
+</script>
+
+  <meta name="description" content="为什么上这门课？  概率论是生活必备的基本知识； 一般到哪里卡壳了呢？ 复习基本概念； 条件概率； 贝叶斯； 统计检验在不同场景下的应用，以及他们的道理是什么？">
+<meta property="og:type" content="article">
+<meta property="og:title" content="概率与统计">
+<meta property="og:url" content="https://fengzhiheng.github.io/2020/02/16/%E6%A6%82%E7%8E%87%E4%B8%8E%E7%BB%9F%E8%AE%A1/index.html">
+<meta property="og:site_name" content="Feng Zhiheng&#39;s Blog">
+<meta property="og:description" content="为什么上这门课？  概率论是生活必备的基本知识； 一般到哪里卡壳了呢？ 复习基本概念； 条件概率； 贝叶斯； 统计检验在不同场景下的应用，以及他们的道理是什么？">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-02-16T01:30:31.000Z">
+<meta property="article:modified_time" content="2020-02-16T15:00:05.044Z">
+<meta property="article:author" content="Feng Zhiheng">
+<meta property="article:tag" content="未整理">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://fengzhiheng.github.io/2020/02/16/%E6%A6%82%E7%8E%87%E4%B8%8E%E7%BB%9F%E8%AE%A1/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true
+  };
+</script>
+
+  <title>概率与统计 | Feng Zhiheng's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Feng Zhiheng's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://fengzhiheng.github.io/2020/02/16/%E6%A6%82%E7%8E%87%E4%B8%8E%E7%BB%9F%E8%AE%A1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Feng Zhiheng">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Feng Zhiheng's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          概率与统计
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-02-16 09:30:31 / 修改时间：23:00:05" itemprop="dateCreated datePublished" datetime="2020-02-16T09:30:31+08:00">2020-02-16</time>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>4.2k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>7 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>为什么上这门课？</p>
+<ol>
+<li>概率论是生活必备的基本知识；</li>
+<li>一般到哪里卡壳了呢？<br> 复习基本概念；<br> 条件概率；<br> 贝叶斯；<br> 统计检验在不同场景下的应用，以及他们的道理是什么？</li>
+</ol>
+<a id="more"></a> 
+
+<p>概率名词：<br>实验(Experiment,experiment,experiment)<br>一个实验包含：步骤（procedures），模型（model），观察（observations）</p>
+<p>结果（outcome）</p>
+<p>样本空间（sample space），机率实验所有可能的结果的集合，通常用S来表示</p>
+<p>事件（event），对实验结果的某种叙述。</p>
+<p>机率的三条公理</p>
+<ol>
+<li>公理一：对于任何事件A而言，P(A)&gt;=0;</li>
+<li>公理二：P(S) = 1；S是样本空间</li>
+<li>公理三：时间A1,A2,…互斥  =&gt; P(A1 U A2 U A3 U …) = P(A1) + P(A2) + P(A3) + …<br><a href="https://youtu.be/NIszc2yzmD8?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=609" target="_blank" rel="noopener">https://youtu.be/NIszc2yzmD8?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=609</a></li>
+</ol>
+<p>机率很多时候反映的是我们对某些事情的了解程度<br><a href="https://youtu.be/qc8KRumNlio?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=57" target="_blank" rel="noopener">https://youtu.be/qc8KRumNlio?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=57</a></p>
+<p>【条件概率本质上刻画的是，当我们知道某些事情发生后，我们对一件事情的了解可能会有所改变。一旦我们对一个事情的了解发生了改变，它对应的样本空间也就发生了变化】</p>
+<p>P(X|Y) 念做 P of X given Y</p>
+<p>P(oi|Y) = P(oi)/P(Y)<br><a href="https://youtu.be/HhUmP_jzxAo?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=100" target="_blank" rel="noopener">https://youtu.be/HhUmP_jzxAo?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=100</a><br>为什么在Y发生的前提下，oi发生的概率等于P(oi)除上P(Y)呢？想一个合理的解释，如果没有合理的解释永远，永远都记不住！<br>叶丙成老师的解释：<br><a href="https://youtu.be/qc8KRumNlio?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=613" target="_blank" rel="noopener">https://youtu.be/qc8KRumNlio?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=613</a><br>我的评价：很模糊，其实也没说清楚，在卷角漏曲的前提下，B为正解的概率是多少？</p>
+<p>北京大学-何书元对条件概率的推导：<br><a href="https://youtu.be/B35CIZZcCjo?list=PLiNa3O8Vm6CHQ6oQf7ItPQ5_cvk9wQsO-&amp;t=383" target="_blank" rel="noopener">https://youtu.be/B35CIZZcCjo?list=PLiNa3O8Vm6CHQ6oQf7ItPQ5_cvk9wQsO-&amp;t=383</a><br>从公式上进行的推导，很无聊，但严谨。没有形象的比喻，也不容易理解。</p>
+<p>我的理解：应该从样本空间的角度考虑。首先在知道卷角漏曲的前提下，我们的样本空间只剩下B和D了，而在原始的样本空间中，outcome B和outcome D的概率是一样的。根据观察，在现在的样本空间中，outcome B和outcome D的概率也是一样的。<br>所以，在知道卷角漏曲的前提下，B为正解的概率就是1/2。其中1代表样本B，2代表样本空间的两个样本B和D。如果分子分母同时除上4，【(1/4)/(2/4)】，分子代表在原始的样本空间（A,B,C,D）中，B发生的概率是1/4，卷角漏曲对应的概率是2/4；</p>
+<p>这是一个哲学的问题，为什么要有除法？</p>
+<ol>
+<li>除法意味着两个值做比较，X/Y如果比1大，那么意味着X比Y大。</li>
+<li>同时除法也有归一化的用途，X/Y，如果Y是最大值，那么相当于把所有的值都缩放到[0,1]的区间内。</li>
+<li>那么概率相除是什么含义呢？一个事件发生的概率除上另外一个事情发生的概率，得到什么呢？——其实我觉得没有啥意义（起码现在还没想到非常形象的解释。</li>
+</ol>
+<p>终极的条件概率计算公式<br><a href="https://youtu.be/HhUmP_jzxAo?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=282" target="_blank" rel="noopener">https://youtu.be/HhUmP_jzxAo?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=282</a></p>
+<p>如何理解条件概率的计算公式。</p>
+<p>P(X|Y)= P(X∩Y)/P(Y)<br>通常，这些词汇：condition on,suppose,if,assuming,given that。后边跟的就是条件概率的条件。</p>
+<p>这个公式还会怎么用呢？<br>有些时候，条件机率我们是知道的，P(Y)的几率我们也是知道的，我们不知道P(X∩Y)的几率。</p>
+<p>这节课讲的是Total probability定理：<br><a href="https://youtu.be/D_pmxqOmhgQ?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=22" target="_blank" rel="noopener">https://youtu.be/D_pmxqOmhgQ?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=22</a></p>
+<p>这个其实就是切面包定理<br>P(A) = P(A|C1)P(C1) + P(A|C2)P(C2)+…+P(A|Cn)P(Cn)<br>这里的A是我们关心的事情，A比如是店员笑不笑</p>
+<p>接下来引申出来：Bayes’ Rule（贝氏定理）<br>这个定理下，A不是我们关心的事情，而是条件，换句话说，是店员笑的前提下，店客满的几率是多少？<br><a href="https://youtu.be/D_pmxqOmhgQ?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=281" target="_blank" rel="noopener">https://youtu.be/D_pmxqOmhgQ?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=281</a></p>
+<p>很多时候，哪些是条件，哪些是我们关心的东西也不太好确定。</p>
+<p>如何理解贝叶斯定理的精华？前提是非常理解条件概率的精华，那么什么是条件概率呢？</p>
+<p>条件概率P(X|Y) 念做，P of X given Y，含义是在Y发生的前提下，X发生的可能性。</p>
+<p>李老师指出，书的价值不是在式子，式子都是大同小异的，真正有价值的地方是文字阐述的内容。因为不好用数学公式描述的地方才需要用文字进一步阐述。<br><a href="https://youtu.be/jGmvsMbU8pA?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=625" target="_blank" rel="noopener">https://youtu.be/jGmvsMbU8pA?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=625</a></p>
+<p>随机变量的本质：<br><a href="https://youtu.be/h0DH8K9JTpw?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=433" target="_blank" rel="noopener">https://youtu.be/h0DH8K9JTpw?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=433</a><br>X:S-R  S是样本空间，到实数的一个映射</p>
+<p>什么是累计分布函数？<br>累积分布函数(Cumulative Distribution Function)<br><a href="https://youtu.be/RlNfklkZPlo?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=149" target="_blank" rel="noopener">https://youtu.be/RlNfklkZPlo?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=149</a></p>
+<p>什么是机率质量函数？<br>probability mass function，简写为pmf<br><a href="https://youtu.be/ynBUPA67a3k?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=28" target="_blank" rel="noopener">https://youtu.be/ynBUPA67a3k?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=28</a><br>几率质量函数一定指的是，离散随机变量。<br>p_X(x)=P(X=x)</p>
+<p>PMF和CDF之间的关系：<br><a href="https://youtu.be/ynBUPA67a3k?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=459" target="_blank" rel="noopener">https://youtu.be/ynBUPA67a3k?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=459</a></p>
+<p>在数学中，连续型随机变量的概率密度函数（Probability density function）PDF</p>
+<p>伯努利分布，这样的module，有个特点一次实验，两个结果。</p>
+<p>为什么要探讨，联合纪律分布：<br>同时将很多个随机变量的行为一起拿来看，我们可以看到很多以往不一样的资讯！<br>Joint Probability distribution<br><a href="https://youtu.be/FC4buzLuWmQ?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=78" target="_blank" rel="noopener">https://youtu.be/FC4buzLuWmQ?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=78</a></p>
+<p>probability mass function和probability indensity function之间的关系。</p>
+<p>概率质量函数和概率密度函数不同之处在于：概率质量函数是对离散随机变量定义的，本身代表该值的概率；概率密度函数是对连续随机变量定义的，本身不是概率，只有对连续随机变量的概率密度函数在某区间内进行积分后才是概率。</p>
+<p>边际概率分布：<br>marginal probability distribution</p>
+<p>Variance相关的性质<br><a href="https://youtu.be/72GSlk0AfFc?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa" target="_blank" rel="noopener">https://youtu.be/72GSlk0AfFc?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa</a><br>协方差：<br>Cov(X,Y) = E[(X-u_x)(Y-u_y)]</p>
+<p>出现了卷积的形式：<br><a href="https://youtu.be/6b1-LIMMez4?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=305" target="_blank" rel="noopener">https://youtu.be/6b1-LIMMez4?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=305</a><br>P_z(X)   </p>
+<p>X1，X2，X3是IID，（独立同分布的随机变量）<br>那么Z=X1+X2的PDF（probability density function）就是<br>X1和X2的PDF的卷积【这里需要问一百个为什么！！！】</p>
+<p>如何理解两个函数做卷积？</p>
+<p>什么是MGF?<br>Moment generating function<br>为什么要学MGF，因为convolution很不好算<br><a href="https://youtu.be/6b1-LIMMez4?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=781" target="_blank" rel="noopener">https://youtu.be/6b1-LIMMez4?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=781</a></p>
+<p>红娘这个例子太形象了<br><a href="https://youtu.be/LGe5eEBzgeU?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=202" target="_blank" rel="noopener">https://youtu.be/LGe5eEBzgeU?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=202</a></p>
+<p>什么是moment？<br>没听懂。<br><a href="https://youtu.be/mIbJfAvrNvw?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=645" target="_blank" rel="noopener">https://youtu.be/mIbJfAvrNvw?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=645</a></p>
+<p>独立随机变数之和</p>
+<p><a href="https://youtu.be/5RroTs-7wwE?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=55" target="_blank" rel="noopener">https://youtu.be/5RroTs-7wwE?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=55</a><br>I.I.D.<br>Independently and Identically Distributed</p>
+<p>中央极限定理背后的道理是什么？<br>现象是：你有n个IID的随机变量X1,X2,X3,…,Xn，你把他们加起来，得到Z,当n趋近于无穷大时，Z的PDF就是高斯分布。</p>
+<p>噪声为什么是正太分布？<br>首先电子有能量，有能量就会忽大忽小乱跑。关键点在于，这些电子都是独立的，多个独立同分布的和的效应就是正太分布。<br><a href="https://youtu.be/sWEjck-m1CQ?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=643" target="_blank" rel="noopener">https://youtu.be/sWEjck-m1CQ?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=643</a></p>
+
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Feng Zhiheng
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://fengzhiheng.github.io/2020/02/16/%E6%A6%82%E7%8E%87%E4%B8%8E%E7%BB%9F%E8%AE%A1/" title="概率与统计">https://fengzhiheng.github.io/2020/02/16/概率与统计/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%9C%AA%E6%95%B4%E7%90%86/" rel="tag"># 未整理</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/02/13/%E6%96%87%E7%8C%AE%E7%9B%B8%E5%85%B3%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" rel="prev" title="文献检索相关的基本概念">
+      <i class="fa fa-chevron-left"></i> 文献检索相关的基本概念
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/02/17/%E7%A5%9E%E7%BB%8F%E5%B7%A5%E7%A8%8B%E6%A6%82%E8%AE%BA-%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0%E6%94%B6%E8%8E%B7/" rel="next" title="神经工程概论-课程笔记收获">
+      神经工程概论-课程笔记收获 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+    
+  
+  <div class="comments">
+  <script src="https://utteranc.es/client.js" repo="FengZhiheng/FengZhiheng.github.io" issue-term="pathname" theme="github-light" crossorigin="anonymous" async></script>
+  </div>
+  
+  
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Feng Zhiheng"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Feng Zhiheng</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">58</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Feng Zhiheng</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    <span title="站点总字数">100k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">2:47</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.2.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.7.0
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  
+  <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="//cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-nest@latest/canvas-nest.min.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>

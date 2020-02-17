@@ -1,6 +1,148 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>数学物理中的反问题-课程笔记</title>
+    <url>/2020/02/17/%E6%95%B0%E5%AD%A6%E7%89%A9%E7%90%86%E4%B8%AD%E7%9A%84%E5%8F%8D%E9%97%AE%E9%A2%98-%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<p>数学物理中的反问题，教材是：<br>An introduction to the mathematical theory of inverse problems by Andreas Kirsch (auth.) (z-lib.org)——德国人</p>
+<a id="more"></a> 
+
+<hr>
+<h3 id="Lecture-1"><a href="#Lecture-1" class="headerlink" title="Lecture-1"></a>Lecture-1</h3><p>2020年2月17日12:56:32<br>数学物理方程，指的就是偏微分方程<br>课程的名字，有问题。是外行人写的。</p>
+<p>想说的是，偏微分方程的反问题。——属于比较难的一类。</p>
+<h4 id="这门课的名称应该叫：反问题的数学理论与算法："><a href="#这门课的名称应该叫：反问题的数学理论与算法：" class="headerlink" title="这门课的名称应该叫：反问题的数学理论与算法："></a>这门课的名称应该叫：反问题的数学理论与算法：</h4><p>归根到底：计算数学，如何用计算机数值求解。</p>
+<p>积分方程、微分方程</p>
+<p>基本思路，把反问题，转换成一个稳定的问题，把问题离散。<br>老师只懂数学，所以从数学的角度理解这个问题。</p>
+<h4 id="课程介绍"><a href="#课程介绍" class="headerlink" title="课程介绍"></a>课程介绍</h4><p>教材的介绍<br>课程大纲，在函数空间里玩儿。<br>希尔伯特空间，有内积会很方便。<br>最好学过泛函分析。没学过泛函分析，可能有点难<br>数值计算，可以弥补。<br>一般第三章介绍不完。</p>
+<p>关键词：积分方程、紧算子、奇异值分解、第一类线性方程、微分方程、特征值（实际能够测到的）、有限元、希尔伯特空间、几何分析、数值计算（这是这门课的非常基础的内容）</p>
+<p>离散天生就有正则化的性质。</p>
+<p>第四章开始，反问题的三个special case。<br>第五章，一种特殊的成像<br>第六章，反散射，雷达技术</p>
+<p>核心是第二章</p>
+<p>开这门课的目的是：<br>张XXX希望在这方面做一些工作。希望北大也开展这方面的问题的研究。</p>
+<p><strong>考核的方式</strong>：</p>
+<ol>
+<li>之前—-&gt;闭卷考试的方式、变成了考泛函分析。</li>
+<li>变成了：前边，老师讲线性反问题的理论。后边同学们每个人讲一些内容。结合自己的研究工作，从这门课得到哪些有帮助的东西。把问题讲清楚。根据你讲的情况，给你一个成绩。只要你愿意，你只要能停下来，讲讲你自己做的东西。就能deserve一个比较好的成绩。自己的学生，正则化理论，你怎么用的？</li>
+</ol>
+<p>如果不符合以上的内容，怎么办？问题不大，第一种，你可以根据老师讲的东西，觉得老师讲的不清楚，你再仔细讲一讲。<br>第二种，之前你思考的问题和反问题不相关，但是现在你开始从反问题的角度思考这种问题，和大家分享讲一讲。第三种，之前你在哪了看到了一篇关于反问题的paper，把paper里的内容讲一讲。</p>
+<p>口试是非常厉害的考察方式。</p>
+<p>老师非常主观地给成绩。</p>
+<p>老师觉得思想很重要。</p>
+<p>老师好，我的麦克风出现了点问题，所以只能通过文字交流。选这门课，主要想通过这门课拓展一下自己的思维方式。因为在我的研究领域中，很多问题都是反问题，没有正解。我的研究方向是神经生物方向，探讨的是引起疼痛背后的神经学机制。</p>
+<p>其实关心这门课，是因为我的导师说，我们实验关心的问题都是反问题，但是我都不知道反问题是什么，所以我想来向专家请教请教，到底什么才是反问题。遇到反问题，用正则化就能完全解决吗？没准我的导致就只是听过反问题的名词感觉比较高级，用这个词来咋呼我。我要通过上这门课来好好求证一下，到底我导师说的那些问题是不是反问题。除此之外，我还想学学反问题如何求解呢？</p>
+<p>积分方程的求解问题。</p>
+<p>紧算子有奇异值分解，所有都能看得非常清楚。</p>
+<h4 id="为什么要研究反问题呢？"><a href="#为什么要研究反问题呢？" class="headerlink" title="为什么要研究反问题呢？"></a>为什么要研究反问题呢？</h4><p>三元组。</p>
+<p>什么样的输入，会造成这样的输出？</p>
+<ul>
+<li>正整数乘法与因子分解问题【正反问题】，为什么呢，为什么正整数乘法叫正问题，因子分解叫反问题？因为乘法容易算，反问题不容易算，甚至反问题的解不是唯一的。</li>
+<li>一元多项式求值与插值问题；</li>
+<li>函数的积分与微分问题；</li>
+<li>函数的积分与微分问题；<br>  老师：一定要把积分问题当成正问题，把微分问题当成反问题。因为积分问题越积分，越稳定。如果你的问题有误差，越微分，这个误差就越被放大。<br>  老师：一般有这样的规律：一个方向的变换越稳定，它的反问题就越不问题。反卷积非常不稳定。<br>  图像的去噪、去模糊、超分辨也算是个反问题</li>
+<li>Fourier变化与反变换；</li>
+</ul>
+<p>定义：</p>
+<ol>
+<li>正问题：已知输入和系统，求输出</li>
+<li>重构问题：已知系统和输出，求输入</li>
+<li>系统辨识问题：已知输入和输出，求系统参数<br>2和3都是反问题</li>
+</ol>
+<p>X是一个集合，这个集合有一定的数学结构，怎么理解呢？<br>:=  叫做，y定义成。<br>K是一个算子</p>
+<p>我的理解：机器学习的训练过程就是一个反问题求解的过程。</p>
+<p>弯弯，叫做tiuta</p>
+<p>第一类方程：<br>1.xxx2.xxxx3.卷积</p>
+<p>如果算子可逆，那么谁正，谁逆就无所谓了。</p>
+<p>K^{-1}的性质不好了，因为他是无界的，为什么？</p>
+<hr>
+]]></content>
+      <tags>
+        <tag>未整理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>神经工程概论-课程笔记收获</title>
+    <url>/2020/02/17/%E7%A5%9E%E7%BB%8F%E5%B7%A5%E7%A8%8B%E6%A6%82%E8%AE%BA-%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0%E6%94%B6%E8%8E%B7/</url>
+    <content><![CDATA[<p>神经工程概论</p>
+<a id="more"></a> 
+<hr>
+<h4 id="Lecture-1"><a href="#Lecture-1" class="headerlink" title="Lecture-1"></a>Lecture-1</h4><p>2020年2月17日10:53:45<br>展示了很多脑机接口的例子<br>神经调制技术<br>Deep Brain Stimulation<br>描述：<br>电极植入到指定的靶点，治疗帕金斯有非常好的疗效。</p>
+<p>脊髓表面刺激，让瘫痪病人走起来。基本原始里，在脊髓表面施加时空的刺激，让瘫痪患者以特定的步态pattern走起来。</p>
+<p>假体：耳蜗、视觉假体。<br>功能电刺激，主要刺激肌肉，来缓解某一类的疾病</p>
+<hr>
+]]></content>
+      <tags>
+        <tag>未整理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>概率与统计</title>
+    <url>/2020/02/16/%E6%A6%82%E7%8E%87%E4%B8%8E%E7%BB%9F%E8%AE%A1/</url>
+    <content><![CDATA[<p>为什么上这门课？</p>
+<ol>
+<li>概率论是生活必备的基本知识；</li>
+<li>一般到哪里卡壳了呢？<br> 复习基本概念；<br> 条件概率；<br> 贝叶斯；<br> 统计检验在不同场景下的应用，以及他们的道理是什么？</li>
+</ol>
+<a id="more"></a> 
+
+<p>概率名词：<br>实验(Experiment,experiment,experiment)<br>一个实验包含：步骤（procedures），模型（model），观察（observations）</p>
+<p>结果（outcome）</p>
+<p>样本空间（sample space），机率实验所有可能的结果的集合，通常用S来表示</p>
+<p>事件（event），对实验结果的某种叙述。</p>
+<p>机率的三条公理</p>
+<ol>
+<li>公理一：对于任何事件A而言，P(A)&gt;=0;</li>
+<li>公理二：P(S) = 1；S是样本空间</li>
+<li>公理三：时间A1,A2,…互斥  =&gt; P(A1 U A2 U A3 U …) = P(A1) + P(A2) + P(A3) + …<br><a href="https://youtu.be/NIszc2yzmD8?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=609" target="_blank" rel="noopener">https://youtu.be/NIszc2yzmD8?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=609</a></li>
+</ol>
+<p>机率很多时候反映的是我们对某些事情的了解程度<br><a href="https://youtu.be/qc8KRumNlio?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=57" target="_blank" rel="noopener">https://youtu.be/qc8KRumNlio?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=57</a></p>
+<p>【条件概率本质上刻画的是，当我们知道某些事情发生后，我们对一件事情的了解可能会有所改变。一旦我们对一个事情的了解发生了改变，它对应的样本空间也就发生了变化】</p>
+<p>P(X|Y) 念做 P of X given Y</p>
+<p>P(oi|Y) = P(oi)/P(Y)<br><a href="https://youtu.be/HhUmP_jzxAo?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=100" target="_blank" rel="noopener">https://youtu.be/HhUmP_jzxAo?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=100</a><br>为什么在Y发生的前提下，oi发生的概率等于P(oi)除上P(Y)呢？想一个合理的解释，如果没有合理的解释永远，永远都记不住！<br>叶丙成老师的解释：<br><a href="https://youtu.be/qc8KRumNlio?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=613" target="_blank" rel="noopener">https://youtu.be/qc8KRumNlio?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=613</a><br>我的评价：很模糊，其实也没说清楚，在卷角漏曲的前提下，B为正解的概率是多少？</p>
+<p>北京大学-何书元对条件概率的推导：<br><a href="https://youtu.be/B35CIZZcCjo?list=PLiNa3O8Vm6CHQ6oQf7ItPQ5_cvk9wQsO-&amp;t=383" target="_blank" rel="noopener">https://youtu.be/B35CIZZcCjo?list=PLiNa3O8Vm6CHQ6oQf7ItPQ5_cvk9wQsO-&amp;t=383</a><br>从公式上进行的推导，很无聊，但严谨。没有形象的比喻，也不容易理解。</p>
+<p>我的理解：应该从样本空间的角度考虑。首先在知道卷角漏曲的前提下，我们的样本空间只剩下B和D了，而在原始的样本空间中，outcome B和outcome D的概率是一样的。根据观察，在现在的样本空间中，outcome B和outcome D的概率也是一样的。<br>所以，在知道卷角漏曲的前提下，B为正解的概率就是1/2。其中1代表样本B，2代表样本空间的两个样本B和D。如果分子分母同时除上4，【(1/4)/(2/4)】，分子代表在原始的样本空间（A,B,C,D）中，B发生的概率是1/4，卷角漏曲对应的概率是2/4；</p>
+<p>这是一个哲学的问题，为什么要有除法？</p>
+<ol>
+<li>除法意味着两个值做比较，X/Y如果比1大，那么意味着X比Y大。</li>
+<li>同时除法也有归一化的用途，X/Y，如果Y是最大值，那么相当于把所有的值都缩放到[0,1]的区间内。</li>
+<li>那么概率相除是什么含义呢？一个事件发生的概率除上另外一个事情发生的概率，得到什么呢？——其实我觉得没有啥意义（起码现在还没想到非常形象的解释。</li>
+</ol>
+<p>终极的条件概率计算公式<br><a href="https://youtu.be/HhUmP_jzxAo?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=282" target="_blank" rel="noopener">https://youtu.be/HhUmP_jzxAo?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=282</a></p>
+<p>如何理解条件概率的计算公式。</p>
+<p>P(X|Y)= P(X∩Y)/P(Y)<br>通常，这些词汇：condition on,suppose,if,assuming,given that。后边跟的就是条件概率的条件。</p>
+<p>这个公式还会怎么用呢？<br>有些时候，条件机率我们是知道的，P(Y)的几率我们也是知道的，我们不知道P(X∩Y)的几率。</p>
+<p>这节课讲的是Total probability定理：<br><a href="https://youtu.be/D_pmxqOmhgQ?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=22" target="_blank" rel="noopener">https://youtu.be/D_pmxqOmhgQ?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=22</a></p>
+<p>这个其实就是切面包定理<br>P(A) = P(A|C1)P(C1) + P(A|C2)P(C2)+…+P(A|Cn)P(Cn)<br>这里的A是我们关心的事情，A比如是店员笑不笑</p>
+<p>接下来引申出来：Bayes’ Rule（贝氏定理）<br>这个定理下，A不是我们关心的事情，而是条件，换句话说，是店员笑的前提下，店客满的几率是多少？<br><a href="https://youtu.be/D_pmxqOmhgQ?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=281" target="_blank" rel="noopener">https://youtu.be/D_pmxqOmhgQ?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=281</a></p>
+<p>很多时候，哪些是条件，哪些是我们关心的东西也不太好确定。</p>
+<p>如何理解贝叶斯定理的精华？前提是非常理解条件概率的精华，那么什么是条件概率呢？</p>
+<p>条件概率P(X|Y) 念做，P of X given Y，含义是在Y发生的前提下，X发生的可能性。</p>
+<p>李老师指出，书的价值不是在式子，式子都是大同小异的，真正有价值的地方是文字阐述的内容。因为不好用数学公式描述的地方才需要用文字进一步阐述。<br><a href="https://youtu.be/jGmvsMbU8pA?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=625" target="_blank" rel="noopener">https://youtu.be/jGmvsMbU8pA?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=625</a></p>
+<p>随机变量的本质：<br><a href="https://youtu.be/h0DH8K9JTpw?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=433" target="_blank" rel="noopener">https://youtu.be/h0DH8K9JTpw?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=433</a><br>X:S-R  S是样本空间，到实数的一个映射</p>
+<p>什么是累计分布函数？<br>累积分布函数(Cumulative Distribution Function)<br><a href="https://youtu.be/RlNfklkZPlo?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=149" target="_blank" rel="noopener">https://youtu.be/RlNfklkZPlo?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=149</a></p>
+<p>什么是机率质量函数？<br>probability mass function，简写为pmf<br><a href="https://youtu.be/ynBUPA67a3k?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=28" target="_blank" rel="noopener">https://youtu.be/ynBUPA67a3k?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=28</a><br>几率质量函数一定指的是，离散随机变量。<br>p_X(x)=P(X=x)</p>
+<p>PMF和CDF之间的关系：<br><a href="https://youtu.be/ynBUPA67a3k?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=459" target="_blank" rel="noopener">https://youtu.be/ynBUPA67a3k?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=459</a></p>
+<p>在数学中，连续型随机变量的概率密度函数（Probability density function）PDF</p>
+<p>伯努利分布，这样的module，有个特点一次实验，两个结果。</p>
+<p>为什么要探讨，联合纪律分布：<br>同时将很多个随机变量的行为一起拿来看，我们可以看到很多以往不一样的资讯！<br>Joint Probability distribution<br><a href="https://youtu.be/FC4buzLuWmQ?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=78" target="_blank" rel="noopener">https://youtu.be/FC4buzLuWmQ?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=78</a></p>
+<p>probability mass function和probability indensity function之间的关系。</p>
+<p>概率质量函数和概率密度函数不同之处在于：概率质量函数是对离散随机变量定义的，本身代表该值的概率；概率密度函数是对连续随机变量定义的，本身不是概率，只有对连续随机变量的概率密度函数在某区间内进行积分后才是概率。</p>
+<p>边际概率分布：<br>marginal probability distribution</p>
+<p>Variance相关的性质<br><a href="https://youtu.be/72GSlk0AfFc?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa" target="_blank" rel="noopener">https://youtu.be/72GSlk0AfFc?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa</a><br>协方差：<br>Cov(X,Y) = E[(X-u_x)(Y-u_y)]</p>
+<p>出现了卷积的形式：<br><a href="https://youtu.be/6b1-LIMMez4?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=305" target="_blank" rel="noopener">https://youtu.be/6b1-LIMMez4?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=305</a><br>P_z(X)   </p>
+<p>X1，X2，X3是IID，（独立同分布的随机变量）<br>那么Z=X1+X2的PDF（probability density function）就是<br>X1和X2的PDF的卷积【这里需要问一百个为什么！！！】</p>
+<p>如何理解两个函数做卷积？</p>
+<p>什么是MGF?<br>Moment generating function<br>为什么要学MGF，因为convolution很不好算<br><a href="https://youtu.be/6b1-LIMMez4?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=781" target="_blank" rel="noopener">https://youtu.be/6b1-LIMMez4?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=781</a></p>
+<p>红娘这个例子太形象了<br><a href="https://youtu.be/LGe5eEBzgeU?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=202" target="_blank" rel="noopener">https://youtu.be/LGe5eEBzgeU?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=202</a></p>
+<p>什么是moment？<br>没听懂。<br><a href="https://youtu.be/mIbJfAvrNvw?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=645" target="_blank" rel="noopener">https://youtu.be/mIbJfAvrNvw?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=645</a></p>
+<p>独立随机变数之和</p>
+<p><a href="https://youtu.be/5RroTs-7wwE?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=55" target="_blank" rel="noopener">https://youtu.be/5RroTs-7wwE?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=55</a><br>I.I.D.<br>Independently and Identically Distributed</p>
+<p>中央极限定理背后的道理是什么？<br>现象是：你有n个IID的随机变量X1,X2,X3,…,Xn，你把他们加起来，得到Z,当n趋近于无穷大时，Z的PDF就是高斯分布。</p>
+<p>噪声为什么是正太分布？<br>首先电子有能量，有能量就会忽大忽小乱跑。关键点在于，这些电子都是独立的，多个独立同分布的和的效应就是正太分布。<br><a href="https://youtu.be/sWEjck-m1CQ?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=643" target="_blank" rel="noopener">https://youtu.be/sWEjck-m1CQ?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=643</a></p>
+]]></content>
+      <tags>
+        <tag>未整理</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>文献检索相关的基本概念</title>
     <url>/2020/02/13/%E6%96%87%E7%8C%AE%E7%9B%B8%E5%85%B3%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</url>
     <content><![CDATA[<p>一些基本概念和定义：SCI、SSCI、IF、WOS、ESI、JCR、H Index</p>
@@ -514,7 +656,7 @@
 <p>任何mn = mm * mn * nn<br>其中mm是matrix—&gt; U  —-&gt;column是independent的<br>其中mn(右边的)是matrix—&gt; 大sigma   是diagonal的，对角线是非负的，左上到右下是逐渐变小的<br>其中mm是matrix—&gt; V^T   row 是independent的</p>
 ]]></content>
       <tags>
-        <tag>未整理的笔记</tag>
+        <tag>未整理</tag>
       </tags>
   </entry>
   <entry>
@@ -1003,7 +1145,7 @@ MLF由央行决定。
     <content><![CDATA[<div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
   <div class="hbe-input-container">
   <input type="password" id="hbePass" placeholder="" />
-    <label for="hbePass">Hey, password is required here.</label>
+    <label for="hbePass">输入密码，查看文章</label>
     <div class="bottom-line"></div>
   </div>
   <script id="hbeData" type="hbeData" data-hmacdigest="039e788ad475ae83ac99f4369092b82a1e5560f90894f876d7c722e08f7bb2bf">35dd00556162f86ec9ac14f55d52b981613279b931c1185c5ff9587fab048969cf7ad8ecafb32e493cc07da226a3d8d57568ca9d21ce2c3db87d62d090f0c104092cbe73ef7864d29eded63f6cb59ed3f8f5636616e1f0c0d2723e02d832ccf1e20bef844b4bde94ca20ed11efa4dd1d6442513a18261526e41981c5fd9ee6e14a153147b95a20d81f538fbca279e7f8dd6c8be52f1b12e58a4a589272e37a7cda6dcf18a000ef2d02f8da5092b9ff39e318fe287e43f307aabc2841f379da8bf67079e1107c4ae1f3e5bc9ee4a03f92378f218dbf343b2224fecfbadcbaafeac6010c6f6826a14c26c35ef8cf1a4daab211339d667fa14bac720b262c4565b75d322672dcc0f5db121056c9b4f33175319710a52aa942b7aec31cf194a1856efbe4893d59005d901396b2eb406c88f3c4d1bf1bcc18d058d9c6fa3e7ac135f2479659f37ccc4abbaf1cb1b3d974dd34edaab142fca81fdca8f5ca1943389a918d6a89807a7bae8789854e01cdd56e5b4aec9d07153e736089a6b7383681a4f7be73ab0b65a63cf4f8e4d4149dc1cfc6f431b5598ad72c2411289f53a29a51ed45c90085ffd894fa5e451bbcafca0c01c3d5e92c1f1b6dca56952b16e5323374f72c51cfb21338ae13b5af8d25855a87801be0c2ea999e886acf62ba3490f24635fa349599a37e646d15aefb821cd9769c0cef23850cf90b6ac59498528dabd3d00f4f06a9ad857d847e9b42cf16bea541ecbee414ac752f9f5b080dbdda95b497f0ddb90bebd1f2e18241a97c440ea50fee9e4881fcdea4efa87606100ec53cb20a1bb2330b7c0a837c88c59ab5cc03efbfad6f8dc397b7d9eddec775fb3d475cd14661c40632cb1fc64326dcdee5380b8c5ca6a26c19f40e5d4a3f8ec4745d051ecea01b77d0e0c9f2a27a5f21dadcb0db3a89ead0589ebc79d83e69657ad79690f4614805901212b2252ecdd2b21d258e4a4b65a5303816b86de07489780cb26128026638293afc07a3f77cc4826120dbc49650d1917a8d69fde99431879dd2baf3eb00a51912c2dd987ac1705655205b2594ccd3fa7a8d65d5916b3e1e938e7ecdb6df3443e299e3ca89e2d714d06bedc45f2d38d737df7a56bbd015c39c6d161e2cc9e4cf6c1ab3e6fb263d15072acf339e68e304ef45f156c85567683728696d0a394afbfdb4f2baabd99811d1decebec5f089acb46cc1ed5bacfef901c294ee571584786ca185f375e5f88897d91eefbca51e3f100b9964f303ad8b0b6cbd41153ed3d12b0b06bc99b2123f5c1a1d5b44d67443aae18e7a8e4a8cd2a100d9039db3f56fbfc74f8f9e90bab1443c7be960ee812ead508d5939db1a9396500a0e510150b057162f9610be75b6962cc8d8846c4a9a28bbf5d7a61337898581ee48241d8adebcb0aeae4ba0b5f824172046701e4398b817aae7e4ac8539b2a5f8924bf3a71921928dd8edc99cc535cdd83180fcc0bf7d42f9a9bb74ab9cb93cd19b35428550f1351de42721c013d08bed4392c8586c41f6269f5f5aec97efa9d141d45d22f59cf0634da9245cf1ad897cdb010272c945575362cf2d132418de702f68e3667312ee78b34e9d888643242d4d6b8da12eb71ef5eefb3aba46336ae923f04b00e6d65592c167d90ebed0b885ed5d7032258cf930ec04334e66963d3903747b6b25d1ca9d51ce60e081c022045141c57f4d0f3305ad18e5347b0541709502875b4a5eb1dba95108a06e1785e41dc2ed437aece3b3c39900e205b626ec6326bd0f5e31d60ca80a5b7ce306711b279c15074e6d95c7c097b8c035bc8462e87409a4ea53b933e6703cee9337fac40a0dbc07e41b0d3f1297c7cddb10a0c0a6ae8a4ca35a6cde29c878f3848070d9cc804c2e9cfdacac7b7551ab09b84ff5fc9397b2cfbc69ab9659acaa1121dfacdda1e42d5f1ee61a01a609cf0e3acaaa4fd2bc0d2f3ff5221354363afd81f8055520c2439646f7c3468c01c17bc25960d212746802465c636798be616a35964bc3a349fb041880b0d5111d6bf76df7cc314088c4f4628b5f8ef5d9531c9340de4437e4b0b0319e9440c3cbcc8c2b066b301febe087222cc8eb1a585793431a6085eca819e73a8b45c01e2e1b8291acfac3e7f512712a21c77fa2f8dedf046b009e2f797ca11797974fef1d77bf937c01a4a9526497b093753ce53d0bbda29df4fd246bbd5b48fa0c0e13e37ae2c475e6f4e4abccee4b9781fa75fbd73d142663993430e9cb5e9d2a29a8597cd9df99a9103b0cf1df72c20773bc83125fedcd666a1dab725b33584dff1ebfcd5c35ece49b1c993de5dcc45bdf315a4e6c6a0fe6dd9382f054a1dfdedd7fea86cbe2d757484254d84bac280828c009c9ba4430063cf45d8d2844465823cd427a6bc221f327dfdcaaaaaa35884b387e52af10fcf8584e360111f31f3c662a3ee6a1a668a8ed1343bdce8e2c126a379341c1923ee7b22aa57fbd5d473e34e03843def71e977548e0269f8cfe6ad44b534e3db5301c12459e5c8165f78c5c9358ab4105cfcc3f96836411decb6b6e453ecf9395a5e84738c80254593c41788c01fde8f6c8daec053596114d4921b766e16f4a288b7f7cf38897913acbbc1eda6cb867095c9ad5ec332b1f75f3cc5a88b9dbd6d931177aef2c40df06d8e4c178f69bf416824e492e7221186af5c8e9599b18e12604e523be16849066049b6b29701b1367434a3b84307ccf98666328513a1c87ee69658be54fe51ab2f86d18ff537c8cf11af1bcf218b361e6e7f5d9f93ddce239c2492ae28993feffa8537a847a9667a4b955e75000b83c1e5f516a39dad1bd274cdc185a605add493de0ebcc9d5ca0a4684954ca829d660893e49849f355fd82c4cdbb9d29d56c98d7af6e2b610f5f21e8bd0e26ccba8de972b5461b29b49e18e69dcf4ab4d00a75c55130d89745560bb7da7851a8c4e00c70f8cb63af0f1addee7ccd771ad2e1969013c7356cfa71488f4ba7b4023582996568f0cfec87776de27f06962142272d4eab3303dd9bdd8fdea5dab29f8c2d7b951bb506aad01fe76d94d84b38b31557fe3b645ddfa625e44f9acf2b59b004d8fc847581cfee4637246c2531d31aad2e773b29c46f2f21461acd2d7189d06d9ed1017aac4bbe07af1180c289b5a60da3c934a1aa9d77be63d111a549d71225534c4a5f61c71191ede69e4e458ec5b51f83609a59ec808372cfc8026dbc09eb35b6d79d697a4c51a4297d61d9d8cdd7627f591f84bb1e578ddf63751589df9e3de6328577f2af0628d1d236588e60478b298adc7d764fa9aea2209b9a93b58a5ee8f932588e71c17d69ac4826fca7a71a08fc166b422083033505d0e4ae42a1b9881a6c80e4ca1a7995025782a0e5237a4657fd0ce5419aad337435cd93c9a4041852d89e47752f2709fa53d46358718320b78760227a87dc4890758b09ea93947d6cb0c7ba84af18a5efab2b59f8a4bd834acd8776486f032c6b3e3b26fb2d2f21869632cf9395a1ee472d8a420fe618017569f6fd37cc0216f6026ba5ff84c7ebb6fcb0305a898ee2d59fcacf4d22dd7475987064c5df6552acc417716ca4d1679d342396f33cc42e1d82f6e0cdf3498b487ffcacefbcd465d0a100efb2bbcb25205b62a390c4f44d511779415b839b950e8995873121f30a62849fa4ba6e6fe90e68e41cb365b92aa8d9a71d00687eb386fad46be115391054805fa3f616fd408c3f238e7defc16423f5eb25ce4bb9018b234c65d67071e427b89eb4d722914c02a48f2039ac303d629fd45c45e8311cc0a54e6f24a2e32f6d666186fb8fd96e2c8a02dcfc5ac534595bac23fb4fa74828500633d9933e11c7375765c7c5d22a9b503f0773921550bab57cbc92fccda20cb5211359f252e20240b83ad6c0656ed0fce75056c118012573370adcc0af22ab4ae621e4f289377811e45baf2cc41d5eca137cbf37ab4e68806058dec4edb7c813150875de1a143746c2d62324493122a87e70e9b64bd7ab5e447bf9cd1a2f407ba3b9b1abf9285d92f90f50b524be7db54655b278d59767565e6b0479fb315b70352479a5a53196c6f6f8889d642ce7e14bd0d48c02f1f842153f64e2845d3062e363e81491b7a2bc81c3242816b04142c1aeb25894e082ac6a3b3e16a8750a90a059b9cdc647166dc004fb4c063663b28ae6b8f6bcbfdf1c03dc00f638f25d124a72bcde0ba1c695dd0e5664b4072c97acaefe3ce9951fca404a0e1c7edef85b017ce20a59b0764600e2fd5854d0a72c751483b12f4af5f9b5dbf534645918a5368976190a8a1193844f48ca99c85a4a5f1900e9d10e6384d5407e760087aa1db1a58b3261ba08122cf441f778d66dda0eecd4c0921e70c4c8c2f27edb41173eed7941b54f756eb96ef38c1edaeb9ffdeb37a4fa5882f0abe6b033ff3bbb0c555a299719086a0a91eacc5b8dbc21f72e8d495d93b89acf0cf655ebfded1a69e9eaadefa7b864b10e490bb72972b4a00d5aee4e8187b185404e82d3111e60e1ff5c8060327f7f1b1e499dad8e32191e6955e8362f1515a63f011f28614a7832eb9f3b1b2e21f319acef4a50279a8f0dca5505721538aa941a2d7283444a838b9cf48401e17c19fce2d7492485e8ce11df338f689bf3859d7586abf6de189afe7f7f74285180f5c5d22c9e7260a3929327fde2b89f80942c4152ab005bb938a749c7d42962159af895df8377768af9fa7482814655f67bd5fbd0623623ea3b2ff287ac82ef0754069292cf113b8c2eede81ff8c49ce252fdcc5840c6df14950d9b3f67b7ab5acd5a87531b7d9945d879829ff3efd701b6ace47790cf151a3a525bc1e3ca03f1a1d45400fdfbb0efc8ff1e47ffad855aefd04fd5fa03db9086305ee8ff76adefb8a5dbb8913e5582535cd2bc0bcccbe7347a3c09a76c9f680bf6e2ee9d1b371e48d7b31a6f1f3ab4c5ebc9069e533192c31861307b635e1c6fc71ae648e794c67a6039f7ed9cde1e0d1042084f54fc24192c247ce2f35c5e58ee626fc5ba510142fa79c9c3b959874e140d64ee654e5ad70ab6cc30256752508ce0d18d39ce9fa7a41b084a5c625b76a42587bf0a15a1ab5976f4f4c70bab13708eb7ec450f52a614ee7ae83859e5fd2bc7fffed0369963db1aae5752164505bd006e00d1cca003f7a3e792e95155918301c2a3aea3dc2960843cb084f68bfcdd54d6b4bcee249b753e92bdefa179b9cf066138f433c6a77a59fadcb18a079a64be1649517ec3fea84591e7049ada4c500369a137d0bbb43bf44b7e94e57e8693245da7c659b640f1d2c4232dc13fc93db023c7839e741a2cf7d9e42aff61a7e82e6ff81cdec2bd8ddbe1de39f11909b6779cc2ce8ff8a2e6bddc6107f6a7723eacbbe2cc960e06a32f8902b18b6f0b01ef9b96443595c4d4bde828eba067424279e86e39098d663326f6a8e3b94976250be75cbc2b064fad8eadeb2ae893da06c45d91f2bdd2008afec5f4a2ecfd87f358fd3e24c26153ff7a2878394a0601996a7825cb3ea810058a8645aaef7baa1844c133aa0beab0cc225e86cc0c2737290a0f910beb0e915c062c8a8f7eaff5830377351542aa742cc161f9cd38b7a03bee459cd75087c18f6ff909042cacc58b36761dda1231e4f833a5159b41b17dd6126f49a3b762cb549e7f8be1d9cb5965ec4f3653c2a26a4cadd21e1adb76cfa3d622281e887c93978ecfc24aeaf39c83b04ddb9257f1851126f75f58814a7bab109ba71a2c6a35d2a5813be8a3c3e0f98cb08a304f7c36bee359a8bbd473f5dd45991197c2adf03af82fdc9b063ef8fa378190ad7f7e</script>
@@ -1250,7 +1392,7 @@ $$
     <content><![CDATA[<div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
   <div class="hbe-input-container">
   <input type="password" id="hbePass" placeholder="" />
-    <label for="hbePass">Hey, password is required here.</label>
+    <label for="hbePass">This article means nothing for your.</label>
     <div class="bottom-line"></div>
   </div>
   <script id="hbeData" type="hbeData" data-hmacdigest="12c40938feb211118c32ced986f015dc49b4f4239d16973ad3f470b007934682">4857673e73abe4f337cab6d5e32ecd2a4ef558706de1a72a311f2365058fcbb185d5563038fe14fe00549fffdf980e5748f51151ec1da41210aa5a064b728ff6694ab40239a8af753f2218d6755cdf013a4bdaae06cf8022b2bfe33eca49a57fb6b34beb60d0cef259f19988a5d246db5c654037aef50ca800272c92b44443a06d04d43d3370b43025d329f8e1555639be34c033b83464f5ef6c1ce8b935ae316aa97c8a3e471da3476b1e3c024a7187c2eda30fb3de8deeebfa6beb53e27e8607950cee30e917c8c6ebe27200f59f0cf02a10d301a1dcdbabb6023c7d435a1591c5141fd0c52496d422bdaec71ecdfba0b5d539b88d1696d4d6bf04c151e002ffcbb8d081645455b26fc0e8d8db16d9a0fc25b075a920a33385113488cd92da70f970fc24803476d5eea290850613d57e66069e3bf68665141d778fa70c53439a82ed293bfd0875ade9548ee17ca0fa7f851662bd3066a5f526c9b57ca7a2ff77ff2117a2db96b4078da3ff85e4875f9b8a24fe4ae53ad2fa9b7efd8b72ce5b9b24891615601e7814e45b3c0d2268689f4b6379fb398d092ab69dcad4b2b44f0b686d4cac2eec68740ffbcab20f57e579a0951b2110fded23538843612d0ab7e59b5ea111b789d2fc07e9dd5d2159ebefcbae343c82a99e965e5c351093b6a64e118a00d5cc731fb1241291cd898e20e0a9f1dc7df94fc7e32602698499eefdf53cf5032228603835ab766a75cc6500f8c4c0e7c3ce191a61103327c000cb17a4ca22118f247fdcfa4c1d8dda98a92f55dcb9cc2e4d564265c411491d86023ea5c321365f9ac9f82d4adcea8377a981541a72b04d9efc1cfdb4792260ec39653e1044188c2ec4cc4ec956d805a95f5ae63299dfaec62d4c465ebe0e87f243aeac41e60478d473ee634eb3ac1c65ca626e3dccc2c6fdc25942e14dee8511a8295794d69cc734722c50da436368363112dbc29f2ea6c54e5bacb90c65129d42c937df1b23427e60e4f6d1d0ef7ae1dddec4208c699db6cf92b4d7f47ac72fe037ef2e275faaf9d79aadb7fbaea68b2b927423a2cd9834d7aa18be79e42079db231a06d57ae45be80b489ad181b70347f28d57bba69461a894a96da97a71082f2ffd46807cc686abaa933e1fe98b5b2d429552689dea7583aa31da9930b5301669b1137ae287f4d711670ab5c284490e3f5ddf120eab42093cf115c29338acc8050bfb2b4e1b57eeffc1e5f637f36e05d6ff5d1aad7d0969f93dbd13545455369f872468eeac59ae2b8640fbd79ee6e7a9e748498cb675907957cab36f9f1d9f226aaeb2c3b3ed56668c42f62c9e2b73f9f7998a797c634a950f81a00214c12f8eae27e77686007954cde4f57ee1c8783feda74bdcdd62b78c0b7f35c415893217e864970f09c013eb41a7fa1ab8c023b01e85157287cacaee3b458d033c2d99ed0a413a61249f41069fae8c7df45789bb251d24f70b967e43d458be9a99a03894b35887591e53997a9b221a498bd36c394df8bc6ea8d7951fec7b38a89d496b5bd5be11cc3802d9bf45d9eed287893b88ef595a2629d21a86f7beb109a495949e2996aee480b6a1b165de569267a29d4a3e442ce9f2b8da2bf80a7940d2016ccb4b0800254e0441c713f0b64640d7e815fe57211e5c6713136a46bc93c8e8a50b8eb28ebd5c2783ab09e0fea18f4a81bad2a52e4b92315b4fd21685bd93396d186b9a2514a8251ed9f0367cb7c934d994a0e403949f08185149583695d3ffaa7af28a8595c84cd06ebb496285cf506481f78e815ab7cb952244e784756af3da5030b35b9e3b6443f3a25f09a06e31ec6412ba7c5ce99b1ac996f58b95b61c89a077fe20d1ba8e264d2e8f0fc303408b804a15059132001ca86e4a0c750164c17319f3a4b7090e39615b0200c4e908e5fea135ca6719071d6568b1d89409333d267ffb307384db35afd71e7a9a9b165c9bbc90555801ab14b277a9118767c70f9178c27c2da9c435c39623755d64fea26f4f2a511e8df090fe53667ec5df8d80638134e2f792ab2f9724b854868d52cc8fd3787487c886b2b544a785fa0ed68607277630bf0c26897bb8268c49db50e3c70520a19dfa1e7221cfc111a66e9cd2731840e6fcc1a121767174f4e9e4d19bd4183953e13f328eb2ca376468278b4e70a279599b30fe6498f638232845797e002461c65efdbbfb8d8e33e4ddcddfb9b908d80ceebaf95c9bdea2968311950881e0a23cf326177c4da74bdaea0b729898a4c486111571ddd426b0e728575b884448a87e0e9f7246f31e96c308b8ae1c2b8a2e92fae9f9824d7b7235b774f571de7671292ca688c9618a96c6b197e1332404bde197ef42f93c4d876aa38f0d042a9f960c0b3b7fd8b00d159479285f954d13fe918463eedd8555e214f690573eb7dc5f597b8aaf863cdfa766e999945c645fd8df1b34b1caffb1c2a48507e8ac6ae708f89abe6d7f27a9f5c6faf50ca8dcefb0b563cba9d7cb5a8f8be7a7fc85ed37c51e42366e598dd7dd905ad07e6da34d90b502bb9f9ceac51a7f086134aeba28c22be9f39f696fde4e7061557fb243cf4f95c8bd4d806ad2d10e0ad41c05b60c5d4a89ca44cdeee6b67dd7a62809c08df3add6e86ca9d705ab2f0307de94dbb208d38ade75aa325c983d557098a3981788529c3593ee852c4ba6e8ad4dbd02cc5ac8607bb5377ad4c0145d923e6f603126116421adb3253464dffe01c01a6dab964f4e4f7ebf8e5143d28eb849c612bb679c6030d55145b065a58f216458a5b575d24797a4082dc3286994ff4fa6f3c0ede82ab2d693aeff1ce4dbdfb03199b5d582d03264867d9cced02d9aa0d089d8f675f09f5f31c2a00ed30b628e6110fca3e75c1b2f241244c844a1bb364981bf44e1a0c983a1a160b9157d08ae31950dd49f64b0058635ffef1545058864547dd66243dbb27aedeee60e0b9aed0341d5dd9700eb8698bb36b5bf91480867389f23b498f631591f2b2e3b916d7a9b5c58b3da91f06281de5f368389a98834182c099cd3e0063cda28588e0ea58decf6a164421a6f7fc43b26edea043f77dff61a19547832171fcdf2f7e0c9da889678af9564c388e1ba6f8bf6cde99320cc1b9c18b53a6d4f40bfe8754a43a6409aa2648fcec152e0f37f8897ee1e717cf8b37697552cba856625a7b3e7661a02fe8a0e3c5d65b6bafedf5ca4b8da6877ef0e79873827361848d566197a02e7fce19ec1a9c2924a3c281ccfe01164a730f7bf08ccd186e3c23a1bc5d129e11961f2005503d78071389b3ed31ffe905413dab86e3093d8ff60c583063ee6bda4f95dfe6072e31414ec243b0b713e596b34389edf31ac760b9fcf748fb479afae4d459a0b8e4b1e43f940c9b5c3b1bfdfe9a406d9c0169dd44946e224fa05448c55fe90322d0861f1acc11a96caebe42382126ca34cd440a612fbbb4d983391a6308de712ba4a943b307fccb0c8ef0a5bd3b73c7c2e45e326225ec09bbcfa1942b32f8a55ba659a311921becaad6e09240e9eec791e11c8f2317171097ffa67277358b6b202c37bcccc91ecdcc99757f4ca76d694a6702c19a8be216a781f8147070af0f4c20682db008be3f80c5f2937e3d1d91f63765d11495720bb7d6a85e997d969d4ed835232d4245048c17d2a75012bde9d9e9e63b747286ecdc47b614cb41bfef07c823c98776b9bd91da8ea1d8b8a884b307d1d40285789c37f55a35671d09d4b8caef50547c2d093bff44deff06635b1c73529761c45aef443080c7bbdc2fc5ca55a7827b19742d65e4664e25b55e694a1d44102e463ab3bed738076b5f12d7eaea0f918ca36f7e09d9c0e4b42dbbc135f13b4dfcc8eee8febd3662955879903163c4d298b7f067c428f2f7cec2ec2dc2bf1b781d9975f632fa5a865ca071a9d1d9a959b8414f6ae96d2f3dc3ac363f8530cdbc167be2ce4536f5bee6d421cc111c6410a22b67fb247bba8712719bd4dcaa1e232a76af12cb434bd688390c77dfbb28b27636410529fe516007110e02c4f127627310be08f6728eee1d7a619a06b9bd45ac4b5c2ae86a096b8148197184a13a94cef9cc2bc6c4486f17f72cd696b87fa2ecd8f419a2dc881483a75dc6d0cc863204e9f9e37b4d4a02134dd46ff97678821aee4e315dc76efabd8bace509aa622d6e14c696c7fc9fd87d55fdeb75141609e1bb89c8e05e1b93d473bf991b374b8b9ded567e48b1b47454f8e89c4a171ca510e1a816a3119671188693f49c702411dc44e6313d279a11cab5bd334b58d5fef38a61cb370da953fbb13ab719783ff4b3b8b5acb68e8fac73c218beb28cbde57ba6a3d1bab464df8390c03d4ef2b7200e1f55d9fdf108de37e23dc992e2aa16fc7ff24fbccaecb5134ae5353cb28195ce3d333ba76f109b6047538038d0113e76ef668a48ea062e9da1204d2fdb0a87006691dc4eff9cc1fb06f824b9c1bf98c775ed6ab617c29fe002ef9ec95e5a090ccaa5d041db8ce7f16527b6963d760979f74e86c91a9097bc1474fac717d02eed7a481a654d629852221b1982fde292c7b6b6ed216fe83f03adb4031336a712992beff58e0b5b05c4d8c47975eb26faea16ac115aed0fb92521cd00075e7cbac954029aa64717f62c83421f2247fa1d084da87b08543e4472942000a919ff3b653637b4a3a9632b80e7467b48b7e850f33f956c8363f1225e3b3ef4991660693e02c3e17d718ab96a5a7a39e1b05a25028bb68225e496a91cff4cfa387684f41f90ffed0792766ab73b33c697db5b3e5eb2ac30feef39bb4b167764eb499a96ddccfee79bfdb3bd7c4560ba4def87f220144eb5328041cef1ebd6e96364cd9a70de11360b0d2070d2a097cc4eed44ae172ac3d5a9a4b99e3fcb4b02e2bffd3b70dada256555d3be6efc00050194487df260948e115d2faebb6e232e52427820e80791dfe3a5926d5abcc3ac9cff9244b9f7426b4055184f1b2e4d6c09bec8829e6db2cfed7e822e4e8b1fbf7e01562bae4c3c6e2e8c8c3c57ddb46f3e2af27fefb79f7f0b8157f4a0126d4a6704132bb182c0058bb28288bb8e14c215bda9fc7b5c8b6076d41860f0616afacc183edb334e9530abb0f4187f028c392eade8de165812ad1b424ec509f1a221b6db6ce03206bbb74381709dd1591c14a4a6db50d43efa3d52923d26717af111814cec8fddc1dc861e0e3c6e0aaa89fb8b4a6f413e36cf0ad538abe6dce48fdc79416ca74220ddca6635ea86f8b189f265776146bfaec2952b744aa6185768d0066eca7fca9efa6aa048f982c44aa9b497f21b77f5c90b47b2649a0f9c07ed1b7f741ab648929a9a9ea609934d84519776449c7e6d2baad3c19c6cf87fe381c8090d488b907a4a6ac377d197523015b31c1bc52aa489db08418564eecbeba3338724d1a70e3ab9657086c89b1f570f276b438dd62159fb20e5ce51a751d9c9f09dc392cc95a07b10ab0fe062f7a0e4dde6a2637f659d7f5226cf841c831c22b78d5d8e0b3e2a6adc7b7d1724efd661e80accaec31215f335902ac2fe4deea30d1d4cf10e58896623493e9f584f92bff1e80a3efabec7aba3cd0873268fb01d1d0452415c1a49352618a7ebd981bee0232345fbbfdfe16ee73109a0bd65162b7dc38f8ea05b5d237f76d949340b08f949885d985434f01638e87b24de7aa26b98685210fe5d2c0209b67d3aff41dac3cd94f6ba4c563b9a9f1d7ba065e912345a625d3982660a34a9215db249b6558552f07036744b868c48e8b561c84bd5a2d8f245de08db4e08be71b74af9aa302c978de439cb2ab01459c50cbd9996d131fcb980fb19ec87470095623d23615bb4f38baaa60b30dc455b617e3794ad07d78</script>
