@@ -54,7 +54,7 @@
 <meta property="og:description" content="为什么上这门课？  概率论是生活必备的基本知识； 一般到哪里卡壳了呢？ 复习基本概念； 条件概率；【条件概率本质上影响的是样本空间，换句话说当我们知道某件事发生的前提下，我们对目标事件的看法会发生改变】 贝叶斯；【贝叶斯探讨的是，在给定事件发生的前提下，导致这个事情发生的原因有哪些，以及这些原因的概率有多大】 统计检验在不同场景下的应用，以及他们的道理是什么？【假设检验很容易理解，首先需要明确的一">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-02-16T01:30:31.000Z">
-<meta property="article:modified_time" content="2020-02-19T01:37:14.623Z">
+<meta property="article:modified_time" content="2020-02-19T04:29:18.029Z">
 <meta property="article:author" content="Feng Zhiheng">
 <meta property="article:tag" content="未整理">
 <meta name="twitter:card" content="summary">
@@ -235,7 +235,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-02-19 09:37:14" itemprop="dateModified" datetime="2020-02-19T09:37:14+08:00">2020-02-19</time>
+                <time title="修改时间：2020-02-19 12:29:18" itemprop="dateModified" datetime="2020-02-19T12:29:18+08:00">2020-02-19</time>
               </span>
 
           
@@ -251,7 +251,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>7.5k</span>
+              <span>7.8k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -276,24 +276,19 @@
 <li>一般到哪里卡壳了呢？<br> 复习基本概念；<br> 条件概率；【条件概率本质上影响的是样本空间，换句话说当我们知道某件事发生的前提下，我们对目标事件的看法会发生改变】<br> 贝叶斯；【贝叶斯探讨的是，在给定事件发生的前提下，导致这个事情发生的原因有哪些，以及这些原因的概率有多大】<br> 统计检验在不同场景下的应用，以及他们的道理是什么？【假设检验很容易理解，首先需要明确的一点是：进行假设检验背后的理论基础是大数定律和中心极限定律。其次，假设检验包含了假设和检验两部分，换句话说，在进行检验之前你必须要有一个假设，称之为虚无假设。P-value代表的是在虚无假设的前提下，得到给定样本的可能性是多少。如果这个可能性很低，我们就有理由拒绝虚无假设。】  </li>
 </ol>
 <a id="more"></a> 
-
-<p>概率名词：<br>实验(Experiment,experiment,experiment)<br>一个实验包含：步骤（procedures），模型（model），观察（observations）</p>
-<p>结果（outcome）</p>
-<p>样本空间（sample space），机率实验所有可能的结果的集合，通常用S来表示</p>
-<p>事件（event），对实验结果的某种叙述。</p>
-<p>机率的三条公理</p>
-<ol>
+<h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><p>概率名词：实验(Experiment,experiment,experiment)；一个实验包含：步骤（procedures），模型（model），观察（observations）、<br>结果（outcome）、样本空间（sample space），机率实验所有可能的结果的集合，通常用S来表示、事件（event），对实验结果的某种叙述。</p>
+<h3 id="机率的三条公理"><a href="#机率的三条公理" class="headerlink" title="机率的三条公理"></a>机率的三条公理</h3><ol>
 <li>公理一：对于任何事件A而言，P(A)&gt;=0;</li>
 <li>公理二：P(S) = 1；S是样本空间</li>
 <li>公理三：时间A1,A2,…互斥  =&gt; P(A1 U A2 U A3 U …) = P(A1) + P(A2) + P(A3) + …<br><a href="https://youtu.be/NIszc2yzmD8?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=609" target="_blank" rel="noopener">https://youtu.be/NIszc2yzmD8?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=609</a></li>
 </ol>
 <p>机率很多时候反映的是我们对某些事情的了解程度<br><a href="https://youtu.be/qc8KRumNlio?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=57" target="_blank" rel="noopener">https://youtu.be/qc8KRumNlio?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=57</a></p>
-<p>【条件概率本质上刻画的是，当我们知道某些事情发生后，我们对一件事情的了解可能会有所改变。一旦我们对一个事情的了解发生了改变，它对应的样本空间也就发生了变化】</p>
+<h3 id="条件概率"><a href="#条件概率" class="headerlink" title="条件概率"></a>条件概率</h3><p>【条件概率本质上刻画的是，当我们知道某些事情发生后，我们对一件事情的了解可能会有所改变。一旦我们对一个事情的了解发生了改变，它对应的样本空间也就发生了变化】</p>
 <p>P(X|Y) 念做 P of X given Y</p>
 <p>P(oi|Y) = P(oi)/P(Y)<br><a href="https://youtu.be/HhUmP_jzxAo?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=100" target="_blank" rel="noopener">https://youtu.be/HhUmP_jzxAo?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=100</a><br>为什么在Y发生的前提下，oi发生的概率等于P(oi)除上P(Y)呢？想一个合理的解释，如果没有合理的解释永远，永远都记不住！<br>叶丙成老师的解释：<br><a href="https://youtu.be/qc8KRumNlio?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=613" target="_blank" rel="noopener">https://youtu.be/qc8KRumNlio?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=613</a><br>我的评价：很模糊，其实也没说清楚，在卷角漏曲的前提下，B为正解的概率是多少？</p>
 <p>北京大学-何书元对条件概率的推导：<br><a href="https://youtu.be/B35CIZZcCjo?list=PLiNa3O8Vm6CHQ6oQf7ItPQ5_cvk9wQsO-&amp;t=383" target="_blank" rel="noopener">https://youtu.be/B35CIZZcCjo?list=PLiNa3O8Vm6CHQ6oQf7ItPQ5_cvk9wQsO-&amp;t=383</a><br>从公式上进行的推导，很无聊，但严谨。没有形象的比喻，也不容易理解。</p>
 <p>我的理解：应该从样本空间的角度考虑。首先在知道卷角漏曲的前提下，我们的样本空间只剩下B和D了，而在原始的样本空间中，outcome B和outcome D的概率是一样的。根据观察，在现在的样本空间中，outcome B和outcome D的概率也是一样的。<br>所以，在知道卷角漏曲的前提下，B为正解的概率就是1/2。其中1代表样本B，2代表样本空间的两个样本B和D。如果分子分母同时除上4，【(1/4)/(2/4)】，分子代表在原始的样本空间（A,B,C,D）中，B发生的概率是1/4，卷角漏曲对应的概率是2/4；</p>
-<p>这是一个哲学的问题，为什么要有除法？</p>
+<h3 id="如何理解除法，是否可以从除法的角度理解条件概率"><a href="#如何理解除法，是否可以从除法的角度理解条件概率" class="headerlink" title="如何理解除法，是否可以从除法的角度理解条件概率"></a>如何理解除法，是否可以从除法的角度理解条件概率</h3><p>这是一个哲学的问题，为什么要有除法？</p>
 <ol>
 <li>除法意味着两个值做比较，X/Y如果比1大，那么意味着X比Y大。</li>
 <li>同时除法也有归一化的用途，X/Y，如果Y是最大值，那么相当于把所有的值都缩放到[0,1]的区间内。</li>
@@ -303,72 +298,70 @@
 <p>如何理解条件概率的计算公式。</p>
 <p>P(X|Y)= P(X∩Y)/P(Y)<br>通常，这些词汇：condition on,suppose,if,assuming,given that。后边跟的就是条件概率的条件。</p>
 <p>这个公式还会怎么用呢？<br>有些时候，条件机率我们是知道的，P(Y)的几率我们也是知道的，我们不知道P(X∩Y)的几率。</p>
-<p>这节课讲的是Total probability定理：<br><a href="https://youtu.be/D_pmxqOmhgQ?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=22" target="_blank" rel="noopener">https://youtu.be/D_pmxqOmhgQ?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=22</a></p>
+<h3 id="切面包定理（Total-probability定理）"><a href="#切面包定理（Total-probability定理）" class="headerlink" title="切面包定理（Total probability定理）"></a>切面包定理（Total probability定理）</h3><p>这节课讲的是Total probability定理：<br><a href="https://youtu.be/D_pmxqOmhgQ?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=22" target="_blank" rel="noopener">https://youtu.be/D_pmxqOmhgQ?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=22</a></p>
 <p>这个其实就是切面包定理<br>P(A) = P(A|C1)P(C1) + P(A|C2)P(C2)+…+P(A|Cn)P(Cn)<br>这里的A是我们关心的事情，A比如是店员笑不笑</p>
-<p>接下来引申出来：Bayes’ Rule（贝氏定理）<br>这个定理下，A不是我们关心的事情，而是条件，换句话说，是店员笑的前提下，店客满的机率是多少？<br><a href="https://youtu.be/D_pmxqOmhgQ?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=281" target="_blank" rel="noopener">https://youtu.be/D_pmxqOmhgQ?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=281</a></p>
+<h3 id="贝叶斯定理（Bayes’-Rule）"><a href="#贝叶斯定理（Bayes’-Rule）" class="headerlink" title="贝叶斯定理（Bayes’ Rule）"></a>贝叶斯定理（Bayes’ Rule）</h3><p>接下来引申出来：Bayes’ Rule（贝氏定理）<br>这个定理下，A不是我们关心的事情，而是条件，换句话说，是店员笑的前提下，店客满的机率是多少？<br><a href="https://youtu.be/D_pmxqOmhgQ?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=281" target="_blank" rel="noopener">https://youtu.be/D_pmxqOmhgQ?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=281</a></p>
 <p>很多时候，哪些是条件，哪些是我们关心的东西也不太好确定。</p>
 <p>如何理解贝叶斯定理的精华？前提是非常理解条件概率的精华，那么什么是条件概率呢？<br>条件概率P(X|Y) 念做，P of X given Y，含义是在Y发生的前提下，X发生的可能性。</p>
 <p>李老师指出，书的价值不是在式子，式子都是大同小异的，真正有价值的地方是文字阐述的内容。因为不好用数学公式描述的地方才需要用文字进一步阐述。<br><a href="https://youtu.be/jGmvsMbU8pA?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=625" target="_blank" rel="noopener">https://youtu.be/jGmvsMbU8pA?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=625</a></p>
 <p>随机变量的本质：<br><a href="https://youtu.be/h0DH8K9JTpw?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=433" target="_blank" rel="noopener">https://youtu.be/h0DH8K9JTpw?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=433</a><br>X:S-R  S是样本空间，到实数的一个映射</p>
-<p>什么是累计分布函数？<br>累积分布函数(Cumulative Distribution Function)<br><a href="https://youtu.be/RlNfklkZPlo?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=149" target="_blank" rel="noopener">https://youtu.be/RlNfklkZPlo?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=149</a></p>
+<h3 id="概率分布相关的一些定义"><a href="#概率分布相关的一些定义" class="headerlink" title="概率分布相关的一些定义"></a>概率分布相关的一些定义</h3><p>什么是累计分布函数？<br>累积分布函数(Cumulative Distribution Function)<br><a href="https://youtu.be/RlNfklkZPlo?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=149" target="_blank" rel="noopener">https://youtu.be/RlNfklkZPlo?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=149</a></p>
 <p>什么是机率质量函数？<br>probability mass function，简写为pmf<br><a href="https://youtu.be/ynBUPA67a3k?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=28" target="_blank" rel="noopener">https://youtu.be/ynBUPA67a3k?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=28</a><br>几率质量函数一定指的是，离散随机变量。<br>p_X(x)=P(X=x)</p>
 <p>PMF和CDF之间的关系：<br><a href="https://youtu.be/ynBUPA67a3k?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=459" target="_blank" rel="noopener">https://youtu.be/ynBUPA67a3k?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=459</a></p>
 <p>在数学中，连续型随机变量的概率密度函数（Probability density function）PDF</p>
+<p>probability mass function和probability indensity function之间的关系。<br>概率质量函数和概率密度函数不同之处在于：概率质量函数是对离散随机变量定义的，本身代表该值的概率；概率密度函数是对连续随机变量定义的，本身不是概率，只有对连续随机变量的概率密度函数在某区间内进行积分后才是概率。</p>
 <p>伯努利分布，这样的module，有个特点一次实验，两个结果。</p>
-<p>为什么要探讨，联合纪律分布：<br>同时将很多个随机变量的行为一起拿来看，我们可以看到很多以往不一样的资讯！<br>Joint Probability distribution<br><a href="https://youtu.be/FC4buzLuWmQ?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=78" target="_blank" rel="noopener">https://youtu.be/FC4buzLuWmQ?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=78</a></p>
-<p>probability mass function和probability indensity function之间的关系。</p>
-<p>概率质量函数和概率密度函数不同之处在于：概率质量函数是对离散随机变量定义的，本身代表该值的概率；概率密度函数是对连续随机变量定义的，本身不是概率，只有对连续随机变量的概率密度函数在某区间内进行积分后才是概率。</p>
-<p>边际概率分布：<br>marginal probability distribution</p>
+<h3 id="联合概率分布"><a href="#联合概率分布" class="headerlink" title="联合概率分布"></a>联合概率分布</h3><p>为什么要探讨，联合纪律分布：<br>同时将很多个随机变量的行为一起拿来看，我们可以看到很多以往不一样的资讯！<br>Joint Probability distribution<br><a href="https://youtu.be/FC4buzLuWmQ?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=78" target="_blank" rel="noopener">https://youtu.be/FC4buzLuWmQ?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=78</a></p>
+<p>边际概率分布：<br>marginal probability distribution，对某一个变量进行积分</p>
 <p>Variance相关的性质<br><a href="https://youtu.be/72GSlk0AfFc?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa" target="_blank" rel="noopener">https://youtu.be/72GSlk0AfFc?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa</a><br>协方差：<br>Cov(X,Y) = E[(X-u_x)(Y-u_y)]</p>
-<p>出现了卷积的形式：<br><a href="https://youtu.be/6b1-LIMMez4?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=305" target="_blank" rel="noopener">https://youtu.be/6b1-LIMMez4?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=305</a><br>P_z(X)   </p>
-<p>X1，X2，X3是IID，（独立同分布的随机变量）<br>那么Z=X1+X2的PDF（probability density function）就是<br>X1和X2的PDF的卷积【这里需要问一百个为什么！！！】</p>
+<h3 id="卷积，两个概率分布做卷积"><a href="#卷积，两个概率分布做卷积" class="headerlink" title="卷积，两个概率分布做卷积"></a>卷积，两个概率分布做卷积</h3><p>出现了卷积的形式：<br><a href="https://youtu.be/6b1-LIMMez4?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=305" target="_blank" rel="noopener">https://youtu.be/6b1-LIMMez4?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=305</a>  </p>
+<p>X1，X2，X3是IID，（独立同分布的随机变量）<br>那么Z=X1+X2的PDF（probability density function）就是<br>X1和X2的PDF的卷积【这里需要问一百个为什么！！！可以借助卷积那个帖子进行理解，小球从高处落下】</p>
 <p>如何理解两个函数做卷积？<br>这里有一个帖子：<a href="http://colah.github.io/posts/2014-07-Understanding-Convolutions/" target="_blank" rel="noopener">http://colah.github.io/posts/2014-07-Understanding-Convolutions/</a></p>
-<p>什么是MGF?<br>Moment generating function<br>为什么要学MGF，因为convolution很不好算<br><a href="https://youtu.be/6b1-LIMMez4?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=781" target="_blank" rel="noopener">https://youtu.be/6b1-LIMMez4?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=781</a></p>
+<p>两个概率分布做卷积后某一个点对应的值是什么含义？<br>是不是可以理解成Z=X1+X2，Z的概率分布。正因为是Z的概率分布，所以某一个位置的值不可能大于1。</p>
+<h3 id="什么是MGF"><a href="#什么是MGF" class="headerlink" title="什么是MGF?"></a>什么是MGF?</h3><p>Moment generating function<br>为什么要学MGF，因为convolution很不好算<br><a href="https://youtu.be/6b1-LIMMez4?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=781" target="_blank" rel="noopener">https://youtu.be/6b1-LIMMez4?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=781</a></p>
 <p>红娘这个例子太形象了<br><a href="https://youtu.be/LGe5eEBzgeU?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=202" target="_blank" rel="noopener">https://youtu.be/LGe5eEBzgeU?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=202</a></p>
 <p>什么是moment？<br>没听懂。<br><a href="https://youtu.be/mIbJfAvrNvw?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=645" target="_blank" rel="noopener">https://youtu.be/mIbJfAvrNvw?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=645</a></p>
-<p>独立随机变数之和</p>
-<p><a href="https://youtu.be/5RroTs-7wwE?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=55" target="_blank" rel="noopener">https://youtu.be/5RroTs-7wwE?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=55</a><br>I.I.D.<br>Independently and Identically Distributed</p>
-<p>中央极限定理背后的道理是什么？</p>
+<p>独立随机变数之和<br><a href="https://youtu.be/5RroTs-7wwE?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=55" target="_blank" rel="noopener">https://youtu.be/5RroTs-7wwE?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=55</a><br>I.I.D.<br>Independently and Identically Distributed</p>
+<h3 id="中心极限定律"><a href="#中心极限定律" class="headerlink" title="中心极限定律"></a>中心极限定律</h3><p>中央极限定理背后的道理是什么？</p>
 <ol>
 <li>第一种叙述方式：你有n个IID的随机变量X1,X2,X3,…,Xn，你把他们加起来，得到Z,当n趋近于无穷大时，Z的PDF就是高斯分布。</li>
 <li>第二种叙述方式：中央极限定理：重复从整体中抽取样本，当样本足够大，抽取的次数足够多时，不论整体属于什么分布，这些样本的平均值会呈现出正态分布，其平均值等于整体平均值。</li>
 </ol>
-<p>噪声为什么是正态分布？<br>首先电子有能量，有能量就会忽大忽小乱跑。关键点在于，这些电子都是独立的，多个独立同分布的和的效应就是正态分布。<br><a href="https://youtu.be/sWEjck-m1CQ?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=643" target="_blank" rel="noopener">https://youtu.be/sWEjck-m1CQ?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=643</a></p>
+<p>噪声为什么是正态分布？<br>首先电子有能量，有能量就会忽大忽小乱跑。关键点在于，这些电子都是独立的，很多很多个独立同分布的和的效应就是正态分布。<br><a href="https://youtu.be/sWEjck-m1CQ?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=643" target="_blank" rel="noopener">https://youtu.be/sWEjck-m1CQ?list=PLO2p2gIHQzKCd_dNMyizf-cTrUTKSlYVa&amp;t=643</a></p>
 <hr>
-<p>依靠样本来推论整体，主要依靠两个定理：</p>
+<h3 id="假设检验"><a href="#假设检验" class="headerlink" title="假设检验"></a>假设检验</h3><p>依靠样本来推论整体，主要依靠两个定理：</p>
 <ol>
 <li>中央极限定理：重复从整体中抽取样本，当样本足够大，抽取的次数足够多时，不论整体属于什么分布，这些样本的平均值会呈现出正态分布，其平均值等于整体平均值。</li>
 <li>大数法则：当重复抽样的样本越大，样本平均数的标准差会越小</li>
+<li>小概率事件在一次实验中不可能发生的</li>
 </ol>
 <p><strong>这里我终于理解了，为什么要做正态性检验了，因为如果我们的样本不符合正态性，那么我们的样本还不足推论整体；换句话说，我们的样本量还不够，还需要继续补充实验</strong></p>
-<p>什么是抽样分布：样本统计量（平均值）的分布，有三个特点：<br><a href="https://youtu.be/bn92a9f2Snc?t=176" target="_blank" rel="noopener">https://youtu.be/bn92a9f2Snc?t=176</a></p>
+<h4 id="什么是抽样分布：样本统计量（平均值）的分布，有三个特点："><a href="#什么是抽样分布：样本统计量（平均值）的分布，有三个特点：" class="headerlink" title="什么是抽样分布：样本统计量（平均值）的分布，有三个特点："></a>什么是抽样分布：样本统计量（平均值）的分布，有三个特点：</h4><p><a href="https://youtu.be/bn92a9f2Snc?t=176" target="_blank" rel="noopener">https://youtu.be/bn92a9f2Snc?t=176</a></p>
 <ol>
 <li>样本的平均值会呈现正态分布；</li>
 <li>抽样分布的平均值等于整体的平均值；</li>
 <li>样本越大，抽样分布的标准差越小</li>
 </ol>
 <p>利用抽样分布的特点完成假设检定<br><a href="https://youtu.be/bn92a9f2Snc?t=403。" target="_blank" rel="noopener">https://youtu.be/bn92a9f2Snc?t=403。</a></p>
-<p>统计检验有两个关键点：</p>
-<ul>
+<h4 id="统计检验有两个关键点："><a href="#统计检验有两个关键点：" class="headerlink" title="统计检验有两个关键点："></a>统计检验有两个关键点：</h4><ul>
 <li>样本大小：样本大小越大，抽样分布（样本统计量（平均值）的分布）的标准差越小</li>
 <li>抽样次数：抽多少次</li>
 </ul>
 <p>如果知道样本的大小（PS:这个我们当然知道，因为是我们自己抽的），所以我们就可以推估出来，理论上这个抽样分布应该长什么样子。</p>
 <p>虚无假设，让我们知道正态分布的平均值；样本大小让我们推论出来正态分布的标准差。</p>
 <p>如果没有虚无假设，我们就没有理论上的这个抽样分布。所以，光有样本的抽样分布，我们是没有办法得到任何的推论的。</p>
-<p>p-value，代表我们拒绝虚无假设的证据力，如果p越小，我们拒绝虚无假设的证据力就越强，如果p越大，我们拒绝虚无假设的证据力就越弱。</p>
+<h4 id="p值的含义"><a href="#p值的含义" class="headerlink" title="p值的含义"></a>p值的含义</h4><p>p-value，代表我们拒绝虚无假设的证据力，如果p越小，我们拒绝虚无假设的证据力就越强，如果p越大，我们拒绝虚无假设的证据力就越弱。</p>
 <p>P-value代表的是，虚无假设为真的前提下，抽到这样的样本的概率小于P-value</p>
-<p>假设检验<br>假设检验的问题在于，它讲不出来风险到底有多大会。</p>
-<hr>
-<p>构造原假设（虚无假设）的基本原则：</p>
-<ol>
+<h4 id="假设检验的问题"><a href="#假设检验的问题" class="headerlink" title="假设检验的问题"></a>假设检验的问题</h4><p>假设检验的问题在于，它讲不出来风险到底有多大会。</p>
+<h4 id="构造原假设（虚无假设）的基本原则："><a href="#构造原假设（虚无假设）的基本原则：" class="headerlink" title="构造原假设（虚无假设）的基本原则："></a>构造原假设（虚无假设）的基本原则：</h4><ol>
 <li>保护原假设原则。换句话说，如果错误地拒绝A比错误地拒绝B带来更严重的后果——A应该是原假设。举个例子：假设A:新药有某种毒副作用，假设B：新药没有毒副作用。当我们错误地拒绝A，也就是说我们的决策时A没有毒副作用，当实际情况是A有毒副作用，所造成的的后果会非常严重，那么A就应该是我们的原假设。</li>
 <li>原假设为维持现状。比如假设药物没有显著效果</li>
 <li>取简单假设</li>
 </ol>
-<p>T-Test检验和Anova检验。<br>T-Test检验，包含单样本t检验，独立样本t检验【老李和老王两家的小麦产量有没有显著性的区别】，配对样本t检验【老王家的小麦产量在施加肥料和不施加肥料有没有差别】<br>t-test检验，检验的是两个变量之间的均值是否有差异。</p>
+<hr>
+<h3 id="T-Test检验和Anova检验"><a href="#T-Test检验和Anova检验" class="headerlink" title="T-Test检验和Anova检验"></a>T-Test检验和Anova检验</h3><p>T-Test检验，包含单样本t检验，独立样本t检验【老李和老王两家的小麦产量有没有显著性的区别】，配对样本t检验【老王家的小麦产量在施加肥料和不施加肥料有没有差别】<br>t-test检验，检验的是两个变量之间的均值是否有差异。</p>
 <p>Anova检验，用于两个及两个以上样本均数差别的显著性检验。由于各种因素的影响，研究所得的数据呈现波动状。造成波动的原因可分成两类，一是不可控的随机因素，另一是研究中施加的对结果形成影响的可控因素。</p>
-<p>什么是t分布，为什么t分布使得小样本的推论成为可能。<br>维基上的解释：<a href="https://zh.wikipedia.org/wiki/%E5%AD%A6%E7%94%9Ft-%E5%88%86%E5%B8%83" target="_blank" rel="noopener">https://zh.wikipedia.org/wiki/%E5%AD%A6%E7%94%9Ft-%E5%88%86%E5%B8%83</a><br>t分布是在未知整体标准差σ的情况下，用样本标准差（S/sqrt(n)）代替σ得到的统计量的分布。</p>
+<h3 id="什么是t分布，为什么t分布使得小样本的推论成为可能。"><a href="#什么是t分布，为什么t分布使得小样本的推论成为可能。" class="headerlink" title="什么是t分布，为什么t分布使得小样本的推论成为可能。"></a>什么是t分布，为什么t分布使得小样本的推论成为可能。</h3><p>维基上的解释：<a href="https://zh.wikipedia.org/wiki/%E5%AD%A6%E7%94%9Ft-%E5%88%86%E5%B8%83" target="_blank" rel="noopener">https://zh.wikipedia.org/wiki/%E5%AD%A6%E7%94%9Ft-%E5%88%86%E5%B8%83</a><br>t分布是在未知整体标准差σ的情况下，用样本标准差（S/sqrt(n)）代替σ得到的统计量的分布。</p>
 <ul>
 <li>我的回答，首先t分布是构造出来的一个统计量所服从的分布。这个统计量使得利用小样本的推论整体成为可能。当你的样本量足够多时，样本的抽样分布应该服从是正太分布</li>
 </ul>
@@ -376,8 +369,7 @@
 <ul>
 <li>我的回答，因为样本方差是有偏估计，想一个极端情况，当你只有1个样本时，你的方差是0，但是你不能推断出整体的方差也是0。</li>
 </ul>
-<p>t-test的前提条件</p>
-<ul>
+<h3 id="t-test的前提条件"><a href="#t-test的前提条件" class="headerlink" title="t-test的前提条件"></a>t-test的前提条件</h3><ul>
 <li>计算相关系数，前提是要符合正态分布</li>
 </ul>
 <p>我们要依据什么原理做出决策？</p>
@@ -386,19 +378,17 @@
 <li>老师的答案是：小概率事件在一次实验中是不会发生的。<br><a href="https://youtu.be/b6WUxyJM3zc?t=1718" target="_blank" rel="noopener">https://youtu.be/b6WUxyJM3zc?t=1718</a></li>
 </ul>
 <hr>
-<p>如何理解ROC曲线。<br>要理解ROC曲线，前提是要理解横纵坐标。假阳性率为横轴（FPR），真阳性率（TPR）为纵轴。  </p>
-<p>如何理解ROC Space？Space上的某一个点，代表什么含义？<br>它是一个概率空间吗？——每一个点代表的是概率值？——不对  </p>
-<p>首先总结一下ROC对角线，这条直线上的点，对于阳性样本和阴性样本没有实际的区分度。换句话说就是random guess。因为，我们心目中的模型应该长这个样子，对于阳性样本来说，应该尽可能检测成阳性（TPR尽可能的高），对于阴性样本来说，应该尽可能检测成阴性（FPR尽可能的低）,这样的模型应该分布在这条线的左上区域。反之，如果连这一点都做不到的话，就位于该条直线的右下方，针对这样的情况，反向预测就能提升模型的预测性能。  </p>
-<p>(1,1)这个点代表：模型全部猜成阳性；<br>(0.5,0.5)点代表：模型把一半猜成阳性，一半猜成阴性；换句话说，在真实的阳性样本中，模型把其中的一半猜成了阳性，在真实的阴性样本中，模型也是把其中的一半猜成了阴性。<br>(0,0)点代表：模型全部猜成阴性。</p>
+<h3 id="如何理解ROC曲线"><a href="#如何理解ROC曲线" class="headerlink" title="如何理解ROC曲线"></a>如何理解ROC曲线</h3><p>要理解ROC曲线，前提是要理解横纵坐标。假阳性率为横轴（FPR），真阳性率（TPR）为纵轴。  </p>
+<h3 id="如何理解ROC-Space"><a href="#如何理解ROC-Space" class="headerlink" title="如何理解ROC Space"></a>如何理解ROC Space</h3><p>如何理解ROC Space？Space上的某一个点，代表什么含义？<br>它是一个概率空间吗？——每一个点代表的是概率值？——不对<br>首先总结一下ROC对角线，这条直线上的点，对于阳性样本和阴性样本没有实际的区分度。换句话说就是random guess。因为，我们心目中的模型应该长这个样子，对于阳性样本来说，应该尽可能检测成阳性（TPR尽可能的高），对于阴性样本来说，应该尽可能检测成阴性（FPR尽可能的低）,这样的模型应该分布在这条线的左上区域。反之，如果连这一点都做不到的话，就位于该条直线的右下方，针对这样的情况，反向预测就能提升模型的预测性能。<br>(1,1)这个点代表：模型全部猜成阳性；<br>(0.5,0.5)点代表：模型把一半猜成阳性，一半猜成阴性；换句话说，在真实的阳性样本中，模型把其中的一半猜成了阳性，在真实的阴性样本中，模型也是把其中的一半猜成了阴性。<br>(0,0)点代表：模型全部猜成阴性。  </p>
 <p>在ROC空间中，每一个点代表的含义是：这个分类器，或者叫做模型，他在真实阳性样本中的表现（TPR）和在真实阴性样本中（FPR）的表现怎么样。</p>
 <p>python绘制ROC曲线；<br>请参考：<a href="https://www.jianshu.com/p/2ca96fce7e81" target="_blank" rel="noopener">https://www.jianshu.com/p/2ca96fce7e81</a><br>几乎所有评估模型的指标都来自sklearn库下面的metrics，包括计算召回率，精确率等。ROC曲线的绘制也不例外</p>
-<p>真阳性、假阳性；<br>假阴性、真阴性；   </p>
+<h3 id="评价一个模型的常用指标"><a href="#评价一个模型的常用指标" class="headerlink" title="评价一个模型的常用指标"></a>评价一个模型的常用指标</h3><p>真阳性、假阳性；<br>假阴性、真阴性；   </p>
 <p>灵敏度（Sensitivity）:= 真阳性/(真阳性+假阴性) = 真阳性/(所有真阳性者)【用来评价检测真阳性的能力】=【换句话说，所有真实类别为1的样本中，预测类别为1的比例】<br>特异度（specificity）:= 真阴性/(真阴性+假阳性) = 真阴性/(所有真阴性者)【用来评价检测真阴性的能力】=【换句话说，所有真实类别为0的样本中，预测类别为0的比例】</p>
 <p><a href="https://youtu.be/9sQygrFdwv0?t=881" target="_blank" rel="noopener">https://youtu.be/9sQygrFdwv0?t=881</a><br>召回率评价的是全不全。<br>对于样本不均衡的情况来说，准确率、召回率、精确率和F1-Score都不行了，这个时候需要用ROC和AUC指标进行评价。</p>
 <p>精确率：精确率是针对我们预测结果而言的，它表示的是预测为正的样本中有多少是真正的正样本。P(precision) = TP/(TP+FP)<br>召回率：召回率是针对我们原来的样本而言的，它表示的是样本中的正例有多少被预测正确了。R(Recall) = TP/(TP+FN)<br>F-score。这是综合考虑Precision和Recall的调和值。</p>
 <p>F-Score = (1+\beta ^2)\frac{precision<em>Recall}{\beta ^2</em>precision+Recall}<br>当\beta = 1，叫做F1-Score，精确率和召回率都很重要，权重相同。当有些情况下，我们认为精确率更重要些，那就调整β的值小于1，如果我们认为召回率更重要些，那就调整β的值大于1。</p>
 <p>灵敏度和召回率是不是一样的？——是的，刻画的是在所有真实为阳性样本中预测为阳性的比例</p>
-<p>总结，评价一个模型，要计算出来这些指标：准确率accuracy、(精确率precision、召回率recall)、（灵敏度sensitivity、特异度specificity）、F-Score</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>评价一个模型，要计算出来这些指标：准确率accuracy、(精确率precision、召回率recall)、（灵敏度sensitivity、特异度specificity）、F-Score</p>
 
     </div>
 
@@ -507,6 +497,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#基本概念"><span class="nav-number">1.</span> <span class="nav-text">基本概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#机率的三条公理"><span class="nav-number">2.</span> <span class="nav-text">机率的三条公理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#条件概率"><span class="nav-number">3.</span> <span class="nav-text">条件概率</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何理解除法，是否可以从除法的角度理解条件概率"><span class="nav-number">4.</span> <span class="nav-text">如何理解除法，是否可以从除法的角度理解条件概率</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#切面包定理（Total-probability定理）"><span class="nav-number">5.</span> <span class="nav-text">切面包定理（Total probability定理）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#贝叶斯定理（Bayes’-Rule）"><span class="nav-number">6.</span> <span class="nav-text">贝叶斯定理（Bayes’ Rule）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#概率分布相关的一些定义"><span class="nav-number">7.</span> <span class="nav-text">概率分布相关的一些定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#联合概率分布"><span class="nav-number">8.</span> <span class="nav-text">联合概率分布</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#卷积，两个概率分布做卷积"><span class="nav-number">9.</span> <span class="nav-text">卷积，两个概率分布做卷积</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是MGF"><span class="nav-number">10.</span> <span class="nav-text">什么是MGF?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#中心极限定律"><span class="nav-number">11.</span> <span class="nav-text">中心极限定律</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#假设检验"><span class="nav-number">12.</span> <span class="nav-text">假设检验</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#什么是抽样分布：样本统计量（平均值）的分布，有三个特点："><span class="nav-number">12.1.</span> <span class="nav-text">什么是抽样分布：样本统计量（平均值）的分布，有三个特点：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#统计检验有两个关键点："><span class="nav-number">12.2.</span> <span class="nav-text">统计检验有两个关键点：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#p值的含义"><span class="nav-number">12.3.</span> <span class="nav-text">p值的含义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#假设检验的问题"><span class="nav-number">12.4.</span> <span class="nav-text">假设检验的问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#构造原假设（虚无假设）的基本原则："><span class="nav-number">12.5.</span> <span class="nav-text">构造原假设（虚无假设）的基本原则：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#T-Test检验和Anova检验"><span class="nav-number">13.</span> <span class="nav-text">T-Test检验和Anova检验</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是t分布，为什么t分布使得小样本的推论成为可能。"><span class="nav-number">14.</span> <span class="nav-text">什么是t分布，为什么t分布使得小样本的推论成为可能。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#t-test的前提条件"><span class="nav-number">15.</span> <span class="nav-text">t-test的前提条件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何理解ROC曲线"><span class="nav-number">16.</span> <span class="nav-text">如何理解ROC曲线</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何理解ROC-Space"><span class="nav-number">17.</span> <span class="nav-text">如何理解ROC Space</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#评价一个模型的常用指标"><span class="nav-number">18.</span> <span class="nav-text">评价一个模型的常用指标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">19.</span> <span class="nav-text">总结</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -522,7 +513,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">59</span>
+          <span class="site-state-item-count">58</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -563,7 +554,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">105k</span>
+    <span title="站点总字数">104k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
