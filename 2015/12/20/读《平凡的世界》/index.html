@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 <meta name="generator" content="Hexo 4.2.0">
@@ -17,7 +17,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"fengzhiheng.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"fengzhiheng.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="一个男人被女人关怀是多么美好。">
@@ -75,12 +75,12 @@
   .use-motion .logo-line-before i { left: initial; }
   .use-motion .logo-line-after i { right: initial; }
   </style>
-</noscript>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container use-motion">
     <div class="headband"></div>
 
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -104,6 +104,7 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -128,11 +129,38 @@
     <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
   </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
   </ul>
 </nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
 
 </div>
     </header>
@@ -189,7 +217,14 @@
                 <time title="修改时间：2020-02-12 21:43:42" itemprop="dateModified" datetime="2020-02-12T21:43:42+08:00">2020-02-12</time>
               </span>
 
-          <br>
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
             <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
@@ -220,77 +255,29 @@
 <a id="more"></a> 
 <blockquote>
 <p>幸福，或者说存在的价值，并不在于我们从事什么样的工作。</p>
-</blockquote>
-<blockquote>
 <p>任何时候，处在失败者的位置上，就得忍辱受屈。</p>
-</blockquote>
-<blockquote>
 <p>大时代的浪潮不仅改变物质世界，更重要的是，也在改变人。</p>
-</blockquote>
-<blockquote>
 <p>没有永恒的痛苦，没有永恒的幸福。生活像流水一般，有时是那么平展，有时又那么曲折。</p>
-</blockquote>
-<blockquote>
 <p>花朵是美丽的，果实的价值更高。</p>
-</blockquote>
-<blockquote>
 <p>青春年华如同晨曦与晚霞，绚丽多彩而又变幻莫测。</p>
-</blockquote>
-<blockquote>
 <p>既不懈地追求生活，又不奢望生活过多的酬报和宠爱，理智而清醒地面对着现实。这也许是所有从农村走出来的知识阶层所共有的一种心态。</p>
-</blockquote>
-<blockquote>
 <p>生活中真正的勇士向来默默无闻，喧哗不止的永远是自视高贵的一群。</p>
-</blockquote>
-<blockquote>
 <p>人处在一种默默奋斗的状态，精神就会从琐碎生活中得到升华。</p>
-</blockquote>
-<blockquote>
 <p>生活使他重新扮演了往日的角色。生活，生活，这就是生活！</p>
-</blockquote>
-<blockquote>
 <p>多大的痛苦也不能打乱生活的节拍——这就是他精神强大的根本所在！</p>
-</blockquote>
-<blockquote>
 <p>伟人们常常企图用纪念碑或纪念堂来使自己永世流芳。真正万古长青的却是普通人的无名纪念碑——生生不息的人类生活自身。是的，生活之树常青。</p>
-</blockquote>
-<blockquote>
 <p>他知道，人的痛苦只能在生活和劳动中慢慢消磨掉。</p>
-</blockquote>
-<blockquote>
 <p>他们如此挣命，是因为生活突然充满了巨大希望。有了希望，人就会产生激情，并可以义无反顾地为之付出代价；在这样的过程中，才能体会到人生的意义。什么是人生？人生就是永不休止的奋斗！只有选定了目标并在奋斗中感到自己的努力没有虚掷，这样的生活才是充实的，精神也会永远年轻！</p>
-</blockquote>
-<blockquote>
 <p>生活啊，这是为什么？贫穷让人痛苦，可有了钱还为什么让人这么痛苦？</p>
-</blockquote>
-<blockquote>
 <p>绝不能松劲！他应该像往常一样，精神抖擞地跳上这辆生活的马车，坐在驾辕的位置上，绷紧全身的肌肉和神经，吆喝着，呐喊着，继续走向前去……</p>
-</blockquote>
-<blockquote>
 <p>还有什么能比得上亲近的人悲悯你而更使你自己难过呢？</p>
-</blockquote>
-<blockquote>
 <p>他痛恨自己的软弱；他和他自己在激烈地斗争着······</p>
-</blockquote>
-<blockquote>
 <p>巨大的打击顷刻间就把他完全变成一个老年人。</p>
-</blockquote>
-<blockquote>
 <p>人们！你们怎么能因为贫困，就以物遮目，而变得如此愚蠢呢？</p>
-</blockquote>
-<blockquote>
 <p>人类正是这样不断地在否定之否定中发展。</p>
-</blockquote>
-<blockquote>
 <p>一旦失去了原则和正确领导，农民的自私性就强烈地表现了出来。</p>
-</blockquote>
-<blockquote>
 <p>一个有文化有知识爱思考的人，一旦失去了自己的精神世界，那痛苦是无法言语的。</p>
-</blockquote>
-<blockquote>
 <p>但她并不具有深刻的思想和广阔的完结。因此，最终她还是不能掌握自己的命运。</p>
-</blockquote>
-<blockquote>
 <p>人生中还有什么打击能比得上年轻时候的失恋对人的打击呢？</p>
 </blockquote>
 
@@ -330,6 +317,7 @@
 
           </div>
           
+    <div class="comments" id="gitalk-container"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -444,6 +432,26 @@
   </div>
 
         
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
 
 
 
@@ -479,6 +487,10 @@
 
 
 
+  
+<script src="/js/local-search.js"></script>
+
+
 
 
 
@@ -493,6 +505,28 @@
   
 
   
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : '9bad5f6ce5fb909b931c',
+      clientSecret: '8af06250d607e8252bf84130a9421a2e5aab692a',
+      repo        : 'FengZhiheng.github.io',
+      owner       : 'FengZhiheng',
+      admin       : ['FengZhiheng'],
+      id          : 'c0e6dc122f3da685d5f00f9a9af47687',
+        language: '',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </body>
 </html>

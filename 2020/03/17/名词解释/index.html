@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 <meta name="generator" content="Hexo 4.2.0">
@@ -17,7 +17,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"fengzhiheng.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"fengzhiheng.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="名词解释-March">
@@ -83,12 +83,12 @@
   .use-motion .logo-line-before i { left: initial; }
   .use-motion .logo-line-after i { right: initial; }
   </style>
-</noscript>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container use-motion">
     <div class="headband"></div>
 
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -112,6 +112,7 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -136,11 +137,38 @@
     <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
   </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
   </ul>
 </nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
 
 </div>
     </header>
@@ -197,7 +225,14 @@
                 <time title="修改时间：2020-03-22 17:45:33" itemprop="dateModified" datetime="2020-03-22T17:45:33+08:00">2020-03-22</time>
               </span>
 
-          <br>
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
             <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
@@ -222,9 +257,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>名词解释-March</p>
-<a id="more"></a> 
-
+        <p>名词解释-March<br><a id="more"></a> </p>
 <h4 id="Backprojection"><a href="#Backprojection" class="headerlink" title="Backprojection"></a>Backprojection</h4><p>The backprojection is calculated from the histogram. It basically replace every pixel by it’s probability to occur in the image. It is not really useful to use it by hand, but this is used by other algorithm like meanshift. The example below shows the common usage of backprojection associated with Region Of Interest. In this example we select a rectangle in the upper left corner of the image, we compute the histogram and then apply a backprojection on the whole image to detect others parts of the image which have the same histogram.</p>
 <p>“replace every pixel by it’s probability to occur in the image”——把每一个像素点替换成它所出现的概率</p>
 <p><a href="http://www.robindavid.fr/opencv-tutorial/chapter4-histogram-and-backprojection.html" target="_blank" rel="noopener">http://www.robindavid.fr/opencv-tutorial/chapter4-histogram-and-backprojection.html</a></p>
@@ -245,14 +278,14 @@
 <p>平移变换，示意图如下：<br><img src="/2020/03/17/%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/pingyibianhuan.png" alt=""></p>
 <p>旋转变换，示意图如下：<br><img src="/2020/03/17/%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/xuanzhuanbianhuan.png" alt=""></p>
 <h4 id="动态磁敏感对比成像"><a href="#动态磁敏感对比成像" class="headerlink" title="动态磁敏感对比成像"></a>动态磁敏感对比成像</h4><p>SWI又叫做磁敏感加权成像，最早由E.Mack Haacke等\cite{reichenbach1997small}在1997年发现，当时叫做“高分辨率血氧水平依赖静脉成像”(high resolution blood oxygenation level dependent venographic imaging)，至今已经22年，在临床上得到了广泛的应用。</p>
-<h5 id="SWI序列基础"><a href="#SWI序列基础" class="headerlink" title="SWI序列基础"></a>SWI序列基础</h5><p>SWI根据不同组织间的磁敏感性差异提供图像对比。为了凸显SWI在表现细小静脉及小出血方面的能力，SWI以T2* 加权梯度回波序列作为基础进行了改进。与T2* 加权梯度回波序列不同的是，SWI采用全流动补偿的梯度回波序列进行扫描，可同时获得幅度图像(magnitude image)和相位图像(phase image)两组图像。<br>常规MRI仅利用了单一的幅度信息，SWI则利用了一直被忽略的相位信息，并经过一系列后处理将相位图与幅度图融合，形成独特的图像对比。</p>
+<h5 id="SWI序列基础"><a href="#SWI序列基础" class="headerlink" title="SWI序列基础"></a>SWI序列基础</h5><p>SWI根据不同组织间的磁敏感性差异提供图像对比。为了凸显SWI在表现细小静脉及小出血方面的能力，SWI以T2<em> 加权梯度回波序列作为基础进行了改进。与T2</em> 加权梯度回波序列不同的是，SWI采用全流动补偿的梯度回波序列进行扫描，可同时获得幅度图像(magnitude image)和相位图像(phase image)两组图像。<br>常规MRI仅利用了单一的幅度信息，SWI则利用了一直被忽略的相位信息，并经过一系列后处理将相位图与幅度图融合，形成独特的图像对比。</p>
 <h5 id="磁敏感性及常见的磁敏感物质"><a href="#磁敏感性及常见的磁敏感物质" class="headerlink" title="磁敏感性及常见的磁敏感物质"></a>磁敏感性及常见的磁敏感物质</h5><p>SWI主要利用组织间磁敏感差异形成图像对比，磁敏感性反映了物质在外加磁场(H)作用下的磁化程度，可以用磁化率(χ)来度量。<br>人体组织中绝大多数磁敏感改变与血液中铁的不同形式或出血等相关。当血红蛋白中的$Fe^{2+}$与氧结合时，形成的氧合血红蛋白呈反磁性。当氧与铁离子分离形成脱氧血红蛋白时，形成的脱氧血红蛋白有4个不成对电子，呈顺磁性\cite{ogawa1990oxygenation}。<br>组织内另一种磁敏感的源物质是非血红素铁，它常以铁蛋白的形式存在，表现为反磁性。组织内的钙化通常也呈反磁性，虽然磁敏感效应比铁弱，但也能导致可测量到的敏感性的变化。<br>无论是顺磁性还是反磁性物质，均可使局部磁场发生变化而引起质子的拉莫尔频率发生变化。如果施加一个足够长的TE，自旋频率不同的质子间将形成明显的相位差别，此时，磁敏感度不同的组织将在SWI相位图上被区分出来。  </p>
 <h5 id="相位图"><a href="#相位图" class="headerlink" title="相位图"></a>相位图</h5><p>与常规磁共振成像不同，相位图反映了质子在弛豫过程中经过的角度(φ)，根据磁敏感性的差异反映图像对比，可获得大量反映组织内铁及其他磁敏感性物质含量的信息。  </p>
 <h5 id="SWI后处理思路"><a href="#SWI后处理思路" class="headerlink" title="SWI后处理思路"></a>SWI后处理思路</h5><p>首先去除由于背景磁场不均匀造成的低频扰动，使用一个高通滤波器，滤除低频扰动分量，得到高频分量，即校正后的相位图。<br>第二步将校正相位图中不同组织的相位值进行标准化处理，建立相位Mask，并将相位Mask与幅度图像多次相乘进行加权。<br>通常按照下述公式将不同组织的相位值进行标准化处理，得到点x处标准化后的相位值： </p>
 <p><img src="/2020/03/17/%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/SWIgongshi.png" alt=""></p>
 <p>$\phi_{x}$代表相位图中点x处的相位，根据公式，相位在$(0,\pi)$的像素，其相位被设定为标准值1，相位在$(-\pi,0)$的像素，其相位值被转化为$(0,1)$，在相位Mask中起到抑制信号的作用。<br>如公式所示，将$\phi_{mask(x)}$做n次幂后与幅度$\rho_(x)$相乘得到SWI图像，n决定了权重的大小。经过相位蒙片与幅度图加权，顺磁性物质的负相位信号得到抑制，在磁敏感加权图像上呈明显的低信号，因此，在失相位区域与正常组织间便形成了较好的对比。  </p>
-<p>$$<br>  SWI_{x} = \phi_{mask(x)}^n\rho_(x)<br>$$</p>
-<h5 id="SWI在临床上的应用"><a href="#SWI在临床上的应用" class="headerlink" title="SWI在临床上的应用"></a>SWI在临床上的应用</h5><p>SWI利用不同组织间磁敏感的差异成像并将其放大，通过检测病灶中的静脉分布、出血灶和矿物质沉积等，有效改善了相关疾病的诊断，目前主要应用于中枢神经系统。<br>从SWI原理上可以看到，只要组织间存在磁化率差异，就可以通过SWI显示出组织对比。但由于磁敏感成像对于局部磁场不均匀性特别敏感，因此在某些磁化率差异特别大的区域，其成像却受到一定程度的限制，如颅底的含气鼻窦、脊柱等部位，由于组织间的的磁化率差异极大，因此造成局部特别强的相位伪影。<br>SWI是MRI常规序列的重要补充，已经成功应用于临床诊断、鉴别诊断及科学研究之中。</p>
+<script type="math/tex; mode=display">
+  SWI_{x} = \phi_{mask(x)}^n\rho_(x)</script><h5 id="SWI在临床上的应用"><a href="#SWI在临床上的应用" class="headerlink" title="SWI在临床上的应用"></a>SWI在临床上的应用</h5><p>SWI利用不同组织间磁敏感的差异成像并将其放大，通过检测病灶中的静脉分布、出血灶和矿物质沉积等，有效改善了相关疾病的诊断，目前主要应用于中枢神经系统。<br>从SWI原理上可以看到，只要组织间存在磁化率差异，就可以通过SWI显示出组织对比。但由于磁敏感成像对于局部磁场不均匀性特别敏感，因此在某些磁化率差异特别大的区域，其成像却受到一定程度的限制，如颅底的含气鼻窦、脊柱等部位，由于组织间的的磁化率差异极大，因此造成局部特别强的相位伪影。<br>SWI是MRI常规序列的重要补充，已经成功应用于临床诊断、鉴别诊断及科学研究之中。</p>
 
     </div>
 
@@ -290,6 +323,7 @@
 
           </div>
           
+    <div class="comments" id="gitalk-container"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -405,6 +439,26 @@
   </div>
 
         
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
 
 
 
@@ -440,6 +494,10 @@
 
 
 
+  
+<script src="/js/local-search.js"></script>
+
+
 
 
 
@@ -454,6 +512,81 @@
   
 
   
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : '9bad5f6ce5fb909b931c',
+      clientSecret: '8af06250d607e8252bf84130a9421a2e5aab692a',
+      repo        : 'FengZhiheng.github.io',
+      owner       : 'FengZhiheng',
+      admin       : ['FengZhiheng'],
+      id          : '8ffe126428f251c71c4803a41de651f9',
+        language: '',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </body>
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 <meta name="generator" content="Hexo 4.2.0">
@@ -17,7 +17,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"fengzhiheng.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"fengzhiheng.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="思想：在不同尺度空间上寻找特征点，并加以描述">
@@ -90,12 +90,12 @@
   .use-motion .logo-line-before i { left: initial; }
   .use-motion .logo-line-after i { right: initial; }
   </style>
-</noscript>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container use-motion">
     <div class="headband"></div>
 
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -119,6 +119,7 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -143,11 +144,38 @@
     <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
   </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
   </ul>
 </nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
 
 </div>
     </header>
@@ -204,13 +232,20 @@
                 <time title="修改时间：2020-02-12 21:32:27" itemprop="dateModified" datetime="2020-02-12T21:32:27+08:00">2020-02-12</time>
               </span>
 
-          <br>
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
             <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>3.6k</span>
+              <span>3.5k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -229,9 +264,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>思想：在不同尺度空间上寻找特征点，并加以描述  </p>
-<a id="more"></a> 
-
+        <p>思想：在不同尺度空间上寻找特征点，并加以描述<br><a id="more"></a> </p>
 <h3 id="问题链"><a href="#问题链" class="headerlink" title="问题链"></a>问题链</h3><ul>
 <li>什么是SIFT？</li>
 <li>为什么要提出来这种方法，解决什么问题？</li>
@@ -249,9 +282,11 @@
 <li>对关键点进行描述，生成关键点的描述器；  </li>
 <li>关键点匹配，通过两方特征点的两两比较找出相互匹配的若干对特征点，也就建立了景物间的对应关系。<br><img src="/2018/03/21/%E5%B0%BA%E5%BA%A6%E4%B8%8D%E5%8F%98%E7%89%B9%E5%BE%81%E5%8F%98%E6%8D%A2-SIFT/method.png" alt="">  </li>
 </ol>
-<h4 id="什么是尺度空间？如何构造"><a href="#什么是尺度空间？如何构造" class="headerlink" title="什么是尺度空间？如何构造"></a>什么是尺度空间？如何构造</h4><p>尺度空间是用来模拟人在距离目标由近到远时，目标在视网膜上的投影情况。尺度是自然存在的，不是人为创造的。在数学上，可以利用不同大小的高斯卷积核来描述不同的尺度空间。<br>高斯核：<br>$$<br>G(x_i, y_i,\sigma) = \frac{1}{2\pi \sigma^2}(- \frac{(x-x_i)^2+(y-y_i)^2)}{2\sigma^2})<br>$$</p>
-<p>和高斯核卷积后的图像：<br>$$<br>L(x,y,\sigma) = G(x,y,\sigma)*I(x,y)<br>$$</p>
-<h4 id="高斯金字塔"><a href="#高斯金字塔" class="headerlink" title="高斯金字塔"></a>高斯金字塔</h4><p>高斯金子塔的构建过程可分为两步：  </p>
+<h4 id="什么是尺度空间？如何构造"><a href="#什么是尺度空间？如何构造" class="headerlink" title="什么是尺度空间？如何构造"></a>什么是尺度空间？如何构造</h4><p>尺度空间是用来模拟人在距离目标由近到远时，目标在视网膜上的投影情况。尺度是自然存在的，不是人为创造的。在数学上，可以利用不同大小的高斯卷积核来描述不同的尺度空间。<br>高斯核：    </p>
+<script type="math/tex; mode=display">
+G(x_i, y_i,\sigma) = \frac{1}{2\pi \sigma^2}(- \frac{(x-x_i)^2+(y-y_i)^2)}{2\sigma^2})</script><p>和高斯核卷积后的图像：  </p>
+<script type="math/tex; mode=display">
+L(x,y,\sigma) = G(x,y,\sigma)*I(x,y)</script><h4 id="高斯金字塔"><a href="#高斯金字塔" class="headerlink" title="高斯金字塔"></a>高斯金字塔</h4><p>高斯金子塔的构建过程可分为两步：  </p>
 <ol>
 <li>对图像做高斯平滑；  </li>
 <li>对图像做降采样。<br><img src="/2018/03/21/%E5%B0%BA%E5%BA%A6%E4%B8%8D%E5%8F%98%E7%89%B9%E5%BE%81%E5%8F%98%E6%8D%A2-SIFT/gaussian.png" alt=""></li>
@@ -259,27 +294,27 @@
 <p>为了让尺度体现其连续性，在简单下采样的基础上加上了高斯滤波。一幅图像可以产生几组（octave）图像，一组图像包括几层（interval）图像。   </p>
 <h4 id="如何寻找特征点？"><a href="#如何寻找特征点？" class="headerlink" title="如何寻找特征点？"></a>如何寻找特征点？</h4><p>所有特征点的检测都是基于尺度不变的特性。Lindeberg[Lindeberg, Tony, “Scale-space theory: A basic tool for analysing structures at different scales”, Journal of Applied Statistics, 21, 2 (1994), pp. 224–270.]指出尺度规范化的LoG算子具有真正的尺度不变性。<br>LoG算子即（Laplacion of Gaussian）,可以由高斯函数梯度算子GOG构建。  </p>
 <p>尺度规范化的GoG算子：  </p>
-<p>$$<br>\nabla^2G = \frac{\partial ^2G}{\partial x^2} + \frac{\partial ^2G}{\partial y^2}<br>$$</p>
-<p>尺度规范化的LoG算子：  </p>
-<p>$$<br>\sigma ^2\nabla ^2G<br>$$</p>
-<h4 id="高斯差分算子"><a href="#高斯差分算子" class="headerlink" title="高斯差分算子"></a>高斯差分算子</h4><p>LOG算子与高斯核函数的关系如下：    </p>
-<p>$$<br>\nabla^2G = \frac{\partial ^2G}{\partial x^2} + \frac{\partial ^2G}{\partial y^2}<br>$$</p>
-<p>$$<br>LOG(x,y,\sigma) = \sigma ^2\nabla ^2G \approx \frac{Gauss(x,y,k\sigma)-Gauss(x,y,\sigma)}{\sigma ^2(k-1)}<br>$$</p>
-<p>$$<br>G(x,y,k\sigma) - G(x,y,\sigma) \approx (k-1)\sigma ^2\nabla ^2G<br>$$</p>
-<p>通过推导可以看出，LOG算子与高斯核函数的差有直接关系，由此引入一种新的算子DOG（Difference of Gaussians），即高斯差分算子。<strong>高斯差分算子(DoG)能够近似代替拉普拉斯高斯算子(LoG)</strong>[Mikolajczyk K., Schmid C. (2002) An Affine Invariant Interest Point Detector. ]  </p>
+<script type="math/tex; mode=display">
+\nabla^2G = \frac{\partial ^2G}{\partial x^2} + \frac{\partial ^2G}{\partial y^2}</script><p>尺度规范化的LoG算子：  </p>
+<script type="math/tex; mode=display">
+\sigma ^2\nabla ^2G</script><h4 id="高斯差分算子"><a href="#高斯差分算子" class="headerlink" title="高斯差分算子"></a>高斯差分算子</h4><p>LOG算子与高斯核函数的关系如下：    </p>
+<script type="math/tex; mode=display">
+\nabla^2G = \frac{\partial ^2G}{\partial x^2} + \frac{\partial ^2G}{\partial y^2}</script><script type="math/tex; mode=display">
+LOG(x,y,\sigma) = \sigma ^2\nabla ^2G \approx \frac{Gauss(x,y,k\sigma)-Gauss(x,y,\sigma)}{\sigma ^2(k-1)}</script><script type="math/tex; mode=display">
+G(x,y,k\sigma) - G(x,y,\sigma) \approx (k-1)\sigma ^2\nabla ^2G</script><p>通过推导可以看出，LOG算子与高斯核函数的差有直接关系，由此引入一种新的算子DOG（Difference of Gaussians），即高斯差分算子。<strong>高斯差分算子(DoG)能够近似代替拉普拉斯高斯算子(LoG)</strong>[Mikolajczyk K., Schmid C. (2002) An Affine Invariant Interest Point Detector. ]  </p>
 <h4 id="构建高斯差分金字塔"><a href="#构建高斯差分金字塔" class="headerlink" title="构建高斯差分金字塔"></a>构建高斯差分金字塔</h4><p>对应DoG算子，我们要构建DOG金字塔：<br><img src="/2018/03/21/%E5%B0%BA%E5%BA%A6%E4%B8%8D%E5%8F%98%E7%89%B9%E5%BE%81%E5%8F%98%E6%8D%A2-SIFT/DOG.png" alt=""><br>我们可以通过高斯差分图像看出图像上的像素值变化情况。如果没有变化，也就没有特征。特征必须是变化尽可能多的点。DoG图像描绘的是目标的轮廓。  </p>
 <h4 id="DoG局部极值检测"><a href="#DoG局部极值检测" class="headerlink" title="DoG局部极值检测"></a>DoG局部极值检测</h4><p>关键点是由DOG空间的局部极值点组成的。为了寻找DoG函数的极值点，每一个像素点要和它所有的相邻点比较，看其是否比它的图像域和尺度域的相邻点大或者小。<br><img src="/2018/03/21/%E5%B0%BA%E5%BA%A6%E4%B8%8D%E5%8F%98%E7%89%B9%E5%BE%81%E5%8F%98%E6%8D%A2-SIFT/DOGLOCAL.png" alt=""><br>中间的检测点和它同尺度的8个相邻点和上下相邻尺度对应的9×2个点共26个点比较，以确保在尺度空间和二维图像空间都检测到极值点。   </p>
 <h4 id="关键点精确定位"><a href="#关键点精确定位" class="headerlink" title="关键点精确定位"></a>关键点精确定位</h4><p>为了提高关键点的稳定性，需要对尺度空间DoG函数进行曲线拟合。利用DoG函数在尺度空间的Taylor展开式：  </p>
-<p>$$<br>D(X) = D + \frac{\partial D^T}{\partial X}X + \frac{1}{2}X^T\frac{\partial ^2D^T}{\partial X^2}X<br>$$</p>
-<p>其极值点为：  </p>
-<p>$$<br>\hat{X} = (x,y,\sigma)^T = -\frac{\partial D^T}{\partial X}(\frac{\partial ^2D^T}{\partial X^2})^{-1}<br>$$</p>
-<h4 id="关键点方向分配"><a href="#关键点方向分配" class="headerlink" title="关键点方向分配"></a>关键点方向分配</h4><p>通过尺度不变性求极值点，可以使其具有缩放不变的性质，利用关键点邻域像素的<strong>梯度方向分布特性</strong>，我们可以为每个关键点指定<strong>方向参数</strong>，从而使描述子对图像旋转具有不变性。<br>我们通过求每个极值点的梯度来为极值点赋予方向。<br>像素点的梯度表示：  </p>
-<p>$$<br>\nabla I(x,y) = (\frac{\partial I}{\partial x}, \frac{\partial I}{\partial y})<br>$$</p>
-<p>梯度幅值：  </p>
-<p>$$<br>m(x,y) = \sqrt{(L(x+1,y)-L(x-1,y))^2+(L(x,y+1)-L(x,y-1))^2}<br>$$</p>
-<p>梯度方向： </p>
-<p>$$<br>\theta(x,y) = tan^{-1}[\frac{L(x,y+1)-L(x,y-1)}{L(x+1,y)-L(x-1,y)}]<br>$$</p>
-<p>确定关键点的方向时采用直方图统计法，统计以关键点为中心，一定区域内的梯度分布情况。<br><img src="/2018/03/21/%E5%B0%BA%E5%BA%A6%E4%B8%8D%E5%8F%98%E7%89%B9%E5%BE%81%E5%8F%98%E6%8D%A2-SIFT/keypoints.png" alt="">   </p>
+<script type="math/tex; mode=display">
+D(X) = D + \frac{\partial D^T}{\partial X}X + \frac{1}{2}X^T\frac{\partial ^2D^T}{\partial X^2}X</script><p>其极值点为：  </p>
+<script type="math/tex; mode=display">
+\hat{X} = (x,y,\sigma)^T = -\frac{\partial D^T}{\partial X}(\frac{\partial ^2D^T}{\partial X^2})^{-1}</script><h4 id="关键点方向分配"><a href="#关键点方向分配" class="headerlink" title="关键点方向分配"></a>关键点方向分配</h4><p>通过尺度不变性求极值点，可以使其具有缩放不变的性质，利用关键点邻域像素的<strong>梯度方向分布特性</strong>，我们可以为每个关键点指定<strong>方向参数</strong>，从而使描述子对图像旋转具有不变性。<br>我们通过求每个极值点的梯度来为极值点赋予方向。<br>像素点的梯度表示：  </p>
+<script type="math/tex; mode=display">
+\nabla I(x,y) = (\frac{\partial I}{\partial x}, \frac{\partial I}{\partial y})</script><p>梯度幅值：  </p>
+<script type="math/tex; mode=display">
+m(x,y) = \sqrt{(L(x+1,y)-L(x-1,y))^2+(L(x,y+1)-L(x,y-1))^2}</script><p>梯度方向： </p>
+<script type="math/tex; mode=display">
+\theta(x,y) = tan^{-1}[\frac{L(x,y+1)-L(x,y-1)}{L(x+1,y)-L(x-1,y)}]</script><p>确定关键点的方向时采用直方图统计法，统计以关键点为中心，一定区域内的梯度分布情况。<br><img src="/2018/03/21/%E5%B0%BA%E5%BA%A6%E4%B8%8D%E5%8F%98%E7%89%B9%E5%BE%81%E5%8F%98%E6%8D%A2-SIFT/keypoints.png" alt="">   </p>
 <ol>
 <li>直方图以每10度方向为一个柱，共36个柱，柱所代表的方向为像素点梯度方向，柱的长短代表了梯度幅值。  </li>
 <li>根据Lowe的建议，直方图统计半径采用$3 \ast 1.5 \ast \sigma$。  </li>
@@ -290,10 +325,10 @@
 <h5 id="描述的思路"><a href="#描述的思路" class="headerlink" title="描述的思路"></a>描述的思路</h5><p>通过对关键点周围图像区域分块，计算块内梯度直方图，生成具有独特性的向量，这个向量是该区域图像信息的一种抽象，具有唯一性。  </p>
 <h5 id="关键点描述"><a href="#关键点描述" class="headerlink" title="关键点描述"></a>关键点描述</h5><p>下图是一个SIFT描述子事例。其中描述子由2×2×8维向量表示，其实也是2×2个8方向的直方图。左图的种子点由8×8单元组成。每一个小格都代表了特征点邻域所在的尺度空间的一个像素，箭头方向代表了像素梯度方向，箭头长度代表该像素的幅值。然后在4×4的窗口内计算8个方向的梯度方向直方图。绘制每个梯度方向的累加可形成一个种子点，如右图所示：一个特征点由4个种子点的信息所组成。<br><img src="/2018/03/21/%E5%B0%BA%E5%BA%A6%E4%B8%8D%E5%8F%98%E7%89%B9%E5%BE%81%E5%8F%98%E6%8D%A2-SIFT/siftDesmor.png" alt=""></p>
 <p> Lowe实验结果表明：描述子采用4×4×8＝128维向量表征，综合效果最优（不变性与独特性）<br> <img src="/2018/03/21/%E5%B0%BA%E5%BA%A6%E4%B8%8D%E5%8F%98%E7%89%B9%E5%BE%81%E5%8F%98%E6%8D%A2-SIFT/siftDesmor2.png" alt=""><br>描述子向量元素规范化：  </p>
-<p>$$<br>W = (w_1,w_2,…,w_{128})<br>$$</p>
-<p>规范化后的向量：  </p>
-<p>$$<br>I = (I_1,I_2,…,I_{128})<br>$$</p>
-<h3 id="利用关键点进行匹配？"><a href="#利用关键点进行匹配？" class="headerlink" title="利用关键点进行匹配？"></a>利用关键点进行匹配？</h3><p>常见的方法是用穷举法：<br><img src="/2018/03/21/%E5%B0%BA%E5%BA%A6%E4%B8%8D%E5%8F%98%E7%89%B9%E5%BE%81%E5%8F%98%E6%8D%A2-SIFT/correspond.png" alt=""></p>
+<script type="math/tex; mode=display">
+W = (w_1,w_2,...,w_{128})</script><p>规范化后的向量：  </p>
+<script type="math/tex; mode=display">
+I = (I_1,I_2,...,I_{128})</script><h3 id="利用关键点进行匹配？"><a href="#利用关键点进行匹配？" class="headerlink" title="利用关键点进行匹配？"></a>利用关键点进行匹配？</h3><p>常见的方法是用穷举法：<br><img src="/2018/03/21/%E5%B0%BA%E5%BA%A6%E4%B8%8D%E5%8F%98%E7%89%B9%E5%BE%81%E5%8F%98%E6%8D%A2-SIFT/correspond.png" alt=""></p>
 <h3 id="前提是什么？局限性有哪些？"><a href="#前提是什么？局限性有哪些？" class="headerlink" title="前提是什么？局限性有哪些？"></a>前提是什么？局限性有哪些？</h3><p>三个前提：  </p>
 <ul>
 <li>一定程度的尺度不变性；  </li>
@@ -341,6 +376,7 @@
 
           </div>
           
+    <div class="comments" id="gitalk-container"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -456,6 +492,26 @@
   </div>
 
         
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
 
 
 
@@ -491,6 +547,10 @@
 
 
 
+  
+<script src="/js/local-search.js"></script>
+
+
 
 
 
@@ -505,6 +565,81 @@
   
 
   
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : '9bad5f6ce5fb909b931c',
+      clientSecret: '8af06250d607e8252bf84130a9421a2e5aab692a',
+      repo        : 'FengZhiheng.github.io',
+      owner       : 'FengZhiheng',
+      admin       : ['FengZhiheng'],
+      id          : '36a85f5ce88e8f09a5d926d1ba96ef75',
+        language: '',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </body>
 </html>

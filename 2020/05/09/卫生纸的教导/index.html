@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 <meta name="generator" content="Hexo 4.2.0">
@@ -17,7 +17,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"fengzhiheng.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"fengzhiheng.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="一张卫生纸意味着什么？">
@@ -75,12 +75,12 @@
   .use-motion .logo-line-before i { left: initial; }
   .use-motion .logo-line-after i { right: initial; }
   </style>
-</noscript>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container use-motion">
     <div class="headband"></div>
 
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -104,6 +104,7 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -128,11 +129,38 @@
     <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
   </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
   </ul>
 </nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
 
 </div>
     </header>
@@ -189,7 +217,14 @@
                 <time title="修改时间：2020-05-30 18:26:29" itemprop="dateModified" datetime="2020-05-30T18:26:29+08:00">2020-05-30</time>
               </span>
 
-          <br>
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
             <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
@@ -220,7 +255,7 @@
     <label for="hbePass">输入密码，查看文章</label>
     <div class="bottom-line"></div>
   </div>
-  <script id="hbeData" type="hbeData" data-hmacdigest="ccd588ec18a137226a20a1bf5e90216fe2fe1fc0baa8831602f416a13ea78646">35dd00556162f86ec9ac14f55d52b981c89957d75526140c3d7a3b1f02a78d1e1c36ca1206f0206e11b0a5a524452571bff951b01cc930daeb99473c956e16b05e968f32dda695aef199843d47535785364a50834e1b0c993ae55bcacbfd5a50e4b5f7542c96d81c75d56f85f5466781d678cebc3a6915112bb21727095aa6eaed896b1a4b3ca4008fc17efa961fb993e956c8af72963dfe05195d98361f843edb9b9b222e9ae692c33390f051d2a9588f3f2a0823a0c89dabf06f3b01627fb20e9d55d92bf5d11d5dd7a36924832c958e7b8ac3fde5194b94f7bab0331128bbe6e69f44f47f0c35035e47e2f00a767711a9ca52d08c5bc341bf4fbd4be505c935f78ae51a7db711771fc857377c4407e5f74d2e590c70e09a19641308063e235f35fdc379fd3f0987b3293142bbef6b9e29890fc6679143db3b75b33a04e6cd8bd93f43a415bc692d99e89769ee69bb06d742f69f09b6bdc9765907ddb1eb1f2ee37a3f4112ec7c13b6db490f21196239e0f72f6cf7f9b0b13fa1312b533078a80e24bd55bee7aa007a09235bd2958d710985eb7061cdf8906d0c09770b8b00</script>
+  <script id="hbeData" type="hbeData" data-hmacdigest="6f4855c8c6ef6ef40daf36e5ac459b69a78c85016993d31e59e576a2529481ad">35dd00556162f86ec9ac14f55d52b981a2cbe942970e6b7332fbc82768682b41d5cca8af5e3395d429d7c7bcd0b52bc48fe2ce3f9c2e5f8157eab5a9ab04baaad4384df019b2f334a21ed2df0b3ae43120c76c70160419ae1dc6da54df6b638eace5c4b8e0b773695c6f1bcb73174b3ffa33b6fe7da002ce32c5044cac28f6a99bc7a136a7ba92aeedb66f47e9ad95a501baa62c08be8f4585116336bfd2434ce77ac6f2b7e7967b6b1377d256f9be3bb9400d7a16c022ba442895b7cb7d03fe3e0b0cbeae6ad49737d99164cddcf1a505407d7df984a48cff11258f82a44539bdc2daa9af7f142d8b67dc02d30ab7fa168454e07d65ff3df76fd13befe7c835c3512241c09097b0f6c41d7b692b44bd8ac33613d2ee840fafaffb7fb8ba6cf7a132e7ddf42caa887cdc368d5ab55c2d804fcb7189b5feb9a7b04140f5eaf572daa8ad05b3e6b2d1efd5db96cc2313d43c1036f9c7db87d3a3736cf32ac9ce5aeef0b91d89ab647fed0dc44c066d89e92dc4ad073dd30de040d516e9f455b362f949a902b57f5fcd38b21a4598cd12aa8d1790a2cae8f2038af856ef756b9489</script>
 </div>
 <script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">
     </div>
@@ -259,6 +294,7 @@
 
           </div>
           
+    <div class="comments" id="gitalk-container"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -373,6 +409,26 @@
   </div>
 
         
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
 
 
 
@@ -408,6 +464,10 @@
 
 
 
+  
+<script src="/js/local-search.js"></script>
+
+
 
 
 
@@ -422,6 +482,28 @@
   
 
   
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : '9bad5f6ce5fb909b931c',
+      clientSecret: '8af06250d607e8252bf84130a9421a2e5aab692a',
+      repo        : 'FengZhiheng.github.io',
+      owner       : 'FengZhiheng',
+      admin       : ['FengZhiheng'],
+      id          : '15deba8fe3da93d18b42dddd47387110',
+        language: '',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </body>
 </html>

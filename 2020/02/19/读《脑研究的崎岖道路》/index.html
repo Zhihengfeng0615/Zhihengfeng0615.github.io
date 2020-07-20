@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 <meta name="generator" content="Hexo 4.2.0">
@@ -17,7 +17,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"fengzhiheng.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"fengzhiheng.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="正如一位著名神经生理学家戴维德·洛伊德所说：“当我送出一篇论文去发表时，我把自己的声誉和一切都送出去了”">
@@ -74,12 +74,12 @@
   .use-motion .logo-line-before i { left: initial; }
   .use-motion .logo-line-after i { right: initial; }
   </style>
-</noscript>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container use-motion">
     <div class="headband"></div>
 
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -103,6 +103,7 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -127,11 +128,38 @@
     <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
   </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
   </ul>
 </nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
 
 </div>
     </header>
@@ -188,7 +216,14 @@
                 <time title="修改时间：2020-02-23 09:58:09" itemprop="dateModified" datetime="2020-02-23T09:58:09+08:00">2020-02-23</time>
               </span>
 
-          <br>
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
             <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
@@ -214,157 +249,55 @@
 
       
         <blockquote>
-<p>正如一位著名神经生理学家戴维德·洛伊德所说：“当我送出一篇论文去发表时，我把自己的声誉和一切都送出去了”</p>
-</blockquote>
-<a id="more"></a> 
-<blockquote>
-<p>一个人的研究兴趣，往往不是由自己苦思冥想出来的，而是由环境影响的结果。</p>
-</blockquote>
-<blockquote>
+<p>正如一位著名神经生理学家戴维德·洛伊德所说：“当我送出一篇论文去发表时，我把自己的声誉和一切都送出去了”<br><a id="more"></a><br>一个人的研究兴趣，往往不是由自己苦思冥想出来的，而是由环境影响的结果。</p>
 <p>回顾过去的经验，深深地体会到：一个人在青少年时代，其主要任务是学习，而不是过早地、过高地要求自己在科学上一鸣惊人。</p>
-</blockquote>
-<blockquote>
 <p>所谓科研工作，只不过是人类生活中的一种奢侈品，在战争中挣扎着的人们不可能去享受。</p>
-</blockquote>
-<blockquote>
 <p>人生的历程往往是由机遇所决定的，不能按照个人的意志自由安排，就好像深秋落叶，随风飘落，不知所终。</p>
-</blockquote>
-<blockquote>
 <p>政府的腐败和无能使人人感到愤怒。一种屈辱、绝望与愤怒的情感啃蚀着我的心。</p>
-</blockquote>
-<blockquote>
 <p>我永远不会忘记他的帮助。</p>
-</blockquote>
-<blockquote>
 <p>在西方学术界，如果没有一个高级学位，就不可能找到一个发展的机会，不管你都在学术上有多大的成就。这当然是不合理的，但是我们生活的这个社会就是这样，任何人都无法改变它。</p>
-</blockquote>
-<blockquote>
 <p>控制有机体功能活动的神经系统，尤其是人类或灵长类的中枢神经系统在结构上有严格的空间排列，在功能上和发育上有严格的时间顺序。</p>
-</blockquote>
-<blockquote>
 <p>因此要想在神经科学上有所作为，必须掌握比较先进的电生理学技术。归根结底地讲，神经系统活动的主要表现是它的电变化，不以它的电变化作为研究对象，是不可能真正理解神经系统的生理功能的。</p>
-</blockquote>
-<blockquote>
 <p>科研道路是曲折的。历史上很少有那么幸运的科学家，能够自始至终毫无阻拦地追求自己的科研事业；有时客观环境迫使他不得不暂时离开自己所选择的道路，以屈从别人的意志。万一有这类情况发生，仍应慎重处理，既不感情用事，也不轻易放弃自己的立场。否则酿成大错，终身遗憾。</p>
-</blockquote>
-<blockquote>
 <p>我深深地懂得：我们都是刚上任不久，彼此都不甚熟识，如果我直率地指出我的上司在学术问题上犯有错误，可能会伤害他的自尊心，使我们今后的关系趋于紧张。</p>
-</blockquote>
-<blockquote>
 <p>记得在这项研究的最后阶段，我在实验室里赶写实验报告，彻夜未眠。</p>
-</blockquote>
-<blockquote>
 <p>德国解剖学家在很多年以前就发现：耳鼓膜是由三条颅神经——即迷走神经，耳咽神经和三叉神经——感觉纤维所支配的。在这三条神经所支配区域的交汇处，有一个“三不管”的地方，在那里没有任何感觉神经纤维的存在，因而也没有任何感觉。在这个地方施行耳鼓穿刺，既没有疼痛感觉，也不出血。</p>
-</blockquote>
-<blockquote>
 <p>记得已故前北大老同学生物学家王风振先生曾说过：“科学研究是一条漫长的通向真理的道路，只有决心走到底的人，才能得到真理。大路两旁可能有不少野草闲花在引诱你。这不要紧。只要你不忘记自己的正路，迷途知返，暂时去欣赏一下自然风光，可能是无害的。有时还可能从中得到些有益的启发。”</p>
-</blockquote>
-<blockquote>
 <p>中枢神经系统内循回神经元线路的电活动，可能使一个信息长期在脑内存在下去，而不致瞬息即逝。这可能是记忆的物质基础。</p>
-</blockquote>
-<blockquote>
 <p>首先是来自我的朋友比利时著名神经生理学家弗莱德里克·布列米尔(FredericBremer)的声音。他一向认为：神经元同心肌细胞一样，自有其与生俱来的自然节律性，不需要外来刺激就能进行自律性活动。他认为大脑皮层诱发电位初始反应以后续发的节律性震荡，不过是自律性活动的一种表现，不一定同神经元循回线路的活动有关。</p>
-</blockquote>
-<blockquote>
 <p>英国神经生理学家伯恩斯（Delile Burns）曾用隔离脑块的技术证明：如果一小块大脑皮层组织与其周围的脑神经纤维联系完全被切断，但仍保持其血液供应完好无损，则这块被隔离的大脑组织将完全丧失自发电活动的能力。可见所谓自律性电活动者，并不是什么真正的自律性，而是由于被其周围传入信息所触发的结果。</p>
-</blockquote>
-<blockquote>
 <p>首先，如果你在科学工作上有幸作出了一点儿什么成就，千万不要沾沾自喜，觉得了不起。必须虚心接受同行们的批评意见，不论这种意见是如何尖锐或不中听，甚至是带有挑衅性的。</p>
-</blockquote>
-<blockquote>
 <p>如果这种批评意见是正确的，将会有助于你改正自己的错误；如果是不正确的，也将无损于你的论述的真正价值。总之，正确的将能经受住任何敲打、而错误的终归是要倒台的。不要怕别人的批评，相反地应当以此作为动力，促使你做更多的工作，以事实证明它是否正确。</p>
-</blockquote>
-<blockquote>
 <p>不论批评者的语言如何尖刻而不留情面，他都应当受到尊重和感激，因为他的动机是纯洁的，他是为了坚持真理，为了帮助同行纠正错误，才去花费自己的时间和精力而写信给你。</p>
-</blockquote>
-<blockquote>
 <p>反言之，如果有人明知你犯了错误，却袖手旁观，默默地看你的笑话，那才是最卑鄙的。</p>
-</blockquote>
-<blockquote>
 <p>首先，三个锋形电位可以随着电刺激视神经或视通路的强度而增加其幅值，但增加到一定程度则不再增加；相反地，诱发电位的慢波部分的幅度可继长增高，甚至会引起长时间的负放电。这显然是由于产生锋电位的神经纤维的兴奋已经达到了饱和程度，而脑内的神经元却可以通过“募集过程”和“山崩效应”引起更强烈而持久的反应。</p>
-</blockquote>
-<blockquote>
 <p>正如一位著名神经生理学家戴维德·洛伊德所说：“当我送出一篇论文去发表时，我把自己的声誉和一切都送出去了”</p>
-</blockquote>
-<blockquote>
 <p>从解剖学上我们知道：在大脑皮层内的感觉传入纤维，几乎全部终止在深部，即第四层。而表层则主要是椎体神经元的顶树突以及少数卡哈尔细胞及其平行的轴突所组成的。</p>
-</blockquote>
-<blockquote>
 <p>这是前人从未注意到，却具有重要意义的一个事实。  </p>
-</blockquote>
-<blockquote>
 <p>中枢神经系统内存在着两种不同的突触连结，因为也有两种不同的突触兴奋。一种叫做“树突上的突触兴奋”，另一种叫做细胞体上的突触兴奋。前者是感知、思维、和意识等高级神经活动的基础，而后者则与呼吸、循环以及低级反射运动有关。如果这个理论被证明是正确的，那么，上述脑温降至22-28°C时，则树突功能和轴突功能可以分别加以控制。</p>
-</blockquote>
-<blockquote>
 <p>换言之</p>
-</blockquote>
-<blockquote>
 <p>正如一位著名哲学家所指出的，人类对于事物的认识是永无止境的。</p>
-</blockquote>
-<blockquote>
 <p>这件事给了作者以极大的震动，令人深刻地领会到：科学上的进步是如此迅速，竞争又是如何剧烈与无情。</p>
-</blockquote>
-<blockquote>
 <p>我们知道人类之所以能够进行逻辑思维，有赖于脑内各种<strong>神经元回路</strong>的有规律活动。而这种活动之所以成为可能，在很大程度上取决于神经元树突的功能特性，以及不同突触连接的类型。</p>
-</blockquote>
-<blockquote>
 <p>充裕的经费、良好的设备、安定的生活和精神上的鼓舞与支持，是科学研究的必备条件。</p>
-</blockquote>
-<blockquote>
 <p>经过这次实践，深刻地体会到：要写好一篇评述，作者作者不仅需要广泛阅读，全面掌握一定时期内有关学术领域内的有关资料，并把它以简练的文字正确无误地介绍出来，而更重要的是把每一项工作，予以正确的评价，指出它在这一学科发展史上所处的地位。这需要作者具有锐敏的判断能力。如果没有这种判断力，也就是说没有作者自己的独到见解，那么写出来的东西，就将成为一本流水账，丧失了对读者的指导作用。</p>
-</blockquote>
-<blockquote>
 <p>一位没有独立见解和批判能力的述论作者，将来也不可能成为一个卓越的科学杂志的编辑。<strong>从这个意义上讲，学会如何写好一篇述评文章，也可以说是一个科学工作者全面培养过程中一个重要组成部分</strong>。</p>
-</blockquote>
-<blockquote>
 <p>(十四)针刺镇痛研究及其国际影响<br>牵涉性痛（referred pain）<br>舍灵顿关于“掩蔽现象”（Occlusion）<br>“会聚投射学说”（Convergence Projection Theory）<br>奥立冈大学医学院内科教授<strong>威廉姆·里文斯顿</strong>，他是著名的痛觉生理学家，著有“痛觉机制”一书。</p>
-</blockquote>
-<blockquote>
 <p>在我离沪期间，上海层举行过一次关于针刺镇痛问题的研讨会，国内有关人士都来参加，并曾到江湾结核病医院参观在针刺作用下，不使用任何麻醉药物成功地完成了肺切除手术。</p>
-</blockquote>
-<blockquote>
 <p>作为一个科学工作者，在一种未知事物面前，必须首先弄清事实真相，既不可墨守成规，盲目反对；又不应“人云亦云”地跟着别人说短道长。这不是科学态度。</p>
-</blockquote>
-<blockquote>
 <p>我们有责任回答针刺为什么会有镇痛作用这个问题。它的生理机制是什么？</p>
-</blockquote>
-<blockquote>
 <p>神经生理学上有一个熟知的原理，即：直径较粗的第一类纤维传导来自肌梭的传入神经冲动，与肌身伸长反射有关，中等粗细的B纤维则传导各种皮肤感觉，而直径最小的C纤维，则传导与痛有关的神经冲动。</p>
-</blockquote>
-<blockquote>
 <p>在60年代，西方学者进一步发现：各种不同粗细的神经纤维之间还能够相互作用，简言之，即：直径较粗的纤维的活动，倾向于抑制较细纤维的活动。日常生活中很多经验都可以用这个原理加以解释。例如，当身体某部疼痛时，用手抚摸其周围的皮肤，疼痛就有所缓解。腰酸背痛，经过在体表上的揉搓或捶打，就觉得好些。反射性地握紧拳头或绷紧全身肌肉，可以帮助人忍受剧痛。…</p>
-</blockquote>
-<blockquote>
 <p>所有这些事例都证明：剧烈振动或其他非痛感觉，也有一定程度抑制疼痛的作用。</p>
-</blockquote>
-<blockquote>
 <p>任何进入意识领域的感觉，都必须有与之相关的神经冲动，自外周感觉器官通过丘脑传送到大脑皮层。痛觉当然也不例外。</p>
-</blockquote>
-<blockquote>
 <p>接受痛觉信息的皮层下结构究竟在哪里，一直不大清楚。如果能肯定这个皮层下结构，从方法论的角度看，将是一个非常重要的步骤。因为我们可以在这个结构上观察痛觉信息是如何进行整合的。经过长时期的探索，我们终于找到了：<strong>位于丘脑中央内侧部的束旁核内的神经元，对于疼痛刺激非常敏感。</strong></p>
-</blockquote>
-<blockquote>
 <p>从神经生理学的角度来看，针刺镇痛是两种不同感觉传入在中枢神经系统内相互作用的结果。<strong>具体来说</strong>，就是伤害性刺激引起的传入冲动，被非伤害性刺激引起的冲动所一直，使前者不能或难以达到大脑皮层进入意识领域，产生痛觉感觉。</p>
-</blockquote>
-<blockquote>
 <p>记得从前有一位科学家曾说过：“天下没有任何事比自己的工作被同行专家所引述并加以赞许，更令人感到高兴的了。”这句话说得多么对啊。</p>
-</blockquote>
-<blockquote>
 <p>因此可以说：是创造性的科学思维导致了先进仪器的创制；反之，只是拥有了先进的仪器设备，并不能保证能作出具有创造性的科研成果来。</p>
-</blockquote>
-<blockquote>
 <p>因为一个新的科学意念的产生，并不是哪一个人凭空想出来的，而是当科学发展到某种程度时，人人都可能会想到的一个逻辑结果。</p>
-</blockquote>
-<blockquote>
 <p>科学研究是脑与手相结合的创造。科学研究是科学家的脑与手相结合的创造。只善于用脑而不善于用手，或只愿意动手而不肯用脑，对于一个科学家来说，都是一种缺陷。</p>
-</blockquote>
-<blockquote>
 <p>在实验资料的整理、计算和图表、曲线的设计及绘制过程中，尤其需要亲自动手，亲自核对，亲自检查。即使是这样，仍然不能保证不出差错。真正的科学家应当把这些事都看作自己应作的事儿，而不假手他人。</p>
-</blockquote>
-<blockquote>
 <p>但是应当知道：电脑是人脑创造出来的，它可能永远也不可能完全代替人脑，尤其是在进行创造性思维、设计实验和作出明知判断方面。人类的双手和大脑将永远是科学研究最可靠的工具。</p>
-</blockquote>
-<blockquote>
 <blockquote>
 <p>作为一个科学工作者，有的时候会转换到另一个地方工作，或者是遇到一些特殊情况，不能在实验室里继续进行既定的工作，怎么办呢？我常常这样想，只要有纸笔和时间，任何地方都可以施展你的能力。可以利用这个机会，去回顾、总结过去的工作，展望未来；也可以在条件允许的情况下，发挥你其他方面的才能</p>
 </blockquote>
@@ -415,6 +348,7 @@
 
           </div>
           
+    <div class="comments" id="gitalk-container"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -529,6 +463,26 @@
   </div>
 
         
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
 
 
 
@@ -564,6 +518,10 @@
 
 
 
+  
+<script src="/js/local-search.js"></script>
+
+
 
 
 
@@ -578,6 +536,28 @@
   
 
   
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : '9bad5f6ce5fb909b931c',
+      clientSecret: '8af06250d607e8252bf84130a9421a2e5aab692a',
+      repo        : 'FengZhiheng.github.io',
+      owner       : 'FengZhiheng',
+      admin       : ['FengZhiheng'],
+      id          : '004ef37bb17c519bb24ec5f9c995c3e1',
+        language: '',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </body>
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 <meta name="generator" content="Hexo 4.2.0">
@@ -17,7 +17,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"fengzhiheng.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"fengzhiheng.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="abstract">
@@ -75,12 +75,12 @@
   .use-motion .logo-line-before i { left: initial; }
   .use-motion .logo-line-after i { right: initial; }
   </style>
-</noscript>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container use-motion">
     <div class="headband"></div>
 
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -104,6 +104,7 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -128,11 +129,38 @@
     <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
   </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
   </ul>
 </nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
 
 </div>
     </header>
@@ -189,13 +217,20 @@
                 <time title="修改时间：2020-04-07 10:12:50" itemprop="dateModified" datetime="2020-04-07T10:12:50+08:00">2020-04-07</time>
               </span>
 
-          <br>
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
             <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>263</span>
+              <span>261</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -220,7 +255,7 @@
     <label for="hbePass">Hey, password is required here.</label>
     <div class="bottom-line"></div>
   </div>
-  <script id="hbeData" type="hbeData" data-hmacdigest="30079e5e3069ecb9e2734a9e3f14e993f48d839f677857bd7e575aecd0dad235">35dd00556162f86ec9ac14f55d52b981646cfe43518b249daf96b12360b22252911ff51ff98b241ea9fb2ae24b8ed1246f23d326c410f1262f58f8a3c226da6e1c1b5282b6031d4c6c7461f110c3a47a3b612d1ecc1018060146341fc328d62a2218b08f5e6711aa17cf219b79de0a186ef75b67961e073b0441bea68a81ba9a50cb9ca595523fc6395a6adea1e348aaeced455bd11bbae215fecb9bb598156fd1cad7e255a78390f91c661348944bcad7174f30a87ddb337eddec64f14918c1237baf04a25741894a2c7c6f1d868c0c1013bf257d9d3a55beadbb59cce7fc10c586565b1c6187a2abb642fafb0db2fe2db5ff6ea3092953e1ac084e65a4bf284004d0b577df1fce4dc2dad4ee52b48e0a6bbc68ed6da21114507616cf5ca249dfd6790821c97616b71e32c157b18f1429bdcb9ca56fc5cb5dc5cb3bebaf384a44750b57fef7d4dfa3ab2a5eff80e2cf93e14183b515008062e799ceed0fbaf5dbca1814aa933abf32ad0cd52c4819ab3977a227e0a1b1e21ead3dbec4e33912d712ceaf3cf4e5bdc913e0c48e1466f83a448f262efaa0cfbff1b0c7f3f101ec48e4c69418f9b03badd3f85c8ee42834901d0a7ecd593baabad810b86cda852f3b5c254ece13208e0ab5166946a426a710174fee3d7017ee3feb0b37f84beffe720ff43faf101ac2ba6b5f620144bb97f6b206796c01e9f7fd718e480a6ff8f1ddc712981ea861abbf3ac60b49a45edffbd7baa050e91f71bbd2061ab3591dd5e86dea48bab1dd811db7c47f915476eb6f91d43f4a421638b326604c81ba05152921532c56c557f5bc7994f8db7bbf5bf2b4a94e953599e851bbfcae0e8e8f134eaf079e6d7a8e6ffcface1cde351875f31eee29ef242a701329588b34cfd5397f19160ab7bafdefd4f575a304867bcf121038e2d22682856c752bd206ab85828da28620448cf2bfa49db86a7d79a71da3c7ca35c075c811a8042a720660f37836ae2f4f4b91c780793cc4ed527e6b46fa7834eea1ffcaa13cae898ba864a3ab4a64d4c751b2d79e2b59f42727ec47dc9150653b4a3b7619d90125077f8948a248ebe30c70f1fdf8211b1fcbd0c6ac1f4f1870084038ebb6717ccc72d687c0ccc2d64867bcd580abb521441828b9833583a2ba997906c8162993109a5a6fa40d</script>
+  <script id="hbeData" type="hbeData" data-hmacdigest="5122a1f2812c13c107170f30c29234915cd927bfefab39a5635cb2acd92478fd">35dd00556162f86ec9ac14f55d52b9814d9ef0fa277d2aa949eb28c3dec18eb7d013ed32878c7fdf3f7fdf179fb079ecdbbf9743ae8b970f328c854aedffe9db0c16153d71068fecb401b2e16cdd25a10b18223bde7d2b05f8a6274af1244c715818e91f61e5dbb526926e8c9f832e91e888a3b603c5466ba2f50a09c1aefae0d47975839a773544d69deff83b22c5978466f314879eb47966cc72c9a68a4bf133909890749dad69d4eb5eb1723f8f985ce3703fded613712750c2e672893340177d65bc342e507b0ed94cba398efdc9d0ebb907db9bf7c2c821bc5cd49f3fc62d0f8f6cfeb5b1238ea02e082924f395fba040ca9aad4e36e62f29dee8b446d0afb415a51c329b3b4bff15c2df9db406668efc215a7124d81e2cf90dfdc4f673c98242f462b268a2d2e287001215941ee6e42f03baeb4934837c4ec3a2c42330de0f7b62fc129ba1d3c71df5054e08f639f8631f4703cd244041b3f7c98a24b22e1062df6c8c4b3629ac4ca51ac1aa8e1d04c49093766949f5abd64d0102fca9025e4cccb7cd622e608128ec31ff3b98e79f8b5b2c6cb97948734babf02933f11d462dd4c71c1c8ac2d72605c5a79204578bdea2d7523367c7dace279b358fda2344cb444cda1c9f8ad96ca22fd18cfbbb4c19b53ee8de6d2d693eda69b582b6765bc67d52730223d92161d31a229174d98c8ed508daa60ebc1e9a58cbb123a617646413d06c4f216873d9c15c1b6ddfe6ad22e297c1f0bca7184eca43a458091c520b35e12f11038aa61ac4f3d8df6cd1f8ac7dfa1bf4be3cee69be7524f1f3633d403fc1fa4b98cb0268e242946290fd6ac8d8d6914ccf3d40a3d90b03f6c391339bfb7b50ad6d0a0073e8f6c306369a9f339767dc897a157f818b875309dc696f16ecf465c8f599df2b2e3a3b75a3cc354b1e5a8d71652de9f413f3d4bcb0f2e0660caf579b089381e7f460b9c1d80b3b78aa03987c95081ca91bb8d0028f2f2dab26afc468d5c5413915fe53c9f7ebebdcc3ea9598b51f8324640edf30f97f0508d23e83db4189d4017d0d83bf726cccd9b47c5617c93d48b3f35449a8584584fcf181a500d4c76ed1ad3916ee792b783f4e180b5208ad81ff0da5933adf10bd79de9f6f03bf28b7a44f513fb9d0a6738c38da4a8375fd7d599392d47e6cfc7ee30fc59e32182eeaaddc219976a4</script>
 </div>
 <script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">
     </div>
@@ -259,6 +294,7 @@
 
           </div>
           
+    <div class="comments" id="gitalk-container"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -373,6 +409,26 @@
   </div>
 
         
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
 
 
 
@@ -408,6 +464,10 @@
 
 
 
+  
+<script src="/js/local-search.js"></script>
+
+
 
 
 
@@ -422,6 +482,28 @@
   
 
   
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : '9bad5f6ce5fb909b931c',
+      clientSecret: '8af06250d607e8252bf84130a9421a2e5aab692a',
+      repo        : 'FengZhiheng.github.io',
+      owner       : 'FengZhiheng',
+      admin       : ['FengZhiheng'],
+      id          : 'c87a71377d71c60472e2872501d0023f',
+        language: '',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </body>
 </html>

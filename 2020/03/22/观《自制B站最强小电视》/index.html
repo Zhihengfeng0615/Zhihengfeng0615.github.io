@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 <meta name="generator" content="Hexo 4.2.0">
@@ -17,7 +17,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"fengzhiheng.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"fengzhiheng.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="请收下膝盖！">
@@ -75,12 +75,12 @@
   .use-motion .logo-line-before i { left: initial; }
   .use-motion .logo-line-after i { right: initial; }
   </style>
-</noscript>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container use-motion">
     <div class="headband"></div>
 
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -104,6 +104,7 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -128,11 +129,38 @@
     <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
   </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
   </ul>
 </nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
 
 </div>
     </header>
@@ -183,7 +211,14 @@
               <time title="创建时间：2020-03-22 16:36:36 / 修改时间：23:15:26" itemprop="dateCreated datePublished" datetime="2020-03-22T16:36:36+08:00">2020-03-22</time>
             </span>
 
-          <br>
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
             <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
@@ -208,9 +243,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>请收下膝盖！</p>
-<a id="more"></a> 
-<p>看完这个视频，感慨良多。尽管看起来只是一个简单的3分钟小视频，但是背后up主花的功夫是我们很难体会到、理解了的。<br>首先是up主的技术路线：从idea、草图、电路板、3D建模、驱动编写、到应用程序开发，到最后的产品落地。背后涉及的内容非常非常的多。本科的时候，我也玩过飞思卡尔，差不多玩了一年，深知绘制电路图之艰辛，除了要对AD软件各个细节非常熟悉外，还要能焊接各种小封装的元器件。上百个元器件，任何一个搞错，不管是短路了还是电容方向焊反了，最终都会功亏一篑。想起当年和小伙伴们通宵焊电路板、排查短路问题的日子，感慨良多啊。3D建模也很有意思，在新区上课的时候，去创客空间玩过一段时间，非常好的一个平台，在里边认识了很多创客大佬，一起学习焊摇摇棒，讲课啥的，学了不少东西。其中印象很深刻的就有3D打印，当时也打印过一些小玩意儿，记得还送人了，哎突然想起伤心往事。当时那个破笔记本可是什么3D建模软件都运行不起来，卡得飞翔。说到编写驱动了，编写驱动这事儿我可没干过，不过想都不用想，玩这事儿肯定要对Cpp和C非常熟悉才行。应用程序开发倒是接触过一些，Pyqt、Java GUI、Matlab GUI、Cpp Qt、C#啥的也玩过了一段时间，深知这些东西对程序设计还是有一定要求的。<br>总而言之，up主的生活就是我之前梦想的样子——做个科技宅，分享自己创作的内容，简单、开心、且富有地过日子。为后人留下些东西，供人学习和敬仰（狗头。<br>之所以感慨这么多，最主要的原因还是我的课题，让人很头大：从计算机方向转到生物方向，其实内心还是比较拒绝的，因为和之前的职业规划、人生规划都有较大的出入。不过也没办法，不同的路上都有好风景吧，用心欣赏就好。尽量活成一个有趣的人吧。<br>突然就爱上B站了，奇怪的一天。  </p>
+        <p>请收下膝盖！<br><a id="more"></a><br>看完这个视频，感慨良多。尽管看起来只是一个简单的3分钟小视频，但是背后up主花的功夫是我们很难体会到、理解了的。<br>首先是up主的技术路线：从idea、草图、电路板、3D建模、驱动编写、到应用程序开发，到最后的产品落地。背后涉及的内容非常非常的多。本科的时候，我也玩过飞思卡尔，差不多玩了一年，深知绘制电路图之艰辛，除了要对AD软件各个细节非常熟悉外，还要能焊接各种小封装的元器件。上百个元器件，任何一个搞错，不管是短路了还是电容方向焊反了，最终都会功亏一篑。想起当年和小伙伴们通宵焊电路板、排查短路问题的日子，感慨良多啊。3D建模也很有意思，在新区上课的时候，去创客空间玩过一段时间，非常好的一个平台，在里边认识了很多创客大佬，一起学习焊摇摇棒，讲课啥的，学了不少东西。其中印象很深刻的就有3D打印，当时也打印过一些小玩意儿，记得还送人了，哎突然想起伤心往事。当时那个破笔记本可是什么3D建模软件都运行不起来，卡得飞翔。说到编写驱动了，编写驱动这事儿我可没干过，不过想都不用想，玩这事儿肯定要对Cpp和C非常熟悉才行。应用程序开发倒是接触过一些，Pyqt、Java GUI、Matlab GUI、Cpp Qt、C#啥的也玩过了一段时间，深知这些东西对程序设计还是有一定要求的。<br>总而言之，up主的生活就是我之前梦想的样子——做个科技宅，分享自己创作的内容，简单、开心、且富有地过日子。为后人留下些东西，供人学习和敬仰（狗头。<br>之所以感慨这么多，最主要的原因还是我的课题，让人很头大：从计算机方向转到生物方向，其实内心还是比较拒绝的，因为和之前的职业规划、人生规划都有较大的出入。不过也没办法，不同的路上都有好风景吧，用心欣赏就好。尽量活成一个有趣的人吧。<br>突然就爱上B站了，奇怪的一天。  </p>
 <p>聊聊这个up主吧，看了他在B站的所有视频后，就去扒他的blog了，是个人才。18年研究生毕业，目前就职于OPPO上海研究院AI实验室。首先是个AI算法工程师，其次是一个软硬件兼攻的极客。难怪对深度学习算法那么熟练，信手捏来，OpenPose、OpenCV人脸识别、语音识别啥的直接拿来用，真大牛啊。还热爱生活，玩些音乐。人也帅。阿西吧，如果要比的话，真是高纬度全方位碾压啊。另外语言表达能力也没得说，说话简洁精炼，有趣。<br>值得学习，感谢自媒体时代，开阔了视野。  </p>
 <p>up主也推荐了一些自己常用的软件，Mark一下：<br>【创意收集整理】<br>1、XMind ZEN(思维导图，zen版本更为简洁)√<br>2、Typora(写markdown的编辑器)√——放弃了还是用VSCode吧，VSCode天下第一<br>3、有道云笔记(推荐，试试吧，放弃了，将OneNote里边的笔记搬运过来花费的力气太大了)、印象笔记、为知笔记、OneNote（有录音功能√）</p>
 <p>关于markdown：<br>github：readme.md(md=markdown)<br>建议从事技术的同行都掌握的一种文本语言<br>可以在多平台自由遨游，到处分享而无须担心格式</p>
@@ -258,6 +291,7 @@
 
           </div>
           
+    <div class="comments" id="gitalk-container"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -372,6 +406,26 @@
   </div>
 
         
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
 
 
 
@@ -407,6 +461,10 @@
 
 
 
+  
+<script src="/js/local-search.js"></script>
+
+
 
 
 
@@ -421,6 +479,28 @@
   
 
   
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : '9bad5f6ce5fb909b931c',
+      clientSecret: '8af06250d607e8252bf84130a9421a2e5aab692a',
+      repo        : 'FengZhiheng.github.io',
+      owner       : 'FengZhiheng',
+      admin       : ['FengZhiheng'],
+      id          : '7537f1ce6f1e4849605a5b288aa3dee6',
+        language: '',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </body>
 </html>

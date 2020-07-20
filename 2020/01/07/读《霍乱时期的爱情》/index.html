@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 <meta name="generator" content="Hexo 4.2.0">
@@ -17,7 +17,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"fengzhiheng.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"fengzhiheng.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="读这本书，是为了回答一个问题    “如果你是女主，你会选择谁？”">
@@ -75,12 +75,12 @@
   .use-motion .logo-line-before i { left: initial; }
   .use-motion .logo-line-after i { right: initial; }
   </style>
-</noscript>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container use-motion">
     <div class="headband"></div>
 
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -104,6 +104,7 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -128,11 +129,38 @@
     <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
   </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
   </ul>
 </nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
 
 </div>
     </header>
@@ -189,7 +217,14 @@
                 <time title="修改时间：2020-02-26 17:00:13" itemprop="dateModified" datetime="2020-02-26T17:00:13+08:00">2020-02-26</time>
               </span>
 
-          <br>
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
             <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
@@ -216,11 +251,7 @@
       
         <p>读这本书，是为了回答一个问题  </p>
 <blockquote>
-<p>“如果你是女主，你会选择谁？”   </p>
-</blockquote>
-<a id="more"></a> 
-
-<blockquote>
+<p>“如果你是女主，你会选择谁？”<br><a id="more"></a> </p>
 <p>“如果我是女主，我会选择谁？我会选择弗洛伦蒂诺，因为那时她爱他，他也爱她。”<br>“短短两天我仿佛窥探了我所能想象到的所有可能的爱情的样子。合上书本的那一刻，我感觉自己像是被掏空了一般，没有爱情的人生是多么令人怜悯啊，可怜的人。”</p>
 </blockquote>
 <p>现在写读后感有些晚了，因为已经过去三个多月了，但是还是随便写点吧。因为我脑子里一直萦绕着这句话：  </p>
@@ -235,167 +266,59 @@
 <p>强烈推荐读一读。</p>
 <h3 id="优美词句摘抄："><a href="#优美词句摘抄：" class="headerlink" title="优美词句摘抄："></a>优美词句摘抄：</h3><blockquote>
 <p>傍晚，街上车水马龙，一大群嗜血的蚊子从沼泽中飞起，带着一股柔柔的人粪气味，温热而感伤，扰得灵魂深处泛起对死亡的坚信。  </p>
-</blockquote>
-<blockquote>
 <p>从来没有人想过，安居在这样一座坚实牢固的房子里的夫妻，会有什么理由不幸福。  </p>
-</blockquote>
-<blockquote>
 <p>每天下午午觉醒来，乌尔比诺医生都与它为伴，坐在整个家中最凉爽的地方，院子的露台上。  </p>
-</blockquote>
-<blockquote>
 <p>唱那位男歌手的歌，它则用男高音，最后，还用一阵放荡的笑声来收场，和女仆们听完它用法语演唱的歌曲后爆发出的哄笑声一模一样，惟妙惟肖。  </p>
-</blockquote>
-<blockquote>
 <p>他离她那么近，甚至能听到她每一次的呼吸声，闻到她身上散发的馨香，在此生余下的岁月中，他正是靠着这种馨香来辨认她。  </p>
-</blockquote>
-<blockquote>
 <p>她们渴望那种安全感，以面对生活的挑战。  </p>
-</blockquote>
-<blockquote>
 <p>好奇心也是爱情的种种伪装之一。  </p>
-</blockquote>
-<blockquote>
 <p>她是一个还很年轻的女人，曾以热情火辣的社交活力从容优雅地投身于生活，而如今，在那身散发着一股樟脑味的寡妇黑绸丧服中，她就像被文火煎熬一般慢慢枯萎了。  </p>
-</blockquote>
-<blockquote>
 <p>正在此时，只见他带着一副痛苦不堪的面容出现在门口，浑身散发着从乌鸦那里沾染来的淫荡香味。  </p>
-</blockquote>
-<blockquote>
 <p>从那一刻起，他就再没有闻到海湾的臭气，只闻到弥漫在城市中的费尔明娜·达萨特有的气息。一切都散发着她的味道。</p>
-</blockquote>
-<blockquote>
 <p>“我崇敬你，因为是你把我变成了娼妇。”   </p>
-</blockquote>
-<blockquote>
 <p>五十年后，当费尔明娜·达萨从她那通过神圣仪式所领受的判决中解脱出来时，他已经拥有了二十五个本子，里面有六百二十二条较长恋情的记录，这还不包括那无数次的短暂艳遇，因为它们甚至都不值得他怜悯地提上一笔。  </p>
-</blockquote>
-<blockquote>
 <p>弗洛伦蒂诺·阿里萨没有忌妒，也没有愤怒，而是感到一种巨大的自卑。他觉得自己可怜，丑陋，低贱，不仅配不上她，也配不上世界上任何一个女人。  </p>
-</blockquote>
-<blockquote>
 <p>他明白了一个人意识到自己开始变老，是源于他发现自己开始长得像父亲了。  </p>
-</blockquote>
-<blockquote>
 <p>在此之前，一直支撑他的是一个假象，那就是世界在变，习惯在变，风尚在变：一切都在变，唯独她不会变。但那个晚上，他第一次头脑清醒地看见生活如何在费尔明娜·达萨身上留下痕迹，又如何在他自己身上留下痕迹，而他却除了等待之外什么都没有做。  </p>
-</blockquote>
-<blockquote>
 <p>安全感、和谐和幸福，这些东西一旦相加，或许看似爱情，也几乎等于爱情。但它们终究不是爱情。  </p>
-</blockquote>
-<blockquote>
 <p>“婚姻的问题在于，它终结于每晚做爱之后，却在第二天早餐之前又必须重新建立起来。”  </p>
-</blockquote>
-<blockquote>
 <p>“社交生活的关键在于学会控制恐惧，夫妻生活的关键在于学会控制厌恶。”  </p>
-</blockquote>
-<blockquote>
 <p>一个冬季的下午，她赶在暴风雨呼啸而至之前去关阳台的窗子，竟看见弗洛伦蒂诺·阿里萨坐在小花园杏树下的那条长凳上，穿着那件改小了的父亲的礼服，膝头放着一本打开的书。  </p>
-</blockquote>
-<blockquote>
 <p>她没有发觉，她正被同情的陷阱威胁，而正是这同样的陷阱，让那么多毫无准备的受害者在弗洛伦蒂诺·阿里萨那里失去了贞洁。  </p>
-</blockquote>
-<blockquote>
 <p>枝繁叶茂的香蕉树和芒果树之间的粉红色大理石帕特农神庙。  </p>
-</blockquote>
-<blockquote>
 <p>但从此，她闻丈夫的衣服，已不是为了判断该不该洗，而是出于一种侵蚀着她五脏六腑的无法忍受的焦虑。  </p>
-</blockquote>
-<blockquote>
 <p>她浑身上下都丰满而结实：美人鱼般的大腿，仿佛经文火炙烤的皮肤，惊艳的乳房，以及一口洁白完美的牙齿，整个身体都散发出健康的气息，也就是费尔明娜·达萨在丈夫衣服上嗅到的那种气味。  </p>
-</blockquote>
-<blockquote>
 <p>五十八岁时，他生活中唯一需要的，依然是一个懂他的人。  </p>
-</blockquote>
-<blockquote>
 <p>老花镜后，那双美丽的柳叶眼已失去了半生的光芒。  </p>
-</blockquote>
-<blockquote>
 <p>至于女人，则只有两个年龄：一是结婚的年龄，一般不超过二十二岁；一是永远独身、再也嫁不出去的年龄。  </p>
-</blockquote>
-<blockquote>
 <p>其次，这可以结束从小就折磨他的牙痛，说起来，那种滋味就和爱情的痛苦一样强烈残忍。  </p>
-</blockquote>
-<blockquote>
 <p>他已不是当年那个在福音花园偷偷窥视她的让人可怜的幽灵，不是那个她进入暮年以后还时常怀着某种柔情想起的幽灵，而是那个穿着刽子手的长礼服、把帽子拿在胸前的令人厌恶的幽灵。  </p>
-</blockquote>
-<blockquote>
 <p>所以，他竟然戏剧性地向她重申了在她看来从未存在过的爱情，实在出乎她的意料，而且还是在这样一个无论他还是她都只能安于天命的年纪。 </p>
-</blockquote>
-<blockquote>
 <p>突然，他浑身颤抖了一下，忘记把信放到哪里去了，这让他紧张万分，以至于最后找到信时大吃一惊：他已经不记得自己把它放到床上了。  </p>
-</blockquote>
-<blockquote>
 <p>这封信应该教会她把爱情想成一种美好的状态，而非达到任何目的的途径，爱情自有其本身的起点和终点。  </p>
-</blockquote>
-<blockquote>
 <p>从那里，他看见费尔明娜·达萨挽着儿子的手臂走进来，穿着一袭黑色天鹅绒裙子，袖子长及手腕，没有佩戴任何首饰，一长排扣子从脖子直到脚尖，就像主教的长袍。  </p>
-</blockquote>
-<blockquote>
 <p>雪花石膏般的光芒  </p>
-</blockquote>
-<blockquote>
 <p>他还活着，但没有了男人的任性，没有了家长式的命令，也没有了那些令她精疲力竭的需求：时时要求她以他爱她的那些方式来爱他，比如不合时宜的亲吻，以及时时挂在嘴边的甜言蜜语。  </p>
-</blockquote>
-<blockquote>
 <p>“你就没有发现我一点也不幸福吗？”<br>“你要永远记住，对于一对恩爱夫妻，最重要的不是幸福，而是稳定。”  </p>
-</blockquote>
-<blockquote>
 <p>“您可以在任何想来的时候来，”她说，“我几乎总是一个人。”  </p>
-</blockquote>
-<blockquote>
 <p>“已经无所谓了。”她说，“我都七十二岁了。”  </p>
-</blockquote>
-<blockquote>
 <p>“我看不出，见这么多次面有什么意义。”<br>“我没想过见面要有什么意义。”他说。  </p>
-</blockquote>
-<blockquote>
 <p>红玫瑰象征着火一般的激情，对守丧的她来说可能是一种冒犯。而黄玫瑰呢，有时象征着好运，但更普遍的时候表达的是忌妒。他曾听人说起土耳其黑玫瑰，或许那是最合适的，但他一直没能让它们适应自己院子里的气候。想来想去，他决定冒险带一枝白玫瑰，他从不像喜欢其他玫瑰那样喜欢它，就因为它平淡无奇，无声无息：什么也不能表达。在最后时刻，为避免精明的费尔明娜·达萨赋予它什么含义，他剪掉了玫瑰上的刺。  </p>
-</blockquote>
-<blockquote>
 <p>当弗洛伦蒂诺·阿里萨带着仍在灼烧的后背走下床来，第一次用雨豆树做的硬木拐杖代替雨伞出门时，去的第一个地方便是费尔明娜·达萨的家。 </p>
-</blockquote>
-<blockquote>
 <p>那曾将她的面容衬得高贵无比、有着纯净的钢铁颜色的头发，此时变成了黄色的玉米须，美丽的母豹眼睛即使闪烁着愤怒的火花，也已失去昔日的光芒。  </p>
-</blockquote>
-<blockquote>
 <p>“我们这个年龄的爱情已属荒唐，”她叫喊道，“到了他们那个年龄，那就是卑鄙！”   </p>
-</blockquote>
-<blockquote>
 <p>“我唯一感到难过的，是没有力气用鞭子抽你一顿，那是你应得的，为的是你的无礼兼恶毒。”她说，“你现在马上给我滚出这个家，我以我母亲的遗骨发誓，只要我活着，你就休想再踏进这个家门。”  </p>
-</blockquote>
-<blockquote>
 <p>最后，她用她最好岁月里的精妙口才，对一直以来与她保持着某种庸俗默契的儿媳道出了心里话：“一个世纪前，人们毁掉了我和这个可怜男人的生活，因为我们太年轻；现在，他们又想在我们身上故伎重施，因为我们太老了。”  </p>
-</blockquote>
-<blockquote>
 <p>“让他们见鬼去吧！”她说，“如果说我们这些寡妇有什么优势的话，那就是再也没人能对我们发号施令了。”  </p>
-</blockquote>
-<blockquote>
 <p>“我真想离开这个家，一直走，一直走，一直走，永远不再回来。”她说。   </p>
-</blockquote>
-<blockquote>
 <p>“乘船去吧。”弗洛伦蒂诺·阿里萨说。  </p>
-</blockquote>
-<blockquote>
 <p>“已经不行了，”她对他说，“我闻起来尽是老太婆的味道。”  </p>
-</blockquote>
-<blockquote>
 <p>只除了那条早已过旧的棕色皮带，费尔明娜·达萨一眼就看见了它，仿佛发现了汤中的苍蝇一般。  </p>
-</blockquote>
-<blockquote>
 <p>弗洛伦蒂诺·阿里萨曾读到过这样一句话：“灾难中的爱情更加伟大而高尚。”总统舱里的潮湿使他们沉浸在一种超乎现实的昏睡之中，这种环境更容易使人相爱而互不询问。在难以想象的漫长时间里，他们几小时几小时地坐在栏杆前的靠背椅上，手拉着手，缓慢地亲吻，陶醉于爱抚之中，从不会因失去耐心而扫兴。  </p>
-</blockquote>
-<blockquote>
 <p>“如果我们一定要干那种见不得人的事，那就干吧。”她说，“不过要像成年人那样。”  </p>
-</blockquote>
-<blockquote>
 <p>于是，他瞥了她一眼，看见她赤裸的上身，跟想象中的一模一样。她的肩膀布满皱纹，乳房耷拉着，肋骨被包在一层青蛙皮似的苍白而冰凉的皮肤里。  </p>
-</blockquote>
-<blockquote>
 <p>弗洛伦蒂诺·阿里萨发现她万分沮丧：她宁愿死，也不愿被那个圈子中的人发现她在丈夫刚去世不久就愉快地出门旅行。她的垂头丧气让弗洛伦蒂诺·阿里萨心疼不已，他发誓要想出办法来保护她，而不是让她像坐牢似的待在舱室里。  </p>
-</blockquote>
-<blockquote>
 <p>船长看了看费尔明娜·达萨，在她睫毛上看到初霜的闪光。然后，他又看了看弗洛伦蒂诺·阿里萨，看到的是他那不可战胜的决心和勇敢无畏的爱。这份迟来的顿悟使他吓了一跳，原来是生命，而非死亡，才是没有止境的。  </p>
-</blockquote>
-<blockquote>
 <p>“见鬼，那您认为我们这样来来回回的究竟走到什么时候？”她问。<br>在五十三年七个月零十一天以来的日日夜夜，弗洛伦蒂诺·阿里萨一直都准备好了答案。<br>“一生一世。”他说。  </p>
 </blockquote>
 
@@ -435,6 +358,7 @@
 
           </div>
           
+    <div class="comments" id="gitalk-container"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -550,6 +474,26 @@
   </div>
 
         
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
 
 
 
@@ -585,6 +529,10 @@
 
 
 
+  
+<script src="/js/local-search.js"></script>
+
+
 
 
 
@@ -599,6 +547,28 @@
   
 
   
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : '9bad5f6ce5fb909b931c',
+      clientSecret: '8af06250d607e8252bf84130a9421a2e5aab692a',
+      repo        : 'FengZhiheng.github.io',
+      owner       : 'FengZhiheng',
+      admin       : ['FengZhiheng'],
+      id          : '8dda329917f7389a5f35c7e6df47ce60',
+        language: '',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </body>
 </html>

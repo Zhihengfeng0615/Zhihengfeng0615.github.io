@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 <meta name="generator" content="Hexo 4.2.0">
@@ -17,7 +17,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"fengzhiheng.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"fengzhiheng.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="用的什么教科书？Elementary Linear Algebra - A Matrix Approach, 2nd Ed., by L. E. Spence, A. J. Insel and S. H. Friedberg">
@@ -75,12 +75,12 @@
   .use-motion .logo-line-before i { left: initial; }
   .use-motion .logo-line-after i { right: initial; }
   </style>
-</noscript>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container use-motion">
     <div class="headband"></div>
 
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -104,6 +104,7 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -128,11 +129,38 @@
     <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
   </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
   </ul>
 </nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
 
 </div>
     </header>
@@ -189,7 +217,14 @@
                 <time title="修改时间：2020-02-19 15:29:30" itemprop="dateModified" datetime="2020-02-19T15:29:30+08:00">2020-02-19</time>
               </span>
 
-          <br>
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
             <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
@@ -215,9 +250,7 @@
 
       
         <p>用的什么教科书？<br>Elementary Linear Algebra - A Matrix Approach, 2nd Ed., by L. E. Spence, A. J. Insel and S. H. Friedberg</p>
-<a id="more"></a> 
-<hr>
-<ol>
+<h2 id=""><a href="#" class="headerlink" title=" "></a><a id="more"></a> </h2><ol>
 <li><p>为什么要学习线性代数？<br> 线性系统有很多application：<br> 信号系统、计算机graphics、Google PageRank（2013年之后就不再update了）</p>
 </li>
 <li><p>线性代数中最重要，最原始的基本概念有哪些？<br>chapter1、chapter2、chapter3：</p>
@@ -240,8 +273,7 @@
 <li>有些线性系统，它会有些特殊的输入，它们的输出是乘上了一个scalar</li>
 </ul>
 </li>
-<li><p>线性代数讨论的是什么问题？</p>
-<ul>
+<li>线性代数讨论的是什么问题？<ul>
 <li>线性系统</li>
 </ul>
 </li>
@@ -316,7 +348,10 @@
 <li>所有nonzero row都在zero row上边</li>
 <li>the leading entries（每一行中，第一个不为零的数） are in echelon form<br><a href="https://youtu.be/zuTH1WdREkY?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=989" target="_blank" rel="noopener">https://youtu.be/zuTH1WdREkY?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=989</a></li>
 </ol>
-<h3 id="什么是Reduced-row-echelon-form（要满足三个条件）"><a href="#什么是Reduced-row-echelon-form（要满足三个条件）" class="headerlink" title="什么是Reduced row echelon form（要满足三个条件）"></a>什么是Reduced row echelon form（要满足三个条件）</h3><p>1-2. 和row echelon form一样<br>3. the columns containing the leading entries are standard vector（什么是standard vector，类似这种[0 0 1 0 0]）.<br><a href="https://youtu.be/zuTH1WdREkY?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=1265" target="_blank" rel="noopener">https://youtu.be/zuTH1WdREkY?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=1265</a></p>
+<h3 id="什么是Reduced-row-echelon-form（要满足三个条件）"><a href="#什么是Reduced-row-echelon-form（要满足三个条件）" class="headerlink" title="什么是Reduced row echelon form（要满足三个条件）"></a>什么是Reduced row echelon form（要满足三个条件）</h3><p>1-2. 和row echelon form一样</p>
+<ol>
+<li>the columns containing the leading entries are standard vector（什么是standard vector，类似这种[0 0 1 0 0]）.<br><a href="https://youtu.be/zuTH1WdREkY?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=1265" target="_blank" rel="noopener">https://youtu.be/zuTH1WdREkY?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=1265</a></li>
+</ol>
 <p>reduced row echelon form是unique的<br><a href="https://youtu.be/zuTH1WdREkY?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=1465" target="_blank" rel="noopener">https://youtu.be/zuTH1WdREkY?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=1465</a></p>
 <h3 id="接下来要补充的一个概念是Pivot-column"><a href="#接下来要补充的一个概念是Pivot-column" class="headerlink" title="接下来要补充的一个概念是Pivot column"></a>接下来要补充的一个概念是Pivot column</h3><p>什么是pivot positions<br><a href="https://youtu.be/zuTH1WdREkY?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=1640" target="_blank" rel="noopener">https://youtu.be/zuTH1WdREkY?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=1640</a><br>有pivot position的column就是pivot column<br><a href="https://youtu.be/zuTH1WdREkY?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=1672" target="_blank" rel="noopener">https://youtu.be/zuTH1WdREkY?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=1672</a></p>
 <p>什么是basic variables，什么是free variables?<br><a href="https://youtu.be/zuTH1WdREkY?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=1942" target="_blank" rel="noopener">https://youtu.be/zuTH1WdREkY?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=1942</a></p>
@@ -351,10 +386,10 @@
 <p>C= AB ,后边的这个B，可以看成很多个输入，<br><a href="https://youtu.be/yO8lDzf4jMs?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=726" target="_blank" rel="noopener">https://youtu.be/yO8lDzf4jMs?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=726</a></p>
 <p>相乘这件事，可以看成两个线性linear system的composition<br>那么什么是composition？<br><a href="https://youtu.be/yO8lDzf4jMs?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=753" target="_blank" rel="noopener">https://youtu.be/yO8lDzf4jMs?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=753</a></p>
 <p>【g。f】的（圈圈是中间的位置）含义是，输入x，先经过f，然后经过g<a href="https://youtu.be/yO8lDzf4jMs?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=844" target="_blank" rel="noopener">https://youtu.be/yO8lDzf4jMs?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=844</a></p>
-<ol start="3">
+<ol>
 <li>角度2：从linear combination of rows<br>从行的角度考虑，两个矩阵相乘。<br><a href="https://youtu.be/yO8lDzf4jMs?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=1306" target="_blank" rel="noopener">https://youtu.be/yO8lDzf4jMs?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=1306</a></li>
 </ol>
-<ol start="4">
+<ol>
 <li>角度3，矩阵相乘，可以看做是summation of matrices<br><a href="https://youtu.be/yO8lDzf4jMs?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=1560" target="_blank" rel="noopener">https://youtu.be/yO8lDzf4jMs?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=1560</a><br>矩阵相乘，可以看做是一堆rank是1的矩阵，相加</li>
 </ol>
 <p>Block Multiplication,用这种方法可以简化矩阵的计算过程<a href="https://youtu.be/yO8lDzf4jMs?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=2492" target="_blank" rel="noopener">https://youtu.be/yO8lDzf4jMs?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=2492</a></p>
@@ -438,13 +473,14 @@
 <p>麻将是4维空间中的游戏（hhhh）：<a href="https://youtu.be/GB48DyvC14o?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=3019" target="_blank" rel="noopener">https://youtu.be/GB48DyvC14o?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=3019</a></p>
 <p>线性代数告诉我们的，如果你组一个队伍，如果有四个人，其中有一个人是多余的：<a href="https://youtu.be/GB48DyvC14o?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=3074" target="_blank" rel="noopener">https://youtu.be/GB48DyvC14o?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=3074</a></p>
 <p>summary ：<br>把basis，想成一个雕像：<br><a href="https://youtu.be/GB48DyvC14o?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=3135" target="_blank" rel="noopener">https://youtu.be/GB48DyvC14o?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=3135</a></p>
-<ol start="2">
+<ol>
 <li>怎么检查一个东西是不是这个subspace的basis<br>接下来的内容是，如果给你一个vector set，怎么confirm它是不是一个basis</li>
 </ol>
 <p>检查一个vector set 是不是generation set<br>检查两件事（1）坚持subspace的dim，（2）检查independent</p>
 <p>接下来的内容是：讲一些耳熟能详、有名有姓的subspace 的特性。（讲3个）<br><a href="https://youtu.be/aW0JVmpIxas?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=9" target="_blank" rel="noopener">https://youtu.be/aW0JVmpIxas?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=9</a></p>
-<p>matrix的 col A(col space )<br>    1. columns space的dim = A 的rank</p>
-<p>matrix的 null A(null space )</p>
+<p>matrix的 col A(col space )</p>
+<pre><code>1. columns space的dim = A 的rank
+</code></pre><p>matrix的 null A(null space )</p>
 <p>matrix的 row A(row space )</p>
 <p>怎么找它们的basis<br>怎么找它们的dim<br><a href="https://youtu.be/aW0JVmpIxas?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=247" target="_blank" rel="noopener">https://youtu.be/aW0JVmpIxas?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=247</a></p>
 <p>Rank(A)意味着什么？<br><a href="https://youtu.be/aW0JVmpIxas?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=410" target="_blank" rel="noopener">https://youtu.be/aW0JVmpIxas?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=410</a></p>
@@ -454,7 +490,7 @@
 <p>coordinate systems是什么呢？是拿来描述vector的观点<br><a href="https://youtu.be/im3kTm9jGEM?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=99" target="_blank" rel="noopener">https://youtu.be/im3kTm9jGEM?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=99</a></p>
 <p>如何从一个coordinate system换到另外一个coordinate system</p>
 <p>由standard vector组成的coordinate system，叫做直角坐标系<br><a href="https://youtu.be/im3kTm9jGEM?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=238" target="_blank" rel="noopener">https://youtu.be/im3kTm9jGEM?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=238</a></p>
-<p>什么样的vector set 能够拿来当coordinate system？<br><a href="https://youtu.be/im3kTm9jGEM?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=570" target="_blank" rel="noopener">https://youtu.be/im3kTm9jGEM?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=570</a><br>basis—-<br>为什么是basis？<br><a href="https://youtu.be/im3kTm9jGEM?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=813" target="_blank" rel="noopener">https://youtu.be/im3kTm9jGEM?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=813</a></p>
+<p>什么样的vector set 能够拿来当coordinate system？<br><a href="https://youtu.be/im3kTm9jGEM?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=570" target="_blank" rel="noopener">https://youtu.be/im3kTm9jGEM?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=570</a><br>basis——<br>为什么是basis？<br><a href="https://youtu.be/im3kTm9jGEM?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=813" target="_blank" rel="noopener">https://youtu.be/im3kTm9jGEM?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=813</a></p>
 <p>v代表什么？代表的是在直角坐标系中看到的vector<br><a href="https://youtu.be/im3kTm9jGEM?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=1194" target="_blank" rel="noopener">https://youtu.be/im3kTm9jGEM?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=1194</a><br>直角坐标系：<br>cartesian coordinate system(直角坐标系)</p>
 <p>其它的坐标系转换到直角坐标系<br>other system  ——&gt; Cartesian<br>v = B[v]_B<br><a href="https://youtu.be/im3kTm9jGEM?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=1435" target="_blank" rel="noopener">https://youtu.be/im3kTm9jGEM?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=1435</a></p>
 <p>Cartesian ——&gt; other system</p>
@@ -547,7 +583,7 @@
 <p>如果一个矩阵的column的和都为1，那么它一定有一个eigenvalue为1<br><a href="https://youtu.be/pSg9TG_U_fY?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=852" target="_blank" rel="noopener">https://youtu.be/pSg9TG_U_fY?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=852</a> </p>
 <p>这个解是唯一的吗？（PageRank的分数是）<br><a href="https://youtu.be/pSg9TG_U_fY?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=1019" target="_blank" rel="noopener">https://youtu.be/pSg9TG_U_fY?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=1019</a></p>
 <p>这个矩阵M = （1-m）A + mS的eigenValue是unique<br><a href="https://youtu.be/pSg9TG_U_fY?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=1619" target="_blank" rel="noopener">https://youtu.be/pSg9TG_U_fY?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=1619</a></p>
-<p>第七章—————————–&gt;<br>接下来学习的是：Orthogonality<br><a href="https://youtu.be/hxI7stenqaw?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=36" target="_blank" rel="noopener">https://youtu.be/hxI7stenqaw?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=36</a></p>
+<p>第七章——————————————-&gt;<br>接下来学习的是：Orthogonality<br><a href="https://youtu.be/hxI7stenqaw?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=36" target="_blank" rel="noopener">https://youtu.be/hxI7stenqaw?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=36</a></p>
 <p>定义的一些名词：<br>norm什么意思？——一个vector的长度||V||<br>Distance，距离||v-u||<br><a href="https://youtu.be/hxI7stenqaw?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=209" target="_blank" rel="noopener">https://youtu.be/hxI7stenqaw?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=209</a></p>
 <p>Orthogonal</p>
 <p>Dot product(点乘)</p>
@@ -597,8 +633,7 @@
 <p>哈哈:TT就是掉眼泪的意思，掉过眼泪就什么事情没有发生了<br><a href="https://youtu.be/TmDYxL7HV68?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=2031" target="_blank" rel="noopener">https://youtu.be/TmDYxL7HV68?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=2031</a></p>
 <p>Symmetric Matrices<br><a href="https://youtu.be/0ijUQ-RfN3I?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=6" target="_blank" rel="noopener">https://youtu.be/0ijUQ-RfN3I?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=6</a></p>
 <ol>
-<li><p>特点，它的eigenvalue一定都是实数</p>
-</li>
+<li>特点，它的eigenvalue一定都是实数</li>
 <li><p>u和v一定是orthogonal</p>
 </li>
 <li><p>如果一个矩阵是symmetric的，那么它一定可以写成  P^T A P = D<br>P is orthogonal matrix<br>D is diagonal matrix<br><a href="https://youtu.be/0ijUQ-RfN3I?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=1105" target="_blank" rel="noopener">https://youtu.be/0ijUQ-RfN3I?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=1105</a></p>
@@ -606,7 +641,7 @@
 </ol>
 <p>为什么对于orthogonal matrix来说，P^T = P^(-1)<br>这个有直观的理解吗？<br><a href="https://youtu.be/0ijUQ-RfN3I?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=1205" target="_blank" rel="noopener">https://youtu.be/0ijUQ-RfN3I?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=1205</a></p>
 <p>针对symmetric matrix来说，它一定是可以diagonalization的</p>
-<p>这件事情有什么重要的呢？****<br>证明你找的的coordinate system是orthogonal basis<br><a href="https://youtu.be/0ijUQ-RfN3I?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=1705" target="_blank" rel="noopener">https://youtu.be/0ijUQ-RfN3I?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=1705</a></p>
+<p>这件事情有什么重要的呢？<em>**</em><br>证明你找的的coordinate system是orthogonal basis<br><a href="https://youtu.be/0ijUQ-RfN3I?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=1705" target="_blank" rel="noopener">https://youtu.be/0ijUQ-RfN3I?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=1705</a></p>
 <p>A = PDP^T<br>矩阵分解，分解出来的矩阵的rank都是1；<br><a href="https://youtu.be/0ijUQ-RfN3I?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=1860" target="_blank" rel="noopener">https://youtu.be/0ijUQ-RfN3I?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=1860</a></p>
 <p>假设一个matrix是对称的symmetric的，那这个对称的matrix可以拆解乘成n个rank为1的matrix的weight sum,这些weight是eigenvalue<br><a href="https://youtu.be/0ijUQ-RfN3I?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=2137" target="_blank" rel="noopener">https://youtu.be/0ijUQ-RfN3I?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=2137</a></p>
 <p>这个分解得到的matrix有一些性质<br><a href="https://youtu.be/0ijUQ-RfN3I?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=2296" target="_blank" rel="noopener">https://youtu.be/0ijUQ-RfN3I?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=2296</a></p>
@@ -623,7 +658,7 @@
 <p>review:subspace</p>
 <p>linear transformation<br><a href="https://youtu.be/o4dPfMkz_lw?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=1695" target="_blank" rel="noopener">https://youtu.be/o4dPfMkz_lw?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=1695</a></p>
 <p>isomorphism(同构)同样的架构 </p>
-<p>basis（general）<br>——-&gt;</p>
+<p>basis（general）<br>———-&gt;</p>
 <h3 id="general-space中也有basis"><a href="#general-space中也有basis" class="headerlink" title="general space中也有basis;"></a>general space中也有basis;</h3><p>我的想法：对于FFT来说，它的basis是不是cos和sin函数呢？<br><a href="https://youtu.be/o4dPfMkz_lw?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=2934" target="_blank" rel="noopener">https://youtu.be/o4dPfMkz_lw?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=2934</a></p>
 <p><a href="https://youtu.be/7E7ZzTJFeng?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=168" target="_blank" rel="noopener">https://youtu.be/7E7ZzTJFeng?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=168</a><br>同一个linear system 在不同的coordinate system 中是不一样的<br>微分，背后对应的matrix，长什么样子呢？<br><a href="https://youtu.be/7E7ZzTJFeng?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=205" target="_blank" rel="noopener">https://youtu.be/7E7ZzTJFeng?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=205</a></p>
 <p>general eigenValue、eigenvector<br><a href="https://youtu.be/7E7ZzTJFeng?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=1180" target="_blank" rel="noopener">https://youtu.be/7E7ZzTJFeng?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=1180</a></p>
@@ -634,7 +669,7 @@
 <p>inner product也可定义在function上边<br><a href="https://youtu.be/7E7ZzTJFeng?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=2211" target="_blank" rel="noopener">https://youtu.be/7E7ZzTJFeng?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=2211</a></p>
 <p>定义orthogonal/orthogonormal basis有什么好处呢？<br>orthogonormal 的norm是1；<br><a href="https://youtu.be/7E7ZzTJFeng?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=2659" target="_blank" rel="noopener">https://youtu.be/7E7ZzTJFeng?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=2659</a></p>
 <p>Singular Value Decomposition<br><a href="https://youtu.be/OEJ0wxxLO7M?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=24" target="_blank" rel="noopener">https://youtu.be/OEJ0wxxLO7M?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=24</a><br>和diagonalization作比较：<br>并不是所有的matrix都能做diagonalization，<br>但是，SVD就很神奇，它可以用在任何的matrix上：<br><a href="https://youtu.be/OEJ0wxxLO7M?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=67" target="_blank" rel="noopener">https://youtu.be/OEJ0wxxLO7M?list=PLJV_el3uVTsNmr39gwbyV-0KjULUsN7fW&amp;t=67</a></p>
-<p>任何mn = mm * mn * nn<br>其中mm是matrix—&gt; U  —-&gt;column是independent的<br>其中mn(右边的)是matrix—&gt; 大sigma   是diagonal的，对角线是非负的，左上到右下是逐渐变小的<br>其中nn是matrix—&gt; V^T   row 是independent的</p>
+<p>任何mn = mm <em> mn </em> nn<br>其中mm是matrix—-&gt; U  ——&gt;column是independent的<br>其中mn(右边的)是matrix—-&gt; 大sigma   是diagonal的，对角线是非负的，左上到右下是逐渐变小的<br>其中nn是matrix—-&gt; V^T   row 是independent的</p>
 
     </div>
 
@@ -672,6 +707,7 @@
 
           </div>
           
+    <div class="comments" id="gitalk-container"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -718,7 +754,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#线性代数这门课讨论的是什么？"><span class="nav-number">1.</span> <span class="nav-text">线性代数这门课讨论的是什么？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是线性系统？"><span class="nav-number">2.</span> <span class="nav-text">什么是线性系统？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#线性系统会关心什么问题？"><span class="nav-number">3.</span> <span class="nav-text">线性系统会关心什么问题？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#线性代数中基本概念？"><span class="nav-number">4.</span> <span class="nav-text">线性代数中基本概念？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何理解矩阵和向量相乘"><span class="nav-number">5.</span> <span class="nav-text">如何理解矩阵和向量相乘</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是Span"><span class="nav-number">6.</span> <span class="nav-text">什么是Span</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#有没有解的陈述，可是换一种说法"><span class="nav-number">7.</span> <span class="nav-text">有没有解的陈述，可是换一种说法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#dependent和有解没有解是没有关系的。"><span class="nav-number">8.</span> <span class="nav-text">dependent和有解没有解是没有关系的。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是homogeneous"><span class="nav-number">9.</span> <span class="nav-text">什么是homogeneous?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Ax-0有非零的解，那么A就是dependent，为什么？因为dependent就是这样定义的呢。"><span class="nav-number">10.</span> <span class="nav-text">Ax &#x3D; 0有非零的解，那么A就是dependent，为什么？因为dependent就是这样定义的呢。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在有解的前提下，有多少个解呢？"><span class="nav-number">11.</span> <span class="nav-text">在有解的前提下，有多少个解呢？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是一个Matrix的Rank呢？"><span class="nav-number">12.</span> <span class="nav-text">什么是一个Matrix的Rank呢？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#equivalent（等价的）什么是等价。"><span class="nav-number">13.</span> <span class="nav-text">equivalent（等价的）什么是等价。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#augmented-matrix增广矩阵"><span class="nav-number">14.</span> <span class="nav-text">augmented matrix增广矩阵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是elementary-row-operation-（行变换？）"><span class="nav-number">15.</span> <span class="nav-text">什么是elementary row operation?（行变换？）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#reduced-row-echelon-form-RREF-简化行梯形形式"><span class="nav-number">16.</span> <span class="nav-text">reduced row echelon form(RREF)(简化行梯形形式)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是row-echelon-form（要满足两个条件）"><span class="nav-number">17.</span> <span class="nav-text">什么是row echelon form（要满足两个条件）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是Reduced-row-echelon-form（要满足三个条件）"><span class="nav-number">18.</span> <span class="nav-text">什么是Reduced row echelon form（要满足三个条件）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#接下来要补充的一个概念是Pivot-column"><span class="nav-number">19.</span> <span class="nav-text">接下来要补充的一个概念是Pivot column</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Reduced-row-echelon-form-和-linear-combination的关系"><span class="nav-number">20.</span> <span class="nav-text">Reduced row echelon form 和 linear combination的关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#reduced-row-echelon-form-和-Independent的关系"><span class="nav-number">21.</span> <span class="nav-text">reduced row echelon form 和 Independent的关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#reduced-row-echelon-form-和-Rank"><span class="nav-number">22.</span> <span class="nav-text">reduced row echelon form 和 Rank</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#reduced-row-echelon-form-和-Span"><span class="nav-number">23.</span> <span class="nav-text">reduced row echelon form 和 Span</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何理解矩阵相乘，（这样记，不会忘记）"><span class="nav-number">24.</span> <span class="nav-text">如何理解矩阵相乘，（这样记，不会忘记）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AC-T-？-A乘上C的转置是什么"><span class="nav-number">25.</span> <span class="nav-text">(AC)^T &#x3D; ？ (A乘上C的转置是什么)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一些特殊的matrix"><span class="nav-number">26.</span> <span class="nav-text">一些特殊的matrix</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是矩阵的逆-what’s-the-inverse-of-matrix"><span class="nav-number">27.</span> <span class="nav-text">什么是矩阵的逆(what’s the inverse of matrix)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#这一引入新的概念，singular，和non-singular。"><span class="nav-number">28.</span> <span class="nav-text">这一引入新的概念，singular，和non-singular。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一个矩阵是不是可逆的，10种等价说法，"><span class="nav-number">29.</span> <span class="nav-text">一个矩阵是不是可逆的，10种等价说法，</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Subspace"><span class="nav-number">30.</span> <span class="nav-text">Subspace</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Null-Space：所有Ax-0-的solution所构成的集合就是Null-A"><span class="nav-number">31.</span> <span class="nav-text">Null Space：所有Ax &#x3D; 0 的solution所构成的集合就是Null A</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Column-Space"><span class="nav-number">32.</span> <span class="nav-text">Column Space</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Basis（基础、支撑）"><span class="nav-number">33.</span> <span class="nav-text">Basis（基础、支撑）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#下来讲basis的重要的三个定理"><span class="nav-number">34.</span> <span class="nav-text">下来讲basis的重要的三个定理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#怎么在两个坐标系中，做任意的转换？"><span class="nav-number">35.</span> <span class="nav-text">怎么在两个坐标系中，做任意的转换？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#这里引入一个新的概念similar；"><span class="nav-number">36.</span> <span class="nav-text">这里引入一个新的概念similar；</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#从现在起，就进入eigenXXX的世界"><span class="nav-number">37.</span> <span class="nav-text">从现在起，就进入eigenXXX的世界</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#并不是所有的matrix都有eigenvector"><span class="nav-number">38.</span> <span class="nav-text">并不是所有的matrix都有eigenvector</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#同一个eigenvalue会对应到很多的eigenvector"><span class="nav-number">39.</span> <span class="nav-text">同一个eigenvalue会对应到很多的eigenvector</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#eigenspace-就是-A-lamdaI-n-的null-space"><span class="nav-number">40.</span> <span class="nav-text">eigenspace 就是(A-lamdaI_n)的null space</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#characteristic的特性"><span class="nav-number">41.</span> <span class="nav-text">characteristic的特性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是similar"><span class="nav-number">42.</span> <span class="nav-text">什么是similar?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Diagonalizable和eigenvalue、eigenvector有关系"><span class="nav-number">43.</span> <span class="nav-text">Diagonalizable和eigenvalue、eigenvector有关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何找到一个matrix的eigenvector和eigenvalue"><span class="nav-number">44.</span> <span class="nav-text">如何找到一个matrix的eigenvector和eigenvalue?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对于一个matrix先找到它的eigenvalue-然后就能找到这个eigenvalue对应eigenspace。eigenspace除了-0-之外，都是eigenvector"><span class="nav-number">45.</span> <span class="nav-text">对于一个matrix先找到它的eigenvalue,然后就能找到这个eigenvalue对应eigenspace。eigenspace除了{0}之外，都是eigenvector</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对角化有什么应用？"><span class="nav-number">46.</span> <span class="nav-text">对角化有什么应用？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何知道一个矩阵有没有办法被对角化"><span class="nav-number">47.</span> <span class="nav-text">如何知道一个矩阵有没有办法被对角化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#orthogonal-projection-到底有什么用呢？"><span class="nav-number">48.</span> <span class="nav-text">orthogonal projection 到底有什么用呢？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#最小而成近似-least-square-approximation"><span class="nav-number">49.</span> <span class="nav-text">最小而成近似 least square approximation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Orthogonal-basis（今天讲的是）"><span class="nav-number">50.</span> <span class="nav-text">Orthogonal basis（今天讲的是）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何把一组independent-vector-变成orthogonal-basis呢？"><span class="nav-number">51.</span> <span class="nav-text">如何把一组independent vector 变成orthogonal basis呢？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#general-space中也有basis"><span class="nav-number">52.</span> <span class="nav-text">general space中也有basis;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#接下来要讲的是inner-product"><span class="nav-number">53.</span> <span class="nav-text">接下来要讲的是inner product</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">1.</span> <span class="nav-text"> </span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#线性代数这门课讨论的是什么？"><span class="nav-number">1.1.</span> <span class="nav-text">线性代数这门课讨论的是什么？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是线性系统？"><span class="nav-number">1.2.</span> <span class="nav-text">什么是线性系统？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#线性系统会关心什么问题？"><span class="nav-number">1.3.</span> <span class="nav-text">线性系统会关心什么问题？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#线性代数中基本概念？"><span class="nav-number">1.4.</span> <span class="nav-text">线性代数中基本概念？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何理解矩阵和向量相乘"><span class="nav-number">1.5.</span> <span class="nav-text">如何理解矩阵和向量相乘</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是Span"><span class="nav-number">1.6.</span> <span class="nav-text">什么是Span</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#有没有解的陈述，可是换一种说法"><span class="nav-number">1.7.</span> <span class="nav-text">有没有解的陈述，可是换一种说法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#dependent和有解没有解是没有关系的。"><span class="nav-number">1.8.</span> <span class="nav-text">dependent和有解没有解是没有关系的。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是homogeneous"><span class="nav-number">1.9.</span> <span class="nav-text">什么是homogeneous?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Ax-0有非零的解，那么A就是dependent，为什么？因为dependent就是这样定义的呢。"><span class="nav-number">1.10.</span> <span class="nav-text">Ax &#x3D; 0有非零的解，那么A就是dependent，为什么？因为dependent就是这样定义的呢。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在有解的前提下，有多少个解呢？"><span class="nav-number">1.11.</span> <span class="nav-text">在有解的前提下，有多少个解呢？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是一个Matrix的Rank呢？"><span class="nav-number">1.12.</span> <span class="nav-text">什么是一个Matrix的Rank呢？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#equivalent（等价的）什么是等价。"><span class="nav-number">1.13.</span> <span class="nav-text">equivalent（等价的）什么是等价。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#augmented-matrix增广矩阵"><span class="nav-number">1.14.</span> <span class="nav-text">augmented matrix增广矩阵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是elementary-row-operation-（行变换？）"><span class="nav-number">1.15.</span> <span class="nav-text">什么是elementary row operation?（行变换？）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#reduced-row-echelon-form-RREF-简化行梯形形式"><span class="nav-number">1.16.</span> <span class="nav-text">reduced row echelon form(RREF)(简化行梯形形式)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是row-echelon-form（要满足两个条件）"><span class="nav-number">1.17.</span> <span class="nav-text">什么是row echelon form（要满足两个条件）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是Reduced-row-echelon-form（要满足三个条件）"><span class="nav-number">1.18.</span> <span class="nav-text">什么是Reduced row echelon form（要满足三个条件）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#接下来要补充的一个概念是Pivot-column"><span class="nav-number">1.19.</span> <span class="nav-text">接下来要补充的一个概念是Pivot column</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Reduced-row-echelon-form-和-linear-combination的关系"><span class="nav-number">1.20.</span> <span class="nav-text">Reduced row echelon form 和 linear combination的关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#reduced-row-echelon-form-和-Independent的关系"><span class="nav-number">1.21.</span> <span class="nav-text">reduced row echelon form 和 Independent的关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#reduced-row-echelon-form-和-Rank"><span class="nav-number">1.22.</span> <span class="nav-text">reduced row echelon form 和 Rank</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#reduced-row-echelon-form-和-Span"><span class="nav-number">1.23.</span> <span class="nav-text">reduced row echelon form 和 Span</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何理解矩阵相乘，（这样记，不会忘记）"><span class="nav-number">1.24.</span> <span class="nav-text">如何理解矩阵相乘，（这样记，不会忘记）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AC-T-？-A乘上C的转置是什么"><span class="nav-number">1.25.</span> <span class="nav-text">(AC)^T &#x3D; ？ (A乘上C的转置是什么)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一些特殊的matrix"><span class="nav-number">1.26.</span> <span class="nav-text">一些特殊的matrix</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是矩阵的逆-what’s-the-inverse-of-matrix"><span class="nav-number">1.27.</span> <span class="nav-text">什么是矩阵的逆(what’s the inverse of matrix)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#这一引入新的概念，singular，和non-singular。"><span class="nav-number">1.28.</span> <span class="nav-text">这一引入新的概念，singular，和non-singular。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一个矩阵是不是可逆的，10种等价说法，"><span class="nav-number">1.29.</span> <span class="nav-text">一个矩阵是不是可逆的，10种等价说法，</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Subspace"><span class="nav-number">1.30.</span> <span class="nav-text">Subspace</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Null-Space：所有Ax-0-的solution所构成的集合就是Null-A"><span class="nav-number">1.31.</span> <span class="nav-text">Null Space：所有Ax &#x3D; 0 的solution所构成的集合就是Null A</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Column-Space"><span class="nav-number">1.32.</span> <span class="nav-text">Column Space</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Basis（基础、支撑）"><span class="nav-number">1.33.</span> <span class="nav-text">Basis（基础、支撑）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#下来讲basis的重要的三个定理"><span class="nav-number">1.34.</span> <span class="nav-text">下来讲basis的重要的三个定理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#怎么在两个坐标系中，做任意的转换？"><span class="nav-number">1.35.</span> <span class="nav-text">怎么在两个坐标系中，做任意的转换？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#这里引入一个新的概念similar；"><span class="nav-number">1.36.</span> <span class="nav-text">这里引入一个新的概念similar；</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#从现在起，就进入eigenXXX的世界"><span class="nav-number">1.37.</span> <span class="nav-text">从现在起，就进入eigenXXX的世界</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#并不是所有的matrix都有eigenvector"><span class="nav-number">1.38.</span> <span class="nav-text">并不是所有的matrix都有eigenvector</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#同一个eigenvalue会对应到很多的eigenvector"><span class="nav-number">1.39.</span> <span class="nav-text">同一个eigenvalue会对应到很多的eigenvector</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#eigenspace-就是-A-lamdaI-n-的null-space"><span class="nav-number">1.40.</span> <span class="nav-text">eigenspace 就是(A-lamdaI_n)的null space</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#characteristic的特性"><span class="nav-number">1.41.</span> <span class="nav-text">characteristic的特性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是similar"><span class="nav-number">1.42.</span> <span class="nav-text">什么是similar?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Diagonalizable和eigenvalue、eigenvector有关系"><span class="nav-number">1.43.</span> <span class="nav-text">Diagonalizable和eigenvalue、eigenvector有关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何找到一个matrix的eigenvector和eigenvalue"><span class="nav-number">1.44.</span> <span class="nav-text">如何找到一个matrix的eigenvector和eigenvalue?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对于一个matrix先找到它的eigenvalue-然后就能找到这个eigenvalue对应eigenspace。eigenspace除了-0-之外，都是eigenvector"><span class="nav-number">1.45.</span> <span class="nav-text">对于一个matrix先找到它的eigenvalue,然后就能找到这个eigenvalue对应eigenspace。eigenspace除了{0}之外，都是eigenvector</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对角化有什么应用？"><span class="nav-number">1.46.</span> <span class="nav-text">对角化有什么应用？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何知道一个矩阵有没有办法被对角化"><span class="nav-number">1.47.</span> <span class="nav-text">如何知道一个矩阵有没有办法被对角化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#orthogonal-projection-到底有什么用呢？"><span class="nav-number">1.48.</span> <span class="nav-text">orthogonal projection 到底有什么用呢？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#最小而成近似-least-square-approximation"><span class="nav-number">1.49.</span> <span class="nav-text">最小而成近似 least square approximation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Orthogonal-basis（今天讲的是）"><span class="nav-number">1.50.</span> <span class="nav-text">Orthogonal basis（今天讲的是）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何把一组independent-vector-变成orthogonal-basis呢？"><span class="nav-number">1.51.</span> <span class="nav-text">如何把一组independent vector 变成orthogonal basis呢？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#general-space中也有basis"><span class="nav-number">1.52.</span> <span class="nav-text">general space中也有basis;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#接下来要讲的是inner-product"><span class="nav-number">1.53.</span> <span class="nav-text">接下来要讲的是inner product</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -787,6 +823,26 @@
   </div>
 
         
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
 
 
 
@@ -822,6 +878,10 @@
 
 
 
+  
+<script src="/js/local-search.js"></script>
+
+
 
 
 
@@ -836,6 +896,28 @@
   
 
   
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : '9bad5f6ce5fb909b931c',
+      clientSecret: '8af06250d607e8252bf84130a9421a2e5aab692a',
+      repo        : 'FengZhiheng.github.io',
+      owner       : 'FengZhiheng',
+      admin       : ['FengZhiheng'],
+      id          : 'd42fb578e87cac54eaa76a14d6ee5458',
+        language: '',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </body>
 </html>

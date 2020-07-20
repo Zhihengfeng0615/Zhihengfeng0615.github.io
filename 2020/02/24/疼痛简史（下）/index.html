@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 <meta name="generator" content="Hexo 4.2.0">
@@ -17,7 +17,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"fengzhiheng.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"fengzhiheng.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="History of Pain:A Brief Overview of the 19th and 20th Centuries疼痛简史：从19世纪到20世纪的一段简明综述">
@@ -75,12 +75,12 @@
   .use-motion .logo-line-before i { left: initial; }
   .use-motion .logo-line-after i { right: initial; }
   </style>
-</noscript>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container use-motion">
     <div class="headband"></div>
 
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -104,6 +104,7 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -128,11 +129,38 @@
     <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
   </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
   </ul>
 </nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
 
 </div>
     </header>
@@ -189,7 +217,14 @@
                 <time title="修改时间：2020-02-25 17:13:31" itemprop="dateModified" datetime="2020-02-25T17:13:31+08:00">2020-02-25</time>
               </span>
 
-          <br>
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
             <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
@@ -214,9 +249,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>History of Pain:A Brief Overview of the 19th and 20th Centuries<br>疼痛简史：从19世纪到20世纪的一段简明综述</p>
-<a id="more"></a> 
-<p>在7月的《实用疼痛管理》（Practical Pain Management）1中，我们介绍了17和18世纪的疼痛历史。了解疼痛的历史可以帮助从业人员和研究人员了解疼痛的性质，并证明疼痛管理专业是如何发展的，以包括当前的治疗选择范围。这是本系列的最后一部分，将回顾19世纪和20世纪的疼痛管理实践。  </p>
+        <p>History of Pain:A Brief Overview of the 19th and 20th Centuries<br>疼痛简史：从19世纪到20世纪的一段简明综述<br><a id="more"></a><br>在7月的《实用疼痛管理》（Practical Pain Management）1中，我们介绍了17和18世纪的疼痛历史。了解疼痛的历史可以帮助从业人员和研究人员了解疼痛的性质，并证明疼痛管理专业是如何发展的，以包括当前的治疗选择范围。这是本系列的最后一部分，将回顾19世纪和20世纪的疼痛管理实践。  </p>
 <h3 id="19世纪的进步：疼痛感受器"><a href="#19世纪的进步：疼痛感受器" class="headerlink" title="19世纪的进步：疼痛感受器"></a>19世纪的进步：疼痛感受器</h3><p>始于18世纪的科学力量一直延续到19世纪，在了解疼痛机理和治疗创新方面取得了越来越多的突破。在19世纪，生理学也受到主要器官的结构和功能实验研究的支配，而器官在疼痛中起着重要作用。2最后，在患者病床或尸体解剖室40年后，医生开始着手研究疼痛症状。在19世纪初期，医学文献开始关注疼痛的生理和心理方面之间的联系。2<br>19世纪初期，诊所的发展引起了人们对疼痛研究的兴趣。疼痛的研究和思考此时仍在约翰内斯·穆勒（JohannesMüller，1801-1858年）和后来的马克西米利安·冯·弗雷（Maximilian von Frey，1852-1932年）提出的“特异性理论”的框架内，后者将疼痛视为具有其自身感觉装置的独立感觉。然而，在法国，天主教会再次反对唯物主义和唯心主义，并担心研究将疼痛的心理方面降低到了更为生理/化学的水平。此时，教会想要保留“灵魂”的概念，这是RenéDescartes在17世纪提出的。根据Roselyne Rey的说法，这种冲突使人们无法更全面地了解疼痛，并且使双方的立场都更加坚定。2<br>尽管有宗教方面的反对，但研究的速度仍在继续。</p>
 <h3 id="约翰尼斯·穆勒（JohannesMuller）"><a href="#约翰尼斯·穆勒（JohannesMuller）" class="headerlink" title="约翰尼斯·穆勒（JohannesMüller）"></a>约翰尼斯·穆勒（JohannesMüller）</h3><p>据雷伊说，显微技术的进步使在德国生活和工作的约翰尼斯·穆勒的工作受益匪浅。Müller得出结论，神经纤维内有特定的能量，并且神经纤维的路径是严格有序的。这项研究导致他总结说，有特定的纤维用于疼痛或感受器（神经感受器）用于疼痛的感觉。如前所述，这一发现是在理解疼痛传递方面迈出的重要一步，并导致穆勒制定了特定神经能量定律。<br>Müller在他的研究中使用截肢者，因为所有原始纤维都在树桩的水平被发现，并且神经干仍然完好无损。在他的研究中，他研究了一种刺激的作用，该刺激作用于受刺激点以下神经分支的受限区域。大脑收到的感觉与残端完整无缺。2<br>然后，Müller提出了一个模型，其中每个后根神经节都将像感觉的半导体一样起作用。该模型可能代表迈向“门”概念的第一步，它将在20世纪的发现中进行更详细的讨论。Müller认为，感觉神经产生的感觉反应将发生在感觉神经而不是运动神经中。他说：“传递到大脑的感觉神经的中枢部分能够独立于神经线或导体感觉。确定适合每种感觉的感觉。” 2<br>Müller提出了一种疼痛理论，该理论考虑了生理学，历史观察，病理学以及疼痛综合心理方面的发现。他认为疼痛不是想象中的，没有外部刺激就可能发生疼痛。2<br>他的想法与Pierre Jean George Cabanis的想法相似，我们在第1部分中进行了讨论，他认为疼痛感觉可能会自发地在大脑中产生并引起真实的疼痛。1组穆勒的有关疼痛的结论是重要的发现，可以追溯到痛觉传导笛卡尔模型（男孩和火）。由于显微镜的改进，Müller的模型涵盖了重大的科学进展。  </p>
 <h3 id="十九世纪中叶"><a href="#十九世纪中叶" class="headerlink" title="十九世纪中叶"></a>十九世纪中叶</h3><p>在19世纪中叶，关于疼痛是可以避免还是致命地接受（即，是否由命运决定）的争论。这场辩论是由战争的作用引起的，战争促进了对痛苦的理解的进一步发展。宿命论意味着我们不选择痛苦，而是无论如何都会发生痛苦（例如在战争中）。通过在战场上获得的经验教训，在英格兰，法国和美国引入了许多新的治疗选择，包括一氧化二氮，德国的吗啡分离和美国的乙醚。<br>到19世纪末，研究开始集中于特定于疼痛的受体。先进的显微镜可以识别彼此非常不同的神经结构。Müller认为这些结构具有非常不同的功能。这一研究趋势代表了向特异性理论迈出的又一大步。2  </p>
@@ -307,6 +340,7 @@
 
           </div>
           
+    <div class="comments" id="gitalk-container"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -422,6 +456,26 @@
   </div>
 
         
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
 
 
 
@@ -457,6 +511,10 @@
 
 
 
+  
+<script src="/js/local-search.js"></script>
+
+
 
 
 
@@ -471,6 +529,28 @@
   
 
   
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : '9bad5f6ce5fb909b931c',
+      clientSecret: '8af06250d607e8252bf84130a9421a2e5aab692a',
+      repo        : 'FengZhiheng.github.io',
+      owner       : 'FengZhiheng',
+      admin       : ['FengZhiheng'],
+      id          : '25bd9140329af86efefad16145dfa258',
+        language: '',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </body>
 </html>
